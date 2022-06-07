@@ -3,18 +3,18 @@
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
 }
-var _chunkLDOEGN5Xjs = require('../chunk-LDOEGN5X.js');
-_chunkLDOEGN5Xjs.b.call(void 0);
+var _chunkPIDYFM3Rjs = require('../chunk-PIDYFM3R.js');
+_chunkPIDYFM3Rjs.b.call(void 0);
 var _cac = require('cac');
 var _chalk = require('chalk');
 var _chalk2 = _interopRequireDefault(_chalk);
 var o = _cac.cac.call(void 0, 'orval');
-_chunkLDOEGN5Xjs.e.call(void 0, {
-  name: _chunkLDOEGN5Xjs.a.name,
-  version: _chunkLDOEGN5Xjs.a.version,
-  description: _chunkLDOEGN5Xjs.a.description,
+_chunkPIDYFM3Rjs.e.call(void 0, {
+  name: _chunkPIDYFM3Rjs.a.name,
+  version: _chunkPIDYFM3Rjs.a.version,
+  description: _chunkPIDYFM3Rjs.a.description,
 });
-o.version(_chunkLDOEGN5Xjs.a.version);
+o.version(_chunkPIDYFM3Rjs.a.version);
 o.command(
   '[config]',
   'generate client with appropriate type-signatures from OpenAPI specs',
@@ -37,10 +37,10 @@ o.command(
   .option('--tsconfig [path]', 'path to your tsconfig file')
   .action(async (m, t) => {
     if (
-      _chunkLDOEGN5Xjs.c.call(void 0, t.input) &&
-      _chunkLDOEGN5Xjs.c.call(void 0, t.output)
+      _chunkPIDYFM3Rjs.c.call(void 0, t.input) &&
+      _chunkPIDYFM3Rjs.c.call(void 0, t.output)
     ) {
-      let i = await _chunkLDOEGN5Xjs.H.call(void 0, {
+      let i = await _chunkPIDYFM3Rjs.H.call(void 0, {
         input: t.input,
         output: {
           target: t.output,
@@ -54,14 +54,14 @@ o.command(
         },
       });
       if (t.watch)
-        _chunkLDOEGN5Xjs.K.call(
+        _chunkPIDYFM3Rjs.K.call(
           void 0,
           t.watch,
           async () => {
             try {
-              await _chunkLDOEGN5Xjs.L.call(void 0, process.cwd(), i);
+              await _chunkPIDYFM3Rjs.L.call(void 0, process.cwd(), i);
             } catch (n) {
-              _chunkLDOEGN5Xjs.d.call(
+              _chunkPIDYFM3Rjs.d.call(
                 void 0,
                 _chalk2.default.red(`\u{1F6D1}  ${n}`),
               );
@@ -71,15 +71,15 @@ o.command(
         );
       else
         try {
-          await _chunkLDOEGN5Xjs.L.call(void 0, process.cwd(), i);
+          await _chunkPIDYFM3Rjs.L.call(void 0, process.cwd(), i);
         } catch (n) {
-          _chunkLDOEGN5Xjs.d.call(
+          _chunkPIDYFM3Rjs.d.call(
             void 0,
             _chalk2.default.red(`\u{1F6D1}  ${n}`),
           );
         }
     } else
-      await _chunkLDOEGN5Xjs.M.call(void 0, t.config, {
+      await _chunkPIDYFM3Rjs.M.call(void 0, t.config, {
         projectName: t.project,
         watch: t.watch,
         clean: t.clean,

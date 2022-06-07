@@ -3,24 +3,24 @@ Object.defineProperty(exports, '__esModule', { value: true });
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
 }
-var _chunkLDOEGN5Xjs = require('./chunk-LDOEGN5X.js');
-_chunkLDOEGN5Xjs.b.call(void 0);
+var _chunkPIDYFM3Rjs = require('./chunk-PIDYFM3R.js');
+_chunkPIDYFM3Rjs.b.call(void 0);
 var _chalk = require('chalk');
 var _chalk2 = _interopRequireDefault(_chalk);
-_chunkLDOEGN5Xjs.b.call(void 0);
+_chunkPIDYFM3Rjs.b.call(void 0);
 var c = async (r, o = process.cwd(), e) => {
-  if (!r || _chunkLDOEGN5Xjs.c.call(void 0, r))
-    return _chunkLDOEGN5Xjs.M.call(void 0, r, e);
-  let n = await _chunkLDOEGN5Xjs.H.call(void 0, r, o, e);
+  if (!r || _chunkPIDYFM3Rjs.c.call(void 0, r))
+    return _chunkPIDYFM3Rjs.M.call(void 0, r, e);
+  let n = await _chunkPIDYFM3Rjs.H.call(void 0, r, o, e);
   if (e != null && e.watch)
-    _chunkLDOEGN5Xjs.K.call(
+    _chunkPIDYFM3Rjs.K.call(
       void 0,
       e == null ? void 0 : e.watch,
       async () => {
         try {
-          await _chunkLDOEGN5Xjs.L.call(void 0, o, n);
+          await _chunkPIDYFM3Rjs.L.call(void 0, o, n);
         } catch (a) {
-          _chunkLDOEGN5Xjs.d.call(
+          _chunkPIDYFM3Rjs.d.call(
             void 0,
             _chalk2.default.red(
               `\u{1F6D1}  ${
@@ -36,9 +36,9 @@ var c = async (r, o = process.cwd(), e) => {
     );
   else
     try {
-      return await _chunkLDOEGN5Xjs.L.call(void 0, o, n);
+      return await _chunkPIDYFM3Rjs.L.call(void 0, o, n);
     } catch (a) {
-      _chunkLDOEGN5Xjs.d.call(
+      _chunkPIDYFM3Rjs.d.call(
         void 0,
         _chalk2.default.red(
           `\u{1F6D1}  ${
@@ -51,35 +51,35 @@ var c = async (r, o = process.cwd(), e) => {
     }
 };
 var re = c;
-exports.URL_REGEX = _chunkLDOEGN5Xjs.s;
-exports.VERBS_WITH_BODY = _chunkLDOEGN5Xjs.r;
-exports.addDependency = _chunkLDOEGN5Xjs.v;
-exports.camel = _chunkLDOEGN5Xjs.g;
+exports.URL_REGEX = _chunkPIDYFM3Rjs.s;
+exports.VERBS_WITH_BODY = _chunkPIDYFM3Rjs.r;
+exports.addDependency = _chunkPIDYFM3Rjs.v;
+exports.camel = _chunkPIDYFM3Rjs.g;
 exports.default = re;
-exports.defineConfig = _chunkLDOEGN5Xjs.G;
-exports.escape = _chunkLDOEGN5Xjs.o;
-exports.generalJSTypes = _chunkLDOEGN5Xjs.p;
-exports.generalJSTypesWithArray = _chunkLDOEGN5Xjs.q;
+exports.defineConfig = _chunkPIDYFM3Rjs.G;
+exports.escape = _chunkPIDYFM3Rjs.o;
+exports.generalJSTypes = _chunkPIDYFM3Rjs.p;
+exports.generalJSTypesWithArray = _chunkPIDYFM3Rjs.q;
 exports.generate = c;
-exports.generateAxiosOptions = _chunkLDOEGN5Xjs.z;
-exports.generateBodyMutatorConfig = _chunkLDOEGN5Xjs.B;
-exports.generateBodyOptions = _chunkLDOEGN5Xjs.y;
-exports.generateDependencyImports = _chunkLDOEGN5Xjs.w;
-exports.generateFormDataAndUrlEncodedFunction = _chunkLDOEGN5Xjs.F;
-exports.generateImports = _chunkLDOEGN5Xjs.t;
-exports.generateMutatorConfig = _chunkLDOEGN5Xjs.D;
-exports.generateMutatorImports = _chunkLDOEGN5Xjs.u;
-exports.generateMutatorRequestOptions = _chunkLDOEGN5Xjs.E;
-exports.generateOptions = _chunkLDOEGN5Xjs.A;
-exports.generateQueryParamsAxiosConfig = _chunkLDOEGN5Xjs.C;
-exports.generateVerbImports = _chunkLDOEGN5Xjs.x;
-exports.getNumberWord = _chunkLDOEGN5Xjs.n;
-exports.isSyntheticDefaultImportsAllow = _chunkLDOEGN5Xjs.J;
-exports.kebab = _chunkLDOEGN5Xjs.i;
-exports.loadTsconfig = _chunkLDOEGN5Xjs.I;
-exports.pascal = _chunkLDOEGN5Xjs.f;
-exports.sanitize = _chunkLDOEGN5Xjs.l;
-exports.snake = _chunkLDOEGN5Xjs.h;
-exports.stringify = _chunkLDOEGN5Xjs.k;
-exports.toObjectString = _chunkLDOEGN5Xjs.m;
-exports.upper = _chunkLDOEGN5Xjs.j;
+exports.generateAxiosOptions = _chunkPIDYFM3Rjs.z;
+exports.generateBodyMutatorConfig = _chunkPIDYFM3Rjs.B;
+exports.generateBodyOptions = _chunkPIDYFM3Rjs.y;
+exports.generateDependencyImports = _chunkPIDYFM3Rjs.w;
+exports.generateFormDataAndUrlEncodedFunction = _chunkPIDYFM3Rjs.F;
+exports.generateImports = _chunkPIDYFM3Rjs.t;
+exports.generateMutatorConfig = _chunkPIDYFM3Rjs.D;
+exports.generateMutatorImports = _chunkPIDYFM3Rjs.u;
+exports.generateMutatorRequestOptions = _chunkPIDYFM3Rjs.E;
+exports.generateOptions = _chunkPIDYFM3Rjs.A;
+exports.generateQueryParamsAxiosConfig = _chunkPIDYFM3Rjs.C;
+exports.generateVerbImports = _chunkPIDYFM3Rjs.x;
+exports.getNumberWord = _chunkPIDYFM3Rjs.n;
+exports.isSyntheticDefaultImportsAllow = _chunkPIDYFM3Rjs.J;
+exports.kebab = _chunkPIDYFM3Rjs.i;
+exports.loadTsconfig = _chunkPIDYFM3Rjs.I;
+exports.pascal = _chunkPIDYFM3Rjs.f;
+exports.sanitize = _chunkPIDYFM3Rjs.l;
+exports.snake = _chunkPIDYFM3Rjs.h;
+exports.stringify = _chunkPIDYFM3Rjs.k;
+exports.toObjectString = _chunkPIDYFM3Rjs.m;
+exports.upper = _chunkPIDYFM3Rjs.j;

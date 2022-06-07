@@ -594,7 +594,7 @@ var Ji = 'orval',
     release: 'dotenv release-it',
     postrelease: 'yarn build && yarn update-samples',
     'generate-api':
-      'node ./dist/bin/orval.js --config ./samples/trpc/orval.config.ts',
+      'node ./dist/bin/orval.js --config ./samples/react-query/basic/orval.config.ts --watch',
     prepare: 'husky install && cd ./samples/react-query/basic && yarn',
     commitlint: 'commitlint',
     'update-samples': 'zx ./scripts/update-samples.mjs',
@@ -2321,7 +2321,22 @@ var k = (e, t, r = []) => {
     let c = k(e == null ? void 0 : e.schema, t, r);
     return { schema: T($({}, e), { schema: c.schema }), imports: r };
   }
-  if (!D(e)) return { schema: e, imports: r };
+  if (!D(e)) {
+    let c = e.properties
+      ? Object.keys(e.properties)
+          .map((m) => ({
+            [m]:
+              '$ref' in e.properties[m]
+                ? k(e.properties[m], t, r).schema
+                : e.properties[m],
+          }))
+          .reduce((m, l) => $($({}, m), l), {})
+      : void 0;
+    return (
+      console.log(e.properties, c),
+      { schema: T($({}, e), { properties: c }), imports: r }
+    );
+  }
   let { name: n, originalName: o, specKey: s, refPaths: i } = Ge(e.$ref, t),
     a = _lodashget2.default.call(void 0, t.specs[s || t.specKey], i);
   if (!a) throw `Oups... \u{1F37B}. Ref not found: ${e.$ref}`;
@@ -4184,7 +4199,7 @@ var It = null,
 `;
   },
   _p = (e) => {
-    switch (e) {
+    switch ((console.log(e), e)) {
       case 'integer':
         return 'number';
       case 'null':
@@ -4258,14 +4273,14 @@ var It = null,
             ]
           : [
               e != null && e.enum
-                ? `mixed<${
+                ? `string<${
                     e == null ? void 0 : e.enum.map((h) => `'${h}'`).join(' | ')
                   }>`
                 : n,
               void 0,
             ],
       ),
-      r.push([o ? 'required' : 'notRequired', void 0]),
+      o && r.push(['required', void 0]),
       s !== void 0 && r.push(['min', s]),
       i !== void 0 && r.push(['max', i]),
       a && r.push(['matches', a]),
