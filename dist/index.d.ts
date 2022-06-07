@@ -275,6 +275,7 @@ declare type NormalizedOverrideOutput = {
   requestOptions: Record<string, any> | boolean;
   useDates?: boolean;
   useTypeOverInterfaces?: boolean;
+  trpc?: TrpcOptions;
 };
 declare type NormalizedMutator = {
   path: string;
@@ -298,6 +299,7 @@ declare type NormalizedOperationOptions = {
   formData: boolean | NormalizedMutator;
   formUrlEncoded: boolean | NormalizedMutator;
   requestOptions: object | boolean;
+  trpc?: TrpcOptions;
 };
 declare type OutputClientFunc = (
   clients: GeneratorClients,
@@ -414,6 +416,7 @@ declare type OverrideOutput = {
   requestOptions?: Record<string, any> | boolean;
   useDates?: boolean;
   useTypeOverInterfaces?: boolean;
+  trpc?: TrpcOptions;
 };
 declare type QueryOptions = {
   useQuery?: boolean;
@@ -424,6 +427,9 @@ declare type QueryOptions = {
 declare type AngularOptions = {
   provideInRoot?: boolean;
   provideIn?: 'root' | 'any' | boolean;
+};
+declare type TrpcOptions = {
+  passRequestContextToCustomMutator?: boolean;
 };
 declare type InputTransformerFn = (spec: OpenAPIObject) => OpenAPIObject;
 declare type InputTransformer = string | InputTransformerFn;
@@ -612,7 +618,7 @@ declare const generateMutatorConfig: ({
 declare const generateMutatorRequestOptions: (
   requestOptions: boolean | object | undefined,
   hasSecondArgument: boolean,
-) => string | undefined;
+) => string;
 declare const generateFormDataAndUrlEncodedFunction: ({
   body,
   formData,

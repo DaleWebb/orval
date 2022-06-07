@@ -42,7 +42,7 @@ var we = (e, t) => {
   return r;
 };
 var Hi = (e, t) => () => (e && (t = e((e = 0))), t);
-var E = (e, t) => () => (t || e((t = { exports: {} }).exports, t), t.exports);
+var M = (e, t) => () => (t || e((t = { exports: {} }).exports, t), t.exports);
 var Yi = (e, t, r, n) => {
   if ((t && typeof t == 'object') || typeof t == 'function')
     for (let o of Ki(t))
@@ -64,7 +64,7 @@ var ye = (e, t, r) => (
   )
 );
 var u = Hi(() => {});
-var ur = E((GO, Ho) => {
+var ur = M((GO, Ho) => {
   u();
   var oc = Object.prototype;
   function sc(e) {
@@ -74,7 +74,7 @@ var ur = E((GO, Ho) => {
   }
   Ho.exports = sc;
 });
-var Jo = E((CO, Yo) => {
+var Jo = M((CO, Yo) => {
   u();
   function ic(e, t) {
     return function (r) {
@@ -83,13 +83,13 @@ var Jo = E((CO, Yo) => {
   }
   Yo.exports = ic;
 });
-var Zo = E((DO, Xo) => {
+var Zo = M((DO, Xo) => {
   u();
   var ac = Jo(),
     pc = ac(Object.keys, Object);
   Xo.exports = pc;
 });
-var ts = E((kO, es) => {
+var ts = M((kO, es) => {
   u();
   var cc = ur(),
     mc = Zo(),
@@ -103,26 +103,26 @@ var ts = E((kO, es) => {
   }
   es.exports = fc;
 });
-var lr = E((qO, rs) => {
+var lr = M((qO, rs) => {
   u();
   var gc =
     typeof global == 'object' && global && global.Object === Object && global;
   rs.exports = gc;
 });
-var de = E((FO, ns) => {
+var de = M((FO, ns) => {
   u();
   var dc = lr(),
     yc = typeof self == 'object' && self && self.Object === Object && self,
     bc = dc || yc || Function('return this')();
   ns.exports = bc;
 });
-var fr = E((VO, os) => {
+var fr = M((VO, os) => {
   u();
   var Oc = de(),
     hc = Oc.Symbol;
   os.exports = hc;
 });
-var ps = E((NO, as) => {
+var ps = M((NO, as) => {
   u();
   var ss = fr(),
     is = Object.prototype,
@@ -141,7 +141,7 @@ var ps = E((NO, as) => {
   }
   as.exports = Sc;
 });
-var ms = E((UO, cs) => {
+var ms = M((UO, cs) => {
   u();
   var wc = Object.prototype,
     Tc = wc.toString;
@@ -150,36 +150,36 @@ var ms = E((UO, cs) => {
   }
   cs.exports = Rc;
 });
-var tt = E((WO, fs) => {
+var tt = M((WO, fs) => {
   u();
   var us = fr(),
     jc = ps(),
     Pc = ms(),
     Ec = '[object Null]',
-    Ic = '[object Undefined]',
+    Mc = '[object Undefined]',
     ls = us ? us.toStringTag : void 0;
-  function vc(e) {
+  function Ic(e) {
     return e == null
       ? e === void 0
-        ? Ic
+        ? Mc
         : Ec
       : ls && ls in Object(e)
       ? jc(e)
       : Pc(e);
   }
-  fs.exports = vc;
+  fs.exports = Ic;
 });
-var gr = E((BO, gs) => {
+var gr = M((BO, gs) => {
   u();
-  function Mc(e) {
+  function Ac(e) {
     var t = typeof e;
     return e != null && (t == 'object' || t == 'function');
   }
-  gs.exports = Mc;
+  gs.exports = Ac;
 });
-var dr = E((_O, ds) => {
+var dr = M((_O, ds) => {
   u();
-  var Ac = tt(),
+  var vc = tt(),
     Gc = gr(),
     Cc = '[object AsyncFunction]',
     Dc = '[object Function]',
@@ -187,18 +187,18 @@ var dr = E((_O, ds) => {
     qc = '[object Proxy]';
   function Fc(e) {
     if (!Gc(e)) return !1;
-    var t = Ac(e);
+    var t = vc(e);
     return t == Dc || t == kc || t == Cc || t == qc;
   }
   ds.exports = Fc;
 });
-var bs = E((QO, ys) => {
+var bs = M((QO, ys) => {
   u();
   var Vc = de(),
     Nc = Vc['__core-js_shared__'];
   ys.exports = Nc;
 });
-var $s = E((zO, hs) => {
+var $s = M((zO, hs) => {
   u();
   var yr = bs(),
     Os = (function () {
@@ -210,7 +210,7 @@ var $s = E((zO, hs) => {
   }
   hs.exports = Uc;
 });
-var br = E((KO, xs) => {
+var br = M((KO, xs) => {
   u();
   var Wc = Function.prototype,
     Bc = Wc.toString;
@@ -227,7 +227,7 @@ var br = E((KO, xs) => {
   }
   xs.exports = _c;
 });
-var ws = E((LO, Ss) => {
+var ws = M((LO, Ss) => {
   u();
   var Qc = dr(),
     zc = $s(),
@@ -256,14 +256,14 @@ var ws = E((LO, Ss) => {
   }
   Ss.exports = rm;
 });
-var Rs = E((HO, Ts) => {
+var Rs = M((HO, Ts) => {
   u();
   function nm(e, t) {
     return e == null ? void 0 : e[t];
   }
   Ts.exports = nm;
 });
-var Ve = E((YO, js) => {
+var Ve = M((YO, js) => {
   u();
   var om = ws(),
     sm = Rs();
@@ -273,46 +273,46 @@ var Ve = E((YO, js) => {
   }
   js.exports = im;
 });
-var Es = E((JO, Ps) => {
+var Es = M((JO, Ps) => {
   u();
   var am = Ve(),
     pm = de(),
     cm = am(pm, 'DataView');
   Ps.exports = cm;
 });
-var vs = E((XO, Is) => {
+var Is = M((XO, Ms) => {
   u();
   var mm = Ve(),
     um = de(),
     lm = mm(um, 'Map');
-  Is.exports = lm;
+  Ms.exports = lm;
 });
-var As = E((ZO, Ms) => {
+var vs = M((ZO, As) => {
   u();
   var fm = Ve(),
     gm = de(),
     dm = fm(gm, 'Promise');
-  Ms.exports = dm;
+  As.exports = dm;
 });
-var Cs = E((eh, Gs) => {
+var Cs = M((eh, Gs) => {
   u();
   var ym = Ve(),
     bm = de(),
     Om = ym(bm, 'Set');
   Gs.exports = Om;
 });
-var ks = E((th, Ds) => {
+var ks = M((th, Ds) => {
   u();
   var hm = Ve(),
     $m = de(),
     xm = hm($m, 'WeakMap');
   Ds.exports = xm;
 });
-var _s = E((rh, Bs) => {
+var _s = M((rh, Bs) => {
   u();
   var Or = Es(),
-    hr = vs(),
-    $r = As(),
+    hr = Is(),
+    $r = vs(),
     xr = Cs(),
     Sr = ks(),
     Ws = tt(),
@@ -355,24 +355,24 @@ var _s = E((rh, Bs) => {
     });
   Bs.exports = Ee;
 });
-var kt = E((nh, Qs) => {
+var kt = M((nh, Qs) => {
   u();
   function Em(e) {
     return e != null && typeof e == 'object';
   }
   Qs.exports = Em;
 });
-var Ks = E((oh, zs) => {
+var Ks = M((oh, zs) => {
   u();
-  var Im = tt(),
-    vm = kt(),
-    Mm = '[object Arguments]';
-  function Am(e) {
-    return vm(e) && Im(e) == Mm;
+  var Mm = tt(),
+    Im = kt(),
+    Am = '[object Arguments]';
+  function vm(e) {
+    return Im(e) && Mm(e) == Am;
   }
-  zs.exports = Am;
+  zs.exports = vm;
 });
-var Js = E((sh, Ys) => {
+var Js = M((sh, Ys) => {
   u();
   var Ls = Ks(),
     Gm = kt(),
@@ -390,12 +390,12 @@ var Js = E((sh, Ys) => {
         };
   Ys.exports = km;
 });
-var Zs = E((ih, Xs) => {
+var Zs = M((ih, Xs) => {
   u();
   var qm = Array.isArray;
   Xs.exports = qm;
 });
-var wr = E((ah, ei) => {
+var wr = M((ah, ei) => {
   u();
   var Fm = 9007199254740991;
   function Vm(e) {
@@ -403,7 +403,7 @@ var wr = E((ah, ei) => {
   }
   ei.exports = Vm;
 });
-var ri = E((ph, ti) => {
+var ri = M((ph, ti) => {
   u();
   var Nm = dr(),
     Um = wr();
@@ -412,14 +412,14 @@ var ri = E((ph, ti) => {
   }
   ti.exports = Wm;
 });
-var oi = E((ch, ni) => {
+var oi = M((ch, ni) => {
   u();
   function Bm() {
     return !1;
   }
   ni.exports = Bm;
 });
-var pi = E((rt, Ue) => {
+var pi = M((rt, Ue) => {
   u();
   var _m = de(),
     Qm = oi(),
@@ -431,7 +431,7 @@ var pi = E((rt, Ue) => {
     Lm = Km || Qm;
   Ue.exports = Lm;
 });
-var mi = E((mh, ci) => {
+var mi = M((mh, ci) => {
   u();
   var Hm = tt(),
     Ym = wr(),
@@ -460,30 +460,30 @@ var mi = E((mh, ci) => {
     hu = '[object Uint8ClampedArray]',
     $u = '[object Uint16Array]',
     xu = '[object Uint32Array]',
-    G = {};
-  G[fu] = G[gu] = G[du] = G[yu] = G[bu] = G[Ou] = G[hu] = G[$u] = G[xu] = !0;
-  G[Xm] =
-    G[Zm] =
-    G[uu] =
-    G[eu] =
-    G[lu] =
-    G[tu] =
-    G[ru] =
-    G[nu] =
-    G[ou] =
-    G[su] =
-    G[iu] =
-    G[au] =
-    G[pu] =
-    G[cu] =
-    G[mu] =
+    C = {};
+  C[fu] = C[gu] = C[du] = C[yu] = C[bu] = C[Ou] = C[hu] = C[$u] = C[xu] = !0;
+  C[Xm] =
+    C[Zm] =
+    C[uu] =
+    C[eu] =
+    C[lu] =
+    C[tu] =
+    C[ru] =
+    C[nu] =
+    C[ou] =
+    C[su] =
+    C[iu] =
+    C[au] =
+    C[pu] =
+    C[cu] =
+    C[mu] =
       !1;
   function Su(e) {
-    return Jm(e) && Ym(e.length) && !!G[Hm(e)];
+    return Jm(e) && Ym(e.length) && !!C[Hm(e)];
   }
   ci.exports = Su;
 });
-var li = E((uh, ui) => {
+var li = M((uh, ui) => {
   u();
   function wu(e) {
     return function (t) {
@@ -492,7 +492,7 @@ var li = E((uh, ui) => {
   }
   ui.exports = wu;
 });
-var gi = E((nt, We) => {
+var gi = M((nt, We) => {
   u();
   var Tu = lr(),
     fi = typeof nt == 'object' && nt && !nt.nodeType && nt,
@@ -507,20 +507,20 @@ var gi = E((nt, We) => {
     })();
   We.exports = ju;
 });
-var Oi = E((lh, bi) => {
+var Oi = M((lh, bi) => {
   u();
   var Pu = mi(),
     Eu = li(),
     di = gi(),
     yi = di && di.isTypedArray,
-    Iu = yi ? Eu(yi) : Pu;
-  bi.exports = Iu;
+    Mu = yi ? Eu(yi) : Pu;
+  bi.exports = Mu;
 });
-var Rr = E((fh, hi) => {
+var Rr = M((fh, hi) => {
   u();
-  var vu = ts(),
-    Mu = _s(),
-    Au = Js(),
+  var Iu = ts(),
+    Au = _s(),
+    vu = Js(),
     Gu = Zs(),
     Cu = ri(),
     Du = pi(),
@@ -539,12 +539,12 @@ var Rr = E((fh, hi) => {
         typeof e.splice == 'function' ||
         Du(e) ||
         qu(e) ||
-        Au(e))
+        vu(e))
     )
       return !e.length;
-    var t = Mu(e);
+    var t = Au(e);
     if (t == Fu || t == Vu) return !e.size;
-    if (ku(e)) return !vu(e).length;
+    if (ku(e)) return !Iu(e).length;
     for (var r in e) if (Uu.call(e, r)) return !1;
     return !0;
   }
@@ -594,7 +594,7 @@ var Ji = 'orval',
     release: 'dotenv release-it',
     postrelease: 'yarn build && yarn update-samples',
     'generate-api':
-      'node ./dist/bin/orval.js --config ./samples/react-query/basic/orval.config.ts --watch',
+      'node ./dist/bin/orval.js --config ./samples/trpc/orval.config.ts',
     prepare: 'husky install && cd ./samples/react-query/basic && yarn',
     commitlint: 'commitlint',
     'update-samples': 'zx ./scripts/update-samples.mjs',
@@ -709,12 +709,12 @@ var B = {
   };
 u();
 var _upath = require('upath');
-var C = (e) => Boolean(e.$ref),
+var D = (e) => Boolean(e.$ref),
   yn = (e) => !_upath.extname.call(void 0, e);
-function k(e) {
+function q(e) {
   return Object.prototype.toString.call(e) === '[object Object]';
 }
-function q(e) {
+function F(e) {
   return typeof e == 'string';
 }
 function bn(e) {
@@ -789,44 +789,44 @@ function X(e = 'info', t = {}) {
   let { prefix: r = '[vite]', allowClearScreen: n = !0 } = t,
     o = Wt[e],
     s = n && process.stdout.isTTY && !process.env.CI ? ua : () => {};
-  function a(m, c, l = {}) {
-    if (o >= Wt[m]) {
-      let g = m === 'info' ? 'log' : m,
+  function i(c, m, l = {}) {
+    if (o >= Wt[c]) {
+      let f = c === 'info' ? 'log' : c,
         d = () => {
           if (l.timestamp) {
-            let f =
-              m === 'info'
+            let g =
+              c === 'info'
                 ? _chalk2.default.cyan.bold(r)
-                : m === 'warn'
+                : c === 'warn'
                 ? _chalk2.default.yellow.bold(r)
                 : _chalk2.default.red.bold(r);
             return `${_chalk2.default.dim(
               new Date().toLocaleTimeString(),
-            )} ${f} ${c}`;
-          } else return c;
+            )} ${g} ${m}`;
+          } else return m;
         };
-      m === xn && c === Sn
-        ? (Bt++, s(), console[g](d(), _chalk2.default.yellow(`(x${Bt + 1})`)))
-        : ((Bt = 0), (Sn = c), (xn = m), l.clear && s(), console[g](d()));
+      c === xn && m === Sn
+        ? (Bt++, s(), console[f](d(), _chalk2.default.yellow(`(x${Bt + 1})`)))
+        : ((Bt = 0), (Sn = m), (xn = c), l.clear && s(), console[f](d()));
     }
   }
-  let i = new Set(),
+  let a = new Set(),
     p = {
       hasWarned: !1,
-      info(m, c) {
-        a('info', m, c);
+      info(c, m) {
+        i('info', c, m);
       },
-      warn(m, c) {
-        (p.hasWarned = !0), a('warn', m, c);
+      warn(c, m) {
+        (p.hasWarned = !0), i('warn', c, m);
       },
-      warnOnce(m, c) {
-        i.has(m) || ((p.hasWarned = !0), a('warn', m, c), i.add(m));
+      warnOnce(c, m) {
+        a.has(c) || ((p.hasWarned = !0), i('warn', c, m), a.add(c));
       },
-      error(m, c) {
-        (p.hasWarned = !0), a('error', m, c);
+      error(c, m) {
+        (p.hasWarned = !0), i('error', c, m);
       },
-      clearScreen(m) {
-        o >= Wt[m] && s();
+      clearScreen(c) {
+        o >= Wt[c] && s();
       },
     };
   return p;
@@ -890,31 +890,31 @@ var _t = function (e, t) {
       '',
       !0,
     )),
-  P = (exports.g = (e) => ga(x(e))),
+  E = (exports.g = (e) => ga(x(e))),
   El = (exports.h = (e) => En(e, '_', !0)),
   Te = (exports.i = (e) => En(e, '-', !0)),
-  Il = (exports.j = (e, t, r) => ft(Pn.call(zt(e, !!t, !1, !0)), t, r));
+  Ml = (exports.j = (e, t, r) => ft(Pn.call(zt(e, !!t, !1, !0)), t, r));
 u();
 var _esutils = require('esutils');
 var _lodashget = require('lodash.get');
 var _lodashget2 = _interopRequireDefault(_lodashget);
 var ne = (e) => {
     if (!(mt(e) || On(e)))
-      return q(e)
+      return F(e)
         ? `'${e}'`
         : bn(e) || J(e) || L(e)
         ? `${e}`
         : Array.isArray(e)
         ? `[${e.map(ne).join(', ')}]`
         : Object.entries(e).reduce((t, [r, n], o, s) => {
-            let a = ne(n);
+            let i = ne(n);
             return s.length === 1
-              ? `{ ${r}: ${a}, }`
+              ? `{ ${r}: ${i}, }`
               : o
               ? s.length - 1 === o
-                ? t + `${r}: ${a}, }`
-                : t + `${r}: ${a}, `
-              : `{ ${r}: ${a}, `;
+                ? t + `${r}: ${i}, }`
+                : t + `${r}: ${i}, `
+              : `{ ${r}: ${i}, `;
           }, '');
   },
   U = (exports.l = (e, t) => {
@@ -923,19 +923,19 @@ var ne = (e) => {
         underscore: n = '',
         dot: o = '',
         dash: s = '',
-        es5keyword: a = !1,
+        es5keyword: i = !1,
       } = t != null ? t : {},
-      i = e.replace(/[^\w\s.-]/g, '');
+      a = e.replace(/[^\w\s.-]/g, '');
     return (
-      r !== !0 && (i = i.replace(/[\s]/g, r)),
-      n !== !0 && (i = i.replace(/['_']/g, n)),
-      o !== !0 && (i = i.replace(/[.]/g, o)),
-      s !== !0 && (i = i.replace(/[-]/g, s)),
-      a && (i = _esutils.keyword.isKeywordES5(i, !0) ? `_${i}` : i),
-      i
+      r !== !0 && (a = a.replace(/[\s]/g, r)),
+      n !== !0 && (a = a.replace(/['_']/g, n)),
+      o !== !0 && (a = a.replace(/[.]/g, o)),
+      s !== !0 && (a = a.replace(/[-]/g, s)),
+      i && (a = _esutils.keyword.isKeywordES5(a, !0) ? `_${a}` : a),
+      a
     );
   }),
-  F = (exports.m = (e, t) =>
+  V = (exports.m = (e, t) =>
     e.length
       ? (t ? e.map((n) => _lodashget2.default.call(void 0, n, t)) : e).join(`,
     `) + ','
@@ -960,11 +960,11 @@ var ne = (e) => {
   dt = (exports.o = (e, t = "'") => e.replace(t, `\\${t}`));
 u();
 var ha = ['number', 'string', 'null', 'unknown', 'undefined', 'object', 'blob'],
-  ve = (exports.q = ha.reduce(
+  Ie = (exports.q = ha.reduce(
     (e, t) => (e.push(t, `Array<${t}>`, `${t}[]`), e),
     [],
   )),
-  se = (exports.r = [K.POST, K.PUT, K.PATCH, K.DELETE]),
+  oe = (exports.r = [K.POST, K.PUT, K.PATCH, K.DELETE]),
   kl = (exports.s =
     /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/);
 u();
@@ -988,37 +988,37 @@ var _path2 = _interopRequireDefault(_path);
 u();
 var _debug = require('debug');
 var _debug2 = _interopRequireDefault(_debug);
-var In = process.env.ORVAL_DEBUG_FILTER,
+var Mn = process.env.ORVAL_DEBUG_FILTER,
   Kt = process.env.DEBUG;
-function vn(e, t = {}) {
+function In(e, t = {}) {
   let r = _debug2.default.call(void 0, e),
     { onlyWhenFocused: n } = t,
     o = typeof n == 'string' ? n : e;
-  return (s, ...a) => {
-    (In && !s.includes(In)) ||
+  return (s, ...i) => {
+    (Mn && !s.includes(Mn)) ||
       (n && !(Kt != null && Kt.includes(o))) ||
-      r(s, ...a);
+      r(s, ...i);
   };
 }
-var A = (
+var v = (
     e = '',
     { backupFilename: t = 'filename', extension: r = '.ts' } = {},
   ) => {
     let n = yn(e),
       o = n ? _upath.join.call(void 0, e, t + r) : e,
       s = o.replace(/\.[^/.]+$/, ''),
-      a = _upath.dirname.call(void 0, o),
-      i = _upath.basename.call(void 0, o, r[0] !== '.' ? `.${r}` : r);
+      i = _upath.dirname.call(void 0, o),
+      a = _upath.basename.call(void 0, o, r[0] !== '.' ? `.${r}` : r);
     return {
       path: o,
       pathWithoutExtension: s,
       extension: r,
       isDirectory: n,
-      dirname: a,
-      filename: i,
+      dirname: i,
+      filename: a,
     };
   },
-  Cn = vn('orval:file-load'),
+  Cn = In('orval:file-load'),
   Ht = new Map();
 async function yt(e, t) {
   let {
@@ -1026,43 +1026,43 @@ async function yt(e, t) {
       isDefault: n = !0,
       defaultFileName: o,
       logLevel: s,
-      alias: a,
-      tsconfig: i,
+      alias: i,
+      tsconfig: a,
       load: p = !0,
     } = t != null ? t : {},
-    m = Date.now(),
-    c,
+    c = Date.now(),
+    m,
     l = !1,
-    g = !1;
-  if (e) (c = _path2.default.resolve(e)), (l = e.endsWith('.ts'));
+    f = !1;
+  if (e) (m = _path2.default.resolve(e)), (l = e.endsWith('.ts'));
   else if (o) {
     let b = _path2.default.resolve(r, `${o}.js`);
-    if ((_fs2.default.existsSync(b) && (c = b), !c)) {
+    if ((_fs2.default.existsSync(b) && (m = b), !m)) {
       let y = _path2.default.resolve(r, `${o}.mjs`);
-      _fs2.default.existsSync(y) && ((c = y), (g = !0));
+      _fs2.default.existsSync(y) && ((m = y), (f = !0));
     }
-    if (!c) {
+    if (!m) {
       let y = _path2.default.resolve(r, `${o}.ts`);
-      _fs2.default.existsSync(y) && ((c = y), (l = !0));
+      _fs2.default.existsSync(y) && ((m = y), (l = !0));
     }
   }
-  c ||
+  m ||
     (e
       ? X(s).error(_chalk2.default.red(`File not found => ${e}`))
       : o
       ? X(s).error(_chalk2.default.red(`File not found => ${o}.{js,mjs,ts}`))
       : X(s).error(_chalk2.default.red('File not found')),
     process.exit(1));
-  let d = _upath.normalizeSafe.call(void 0, c),
-    f = Ht.get(c);
-  if (f) return T($({ path: d }, f), { cached: !0 });
+  let d = _upath.normalizeSafe.call(void 0, m),
+    g = Ht.get(m);
+  if (g) return T($({ path: d }, g), { cached: !0 });
   try {
     let b;
-    if (!b && !l && !g)
+    if (!b && !l && !f)
       try {
-        delete W.cache[W.resolve(c)],
-          (b = W(c)),
-          Cn(`cjs loaded in ${Date.now() - m}ms`);
+        delete W.cache[W.resolve(m)],
+          (b = W(m)),
+          Cn(`cjs loaded in ${Date.now() - c}ms`);
       } catch (y) {
         if (
           !new RegExp(
@@ -1078,18 +1078,18 @@ async function yt(e, t) {
       }
     if (!b) {
       let { code: y } = await ja(
-        c,
-        g,
+        m,
+        f,
         r || _upath.dirname.call(void 0, d),
-        a,
-        i == null ? void 0 : i.compilerOptions,
+        i,
+        a == null ? void 0 : a.compilerOptions,
       );
-      p ? (b = await Pa(c, y, n)) : (b = y),
-        Cn(`bundled file loaded in ${Date.now() - m}ms`);
+      p ? (b = await Pa(m, y, n)) : (b = y),
+        Cn(`bundled file loaded in ${Date.now() - c}ms`);
     }
-    return Ht.set(c, { file: b }), { path: d, file: b };
+    return Ht.set(m, { file: b }), { path: d, file: b };
   } catch (b) {
-    return Ht.set(c, { error: b }), { path: d, error: b };
+    return Ht.set(m, { error: b }), { path: d, error: b };
   }
 }
 async function ja(e, t = !1, r, n, o) {
@@ -1110,45 +1110,45 @@ async function ja(e, t = !1, r, n, o) {
           ? [
               {
                 name: 'aliasing',
-                setup(i) {
-                  i.onResolve({ filter: /^[\w@][^:]/ }, async ({ path: p }) => {
+                setup(a) {
+                  a.onResolve({ filter: /^[\w@][^:]/ }, async ({ path: p }) => {
                     if (n) {
-                      let m = Object.keys(n),
-                        c = m.find(
+                      let c = Object.keys(n),
+                        m = c.find(
                           (l) =>
                             p.startsWith(l) ||
-                            _micromatch2.default.isMatch(p, m),
+                            _micromatch2.default.isMatch(p, c),
                         );
-                      if (c) {
-                        let l = _micromatch2.default.scan(c),
-                          g = _micromatch2.default.scan(n[c]),
-                          d = _upath.resolve.call(void 0, r, g.base),
-                          f = l.base
+                      if (m) {
+                        let l = _micromatch2.default.scan(m),
+                          f = _micromatch2.default.scan(n[m]),
+                          d = _upath.resolve.call(void 0, r, f.base),
+                          g = l.base
                             ? p.replace(l.base, d)
                             : _upath.joinSafe.call(void 0, d, p),
-                          y = _upath.extname.call(void 0, f) ? f : `${f}.ts`;
+                          y = _upath.extname.call(void 0, g) ? g : `${g}.ts`;
                         return _fs2.default.existsSync(y)
                           ? { path: y }
                           : void 0;
                       }
                     }
                     if (o != null && o.paths) {
-                      let m = Object.keys(o == null ? void 0 : o.paths),
-                        c = m.find(
+                      let c = Object.keys(o == null ? void 0 : o.paths),
+                        m = c.find(
                           (l) =>
                             p.startsWith(l) ||
-                            _micromatch2.default.isMatch(p, m),
+                            _micromatch2.default.isMatch(p, c),
                         );
-                      if (c) {
-                        let l = _micromatch2.default.scan(c),
-                          g = _micromatch2.default.scan(
-                            o == null ? void 0 : o.paths[c][0],
+                      if (m) {
+                        let l = _micromatch2.default.scan(m),
+                          f = _micromatch2.default.scan(
+                            o == null ? void 0 : o.paths[m][0],
                           ),
-                          d = _upath.resolve.call(void 0, r, g.base),
-                          f = l.base
+                          d = _upath.resolve.call(void 0, r, f.base),
+                          g = l.base
                             ? p.replace(l.base, d)
                             : _upath.joinSafe.call(void 0, d, p),
-                          y = _upath.extname.call(void 0, f) ? f : `${f}.ts`;
+                          y = _upath.extname.call(void 0, g) ? g : `${g}.ts`;
                         return _fs2.default.existsSync(y)
                           ? { path: y }
                           : void 0;
@@ -1161,22 +1161,22 @@ async function ja(e, t = !1, r, n, o) {
           : []),
         {
           name: 'externalize-deps',
-          setup(i) {
-            i.onResolve({ filter: /.*/ }, (p) => {
-              let m = p.path;
-              if (m[0] !== '.' && !_path2.default.isAbsolute(m))
+          setup(a) {
+            a.onResolve({ filter: /.*/ }, (p) => {
+              let c = p.path;
+              if (c[0] !== '.' && !_path2.default.isAbsolute(c))
                 return { external: !0 };
             });
           },
         },
         {
           name: 'replace-import-meta',
-          setup(i) {
-            i.onLoad({ filter: /\.[jt]s$/ }, async (p) => {
-              let m = await _fs2.default.promises.readFile(p.path, 'utf8');
+          setup(a) {
+            a.onLoad({ filter: /\.[jt]s$/ }, async (p) => {
+              let c = await _fs2.default.promises.readFile(p.path, 'utf8');
               return {
                 loader: p.path.endsWith('.ts') ? 'ts' : 'js',
-                contents: m
+                contents: c
                   .replace(
                     /\bimport\.meta\.url\b/g,
                     JSON.stringify(`file://${p.path}`),
@@ -1192,22 +1192,22 @@ async function ja(e, t = !1, r, n, o) {
         },
       ],
     }),
-    { text: a } = s.outputFiles[0];
+    { text: i } = s.outputFiles[0];
   return {
-    code: a,
+    code: i,
     dependencies: s.metafile ? Object.keys(s.metafile.inputs) : [],
   };
 }
 async function Pa(e, t, r) {
   let n = _path2.default.extname(e),
     o = W.extensions[n];
-  (W.extensions[n] = (i, p) => {
-    p === e ? i._compile(t, p) : o(i, p);
+  (W.extensions[n] = (a, p) => {
+    p === e ? a._compile(t, p) : o(a, p);
   }),
     delete W.cache[W.resolve(e)];
   let s = W(e),
-    a = r && s.__esModule ? s.default : s;
-  return (W.extensions[n] = o), a;
+    i = r && s.__esModule ? s.default : s;
+  return (W.extensions[n] = o), i;
 }
 async function Yt(e, t) {
   let r = await _globby2.default.call(void 0, e, { cwd: t, absolute: !0 });
@@ -1222,9 +1222,9 @@ var Jt = (e) =>
 u();
 var _isURL = require('validator/lib/isURL');
 var _isURL2 = _interopRequireDefault(_isURL);
-var Ia = /^https?:\/\/\w+(\.\w+)*(:[0-9]+)?(\/.*)?$/,
-  Oe = (e) => _isURL2.default.call(void 0, e) || Ia.test(e);
-var oe = (e, t) => {
+var Ma = /^https?:\/\/\w+(\.\w+)*(:[0-9]+)?(\/.*)?$/,
+  Oe = (e) => _isURL2.default.call(void 0, e) || Ma.test(e);
+var se = (e, t) => {
     let r = _upath.relative.call(void 0, e, t);
     return _upath.normalizeSafe.call(void 0, `.${_upath.sep}${r}`);
   },
@@ -1233,23 +1233,23 @@ var oe = (e, t) => {
       let r = new URL(t);
       return e
         .replace(r.origin, '')
-        .replace(A(r.pathname).dirname, '')
+        .replace(v(r.pathname).dirname, '')
         .replace(`.${Jt(e)}`, '');
     }
     return (
       '/' +
       _upath.normalize
-        .call(void 0, _upath.relative.call(void 0, A(t).dirname, e))
+        .call(void 0, _upath.relative.call(void 0, v(t).dirname, e))
         .split('../')
         .join('')
         .replace(`.${Jt(e)}`, '')
     );
   };
-var Ae = 'BodyType',
+var ve = 'BodyType',
   Fn = (e, t) => {
-    let r = A(e),
-      n = A(t.path),
-      { pathWithoutExtension: o } = A(oe(r.dirname, n.path));
+    let r = v(e),
+      n = v(t.path),
+      { pathWithoutExtension: o } = v(se(r.dirname, n.path));
     return o;
   },
   ht = async ({
@@ -1262,17 +1262,17 @@ var Ae = 'BodyType',
     var b;
     if (!t || !e) return;
     let s = t.default,
-      a = t.name ? t.name : `${r}Mutator`,
-      i = t.path,
-      p = await _fsextra.readFile.call(void 0, i, 'utf8'),
-      m =
+      i = t.name ? t.name : `${r}Mutator`,
+      a = t.path,
+      p = await _fsextra.readFile.call(void 0, a, 'utf8'),
+      c =
         p.includes('export type ErrorType') ||
         p.includes('export interface ErrorType'),
-      c =
-        p.includes(`export type ${Ae}`) || p.includes(`export interface ${Ae}`),
+      m =
+        p.includes(`export type ${ve}`) || p.includes(`export interface ${ve}`),
       l = t.default ? `${x(r)}ErrorType` : 'ErrorType',
-      g = t.default ? `${x(r)}${Ae}` : Ae,
-      { file: d, cached: f } = await yt(i, {
+      f = t.default ? `${x(r)}${ve}` : ve,
+      { file: d, cached: g } = await yt(a, {
         isDefault: !1,
         root: n,
         alias: t.alias,
@@ -1292,10 +1292,10 @@ var Ae = 'BodyType',
       let S = Fn(e, t);
       return $(
         {
-          name: a,
+          name: i,
           path: S,
           default: s,
-          hasErrorType: m,
+          hasErrorType: c,
           errorTypeName: l,
           hasSecondArg: h.numberOfParams > 1,
           hasThirdArg: h.numberOfParams > 2,
@@ -1304,27 +1304,27 @@ var Ae = 'BodyType',
               (b = t == null ? void 0 : t.name) != null && b.startsWith('use')
             ) && !h.numberOfParams,
         },
-        c ? { bodyTypeName: g } : {},
+        m ? { bodyTypeName: f } : {},
       );
     } else {
       let y = Fn(e, t);
       return (
-        f ||
+        g ||
           X().warn(
             _chalk2.default.yellow('Failed to parse provided mutator function'),
           ),
         $(
           {
-            name: a,
+            name: i,
             path: y,
             default: s,
             hasSecondArg: !1,
             hasThirdArg: !1,
             isHook: !1,
-            hasErrorType: m,
+            hasErrorType: c,
             errorTypeName: l,
           },
-          c ? { bodyTypeName: g } : {},
+          m ? { bodyTypeName: f } : {},
         )
       );
     }
@@ -1336,31 +1336,31 @@ var Ae = 'BodyType',
         s =
           (r = o == null ? void 0 : o.body) == null
             ? void 0
-            : r.find((i) => {
-                var p, m, c, l, g, d, f;
-                if (i.type === 'ExpressionStatement')
-                  return ((c =
-                    (m =
-                      (p = i.expression.arguments) == null ? void 0 : p[1]) ==
+            : r.find((a) => {
+                var p, c, m, l, f, d, g;
+                if (a.type === 'ExpressionStatement')
+                  return ((m =
+                    (c =
+                      (p = a.expression.arguments) == null ? void 0 : p[1]) ==
                     null
                       ? void 0
-                      : m.properties) != null &&
-                    c.some((b) => {
+                      : c.properties) != null &&
+                    m.some((b) => {
                       var y;
                       return ((y = b.key) == null ? void 0 : y.name) === t;
                     })) ||
-                    ((g =
-                      (l = i.expression.left) == null ? void 0 : l.property) ==
+                    ((f =
+                      (l = a.expression.left) == null ? void 0 : l.property) ==
                     null
                       ? void 0
-                      : g.name) === t
+                      : f.name) === t
                     ? !0
-                    : (f =
-                        (d = i.expression.right) == null
+                    : (g =
+                        (d = a.expression.right) == null
                           ? void 0
                           : d.properties) == null
                     ? void 0
-                    : f.some((b) => b.key.name === t);
+                    : g.some((b) => b.key.name === t);
               });
       if (!s) return;
       if (s.expression.type === 'AssignmentExpression') {
@@ -1370,22 +1370,22 @@ var Ae = 'BodyType',
         )
           return { numberOfParams: s.expression.right.params.length };
         if (s.expression.right.name) return Ot(o, s.expression.right.name);
-        let i =
+        let a =
           (n = s.expression.right) == null
             ? void 0
             : n.properties.find((p) => p.key.name === t);
-        return i.value.name
-          ? Ot(o, i.value.name)
-          : i.value.type === 'FunctionExpression' ||
-            i.value.type === 'ArrowFunctionExpression'
-          ? { numberOfParams: i.value.params.length }
+        return a.value.name
+          ? Ot(o, a.value.name)
+          : a.value.type === 'FunctionExpression' ||
+            a.value.type === 'ArrowFunctionExpression'
+          ? { numberOfParams: a.value.params.length }
           : void 0;
       }
-      let a = s.expression.arguments[1].properties.find((i) => {
+      let i = s.expression.arguments[1].properties.find((a) => {
         var p;
-        return ((p = i.key) == null ? void 0 : p.name) === t;
+        return ((p = a.key) == null ? void 0 : p.name) === t;
       });
-      return Ot(o, a.value.body.name);
+      return Ot(o, i.value.body.name);
     } catch (e6) {
       return;
     }
@@ -1397,7 +1397,7 @@ var Ae = 'BodyType',
         ? void 0
         : o.find((s) => {
             if (s.type === 'VariableDeclaration')
-              return s.declarations.find((a) => a.id.name === t);
+              return s.declarations.find((i) => i.id.name === t);
             if (s.type === 'FunctionDeclaration' && s.id.name === t) return s;
           });
     if (!r) return;
@@ -1420,20 +1420,20 @@ var Un = ({ imports: e = [], target: t, isRootKey: r, specsName: n }) =>
               o.specKey === s.specKey,
           )
           .sort()
-          .map(({ specKey: o, name: s, values: a, alias: i }) => {
+          .map(({ specKey: o, name: s, values: i, alias: a }) => {
             if (o) {
               let p = o !== t ? n[o] : '';
               return !r && o
-                ? `import ${a ? '' : 'type '}{ ${s}${
-                    i ? ` as ${i}` : ''
-                  } } from '../${_upath.join.call(void 0, p, P(s))}';`
-                : `import ${a ? '' : 'type '}{ ${s}${
-                    i ? ` as ${i}` : ''
-                  } } from './${_upath.join.call(void 0, p, P(s))}';`;
+                ? `import ${i ? '' : 'type '}{ ${s}${
+                    a ? ` as ${a}` : ''
+                  } } from '../${_upath.join.call(void 0, p, E(s))}';`
+                : `import ${i ? '' : 'type '}{ ${s}${
+                    a ? ` as ${a}` : ''
+                  } } from './${_upath.join.call(void 0, p, E(s))}';`;
             }
-            return `import ${a ? '' : 'type '}{ ${s}${
-              i ? ` as ${i}` : ''
-            } } from './${P(s)}';`;
+            return `import ${i ? '' : 'type '}{ ${s}${
+              a ? ` as ${a}` : ''
+            } } from './${E(s)}';`;
           }).join(`
 `)
       : '',
@@ -1449,7 +1449,7 @@ var Un = ({ imports: e = [], target: t, isRootKey: r, specsName: n }) =>
                     ? `, { ${
                         n.hasErrorType ? `ErrorType as ${n.errorTypeName}` : ''
                       }${n.hasErrorType && n.bodyTypeName ? ',' : ''} ${
-                        n.bodyTypeName ? `${Ae} as ${n.bodyTypeName}` : ''
+                        n.bodyTypeName ? `${ve} as ${n.bodyTypeName}` : ''
                       } }`
                     : ''
                 }`
@@ -1473,44 +1473,44 @@ var Un = ({ imports: e = [], target: t, isRootKey: r, specsName: n }) =>
     hasSchemaDir: o,
     isAllowSyntheticDefaultImports: s,
   }) => {
-    let a = t.filter((p) => e.includes(p.alias || p.name));
-    if (!a.length) return;
-    let i = a.reduce((p, m) => {
-      var l, g, d;
-      let c = o && m.specKey ? m.specKey : 'default';
+    let i = t.filter((p) => e.includes(p.alias || p.name));
+    if (!i.length) return;
+    let a = i.reduce((p, c) => {
+      var l, f, d;
+      let m = o && c.specKey ? c.specKey : 'default';
       return (
-        (p[c] = {
+        (p[m] = {
           values:
-            ((l = p[c]) == null ? void 0 : l.values) ||
-            (m.values && (s || !m.syntheticDefaultImport)) ||
+            ((l = p[m]) == null ? void 0 : l.values) ||
+            (c.values && (s || !c.syntheticDefaultImport)) ||
             !1,
           deps: [
-            ...((d = (g = p[c]) == null ? void 0 : g.deps) != null ? d : []),
-            m,
+            ...((d = (f = p[m]) == null ? void 0 : f.deps) != null ? d : []),
+            c,
           ],
         }),
         p
       );
     }, {});
-    return Object.entries(i).map(([p, { values: m, deps: c }]) => {
-      let l = c.find((y) => y.default && (s || !y.syntheticDefaultImport)),
-        g = s ? void 0 : c.find((y) => y.syntheticDefaultImport),
+    return Object.entries(a).map(([p, { values: c, deps: m }]) => {
+      let l = m.find((y) => y.default && (s || !y.syntheticDefaultImport)),
+        f = s ? void 0 : m.find((y) => y.syntheticDefaultImport),
         d = _lodashuniq2.default.call(
           void 0,
-          c
+          m
             .filter((y) => !y.default && !y.syntheticDefaultImport)
             .map(({ name: y, alias: h }) => (h ? `${y} as ${h}` : y)),
         ).join(`,
   `),
-        f = '',
-        b = g ? `import * as ${g.name} from '${r}';` : '';
+        g = '',
+        b = f ? `import * as ${f.name} from '${r}';` : '';
       if (b) {
-        if (c.length === 1) return b;
-        f += `${b}
+        if (m.length === 1) return b;
+        g += `${b}
 `;
       }
       return (
-        (f += `import ${m ? '' : 'type '}${
+        (g += `import ${c ? '' : 'type '}${
           l ? `${l.name}${d ? ',' : ''}` : ''
         }${
           d
@@ -1519,16 +1519,16 @@ var Un = ({ imports: e = [], target: t, isRootKey: r, specsName: n }) =>
 }`
             : ''
         } from '${r}${p !== 'default' && n[p] ? `/${n[p]}` : ''}'`),
-        f
+        g
       );
     }).join(`
 `);
   }),
   $t = (exports.w = (e, t, r, n, o) => {
     let s = t
-      .map((a) =>
+      .map((i) =>
         qa(
-          T($({}, a), {
+          T($({}, i), {
             implementation: e,
             specsName: r,
             hasSchemaDir: n,
@@ -1572,10 +1572,10 @@ var Fa = (e, t, r) =>
         (o += `
         params,`),
       e.isBlob &&
-        (!k(r) || !r.hasOwnProperty('responseType')) &&
+        (!q(r) || !r.hasOwnProperty('responseType')) &&
         (o += `
         responseType: 'blob',`),
-      k(r) &&
+      q(r) &&
         (o += `
  ${(s = ne(r)) == null ? void 0 : s.slice(1, -1)}`),
       n &&
@@ -1591,23 +1591,23 @@ var Fa = (e, t, r) =>
     response: n,
     verb: o,
     requestOptions: s,
-    isFormData: a,
-    isFormUrlEncoded: i,
+    isFormData: i,
+    isFormUrlEncoded: a,
     isAngular: p,
   }) => {
-    let m = se.includes(o),
-      c = m ? Fa(t, a, i) : '',
+    let c = oe.includes(o),
+      m = c ? Fa(t, i, a) : '',
       l = Va(n, r == null ? void 0 : r.schema, s);
     return o === K.DELETE
-      ? c
+      ? m
         ? `
-      \`${e}\`,{${p ? 'body' : 'data'}:${c} ${l === 'options' ? `...${l}` : l}}
+      \`${e}\`,{${p ? 'body' : 'data'}:${m} ${l === 'options' ? `...${l}` : l}}
     `
         : `
       \`${e}\`,${l === 'options' ? l : `{${l}}`}
     `
       : `
-      \`${e}\`,${m ? c || 'undefined,' : ''}${l === 'options' ? l : `{${l}}`}
+      \`${e}\`,${c ? m || 'undefined,' : ''}${l === 'options' ? l : `{${l}}`}
     `;
   }),
   Na = (exports.B = (e, t, r) =>
@@ -1641,31 +1641,29 @@ var Fa = (e, t, r) =>
     response: n,
     verb: o,
     isFormData: s,
-    isFormUrlEncoded: a,
-    isBodyVerb: i,
+    isFormUrlEncoded: i,
+    isBodyVerb: a,
     hasSignal: p,
   }) => {
-    let m = i ? Na(t, s, a) : '',
-      c = Ua(n, r == null ? void 0 : r.schema),
+    let c = a ? Na(t, s, i) : '',
+      m = Ua(n, r == null ? void 0 : r.schema),
       l = t.contentType
         ? `,
       headers: {'Content-Type': '${t.contentType}'}`
         : '';
     return `{url: \`${e}\`, method: '${o}'${
-      !i && p ? ', signal' : ''
-    }${l}${m}${c}
+      !a && p ? ', signal' : ''
+    }${l}${c}${m}
     }`;
   }),
   me = (exports.E = (e, t) => {
     var r, n;
     return t
-      ? k(e)
+      ? q(e)
         ? `{${(n = ne(e)) == null ? void 0 : n.slice(1, -1)} ...options}`
         : 'options'
-      : k(e)
-      ? (r = ne(e)) == null
-        ? void 0
-        : r.slice(1, -1)
+      : q(e)
+      ? `{${(r = ne(e)) == null ? void 0 : r.slice(1, -1)}}`
       : '';
   }),
   ue = (exports.F = ({
@@ -1707,12 +1705,12 @@ var Le = {
         [...o.slice(0, 2), 'suffix'],
         '',
       ),
-      a = o[o.length - 1];
-    if (!r) return { name: x(a) + s, originalName: a, refPaths: o };
-    let i = Oe(t.specKey)
+      i = o[o.length - 1];
+    if (!r) return { name: x(i) + s, originalName: i, refPaths: o };
+    let a = Oe(t.specKey)
       ? _url2.default.resolve(t.specKey, r)
-      : _upath.resolve.call(void 0, A(t.specKey).dirname, r);
-    return { name: x(a) + s, originalName: a, specKey: i, refPaths: o };
+      : _upath.resolve.call(void 0, v(t.specKey).dirname, r);
+    return { name: x(i) + s, originalName: i, specKey: a, refPaths: o };
   };
 u();
 var _inquirer = require('inquirer');
@@ -1723,18 +1721,18 @@ var _https2 = _interopRequireDefault(_https);
 var Wn = (e, t) =>
   new Promise((r, n) => {
     let o = _https2.default.request(e, (s) => {
-      let a = '';
-      s.on('data', (i) => (a += i.toString())),
+      let i = '';
+      s.on('data', (a) => (i += a.toString())),
         s.on('error', n),
         s.on('end', () => {
-          let i = {
+          let a = {
             status: s.statusCode,
             headers: s.headers,
-            body: JSON.parse(a),
+            body: JSON.parse(i),
           };
           s.statusCode && s.statusCode >= 200 && s.statusCode <= 299
-            ? r(i)
-            : n(i);
+            ? r(a)
+            : n(a);
         });
     });
     o.on('error', n), t && o.write(t, 'binary'), o.end();
@@ -1792,22 +1790,22 @@ var Ja = ({ accessToken: e, repo: t, owner: r, branch: n, path: o }) => {
     }
   },
   Za = async (e) => {
-    var m, c, l, g;
+    var c, m, l, f;
     let t = _upath.join.call(void 0, __dirname, '.githubToken'),
       r = await Xa(t),
       [n] = e.split('github.com/').slice(-1),
-      [o, s, , a, ...i] = n.split('/'),
-      p = i.join('/');
+      [o, s, , i, ...a] = n.split('/'),
+      p = a.join('/');
     try {
       let { body: d } = await Wn(
-        ...Ja({ accessToken: r, repo: s, owner: o, branch: a, path: p }),
+        ...Ja({ accessToken: r, repo: s, owner: o, branch: i, path: p }),
       );
       return (
-        (m = d.errors) != null &&
-          m.length &&
-          ((c = d.errors) == null
+        (c = d.errors) != null &&
+          c.length &&
+          ((m = d.errors) == null
             ? void 0
-            : c.some((b) => (b == null ? void 0 : b.type) === 'NOT_FOUND')) &&
+            : m.some((b) => (b == null ? void 0 : b.type) === 'NOT_FOUND')) &&
           (
             await _inquirer2.default.prompt([
               {
@@ -1819,9 +1817,9 @@ var Ja = ({ accessToken: e, repo: t, owner: r, branch: n, path: o }) => {
             ])
           ).removeToken &&
           (await _fsextra.unlink.call(void 0, t)),
-        (g = (l = d.data) == null ? void 0 : l.repository) == null
+        (f = (l = d.data) == null ? void 0 : l.repository) == null
           ? void 0
-          : g.object.text
+          : f.object.text
       );
     } catch (d) {
       throw d.body
@@ -1899,7 +1897,7 @@ var Ln = async (e, t = process.cwd()) => {
       );
       return o ? (await _tsconfck.parse.call(void 0, o)).tsconfig : void 0;
     }
-    if (q(e)) {
+    if (F(e)) {
       let o = le(e, t);
       if (_fsextra.existsSync.call(void 0, o)) {
         let s = await _tsconfck.parse.call(void 0, o);
@@ -1907,14 +1905,14 @@ var Ln = async (e, t = process.cwd()) => {
           ((n =
             (r = s.referenced) == null
               ? void 0
-              : r.find(({ tsconfigFile: i }) => i === o)) == null
+              : r.find(({ tsconfigFile: a }) => a === o)) == null
             ? void 0
             : n.tsconfig) || s.tsconfig
         );
       }
       return;
     }
-    if (k(e)) return e;
+    if (q(e)) return e;
   },
   Q = (exports.J = (e) => {
     var t, r, n;
@@ -1937,15 +1935,15 @@ var Yn = async (e, t = process.cwd(), r = {}) => {
       h,
       S,
       w,
-      R,
+      P,
       j,
-      M,
       I,
-      V,
+      R,
+      G,
       Z,
       ee,
       te,
-      Ie,
+      Me,
       it,
       Be,
       _e,
@@ -1953,7 +1951,7 @@ var Yn = async (e, t = process.cwd(), r = {}) => {
       ze,
       at,
       pt,
-      Ar,
+      vr,
       Gr,
       Cr,
       Dr,
@@ -1995,16 +1993,16 @@ var Yn = async (e, t = process.cwd(), r = {}) => {
       n.output ||
         (X().error(_chalk2.default.red('Config require an output')),
         process.exit(1));
-    let o = q(n.input) ? { target: n.input } : n.input,
-      s = q(n.output) ? { target: n.output } : n.output;
+    let o = F(n.input) ? { target: n.input } : n.input,
+      s = F(n.output) ? { target: n.output } : n.output;
     typeof ((h = (y = s.override) == null ? void 0 : y.angular) == null
       ? void 0
       : h.provideInRoot) < 'u' &&
       console.warn('provideInRoot is deprecated, use provideIn instead');
-    let a = le(s.workspace || '', t),
-      { clean: i, prettier: p, client: m, mode: c, mock: l, tslint: g } = r,
+    let i = le(s.workspace || '', t),
+      { clean: a, prettier: p, client: c, mode: m, mock: l, tslint: f } = r,
       d = await Ln(s.tsconfig || r.tsconfig, t),
-      f = await zn(s.packageJson || r.packageJson, t),
+      g = await zn(s.packageJson || r.packageJson, t),
       b = {
         input: {
           target: sp(o.target, t),
@@ -2016,43 +2014,43 @@ var Yn = async (e, t = process.cwd(), r = {}) => {
             ),
           },
           converterOptions: (w = o.converterOptions) != null ? w : {},
-          parserOptions: Pe(op, (R = o.parserOptions) != null ? R : {}),
+          parserOptions: Pe(op, (P = o.parserOptions) != null ? P : {}),
         },
         output: {
-          target: le(s.target, a),
-          schemas: le(s.schemas, a),
-          workspace: s.workspace ? a : void 0,
+          target: le(s.target, i),
+          schemas: le(s.schemas, i),
+          workspace: s.workspace ? i : void 0,
           client:
-            (M = (j = s.client) != null ? j : m) != null
-              ? M
+            (I = (j = s.client) != null ? j : c) != null
+              ? I
               : B.AXIOS_FUNCTIONS,
-          mode: ip((I = s.mode) != null ? I : c),
-          mock: (Z = (V = s.mock) != null ? V : l) != null ? Z : !1,
-          clean: (te = (ee = s.clean) != null ? ee : i) != null ? te : !1,
-          prettier: (it = (Ie = s.prettier) != null ? Ie : p) != null ? it : !1,
-          tslint: (_e = (Be = s.tslint) != null ? Be : g) != null ? _e : !1,
+          mode: ip((R = s.mode) != null ? R : m),
+          mock: (Z = (G = s.mock) != null ? G : l) != null ? Z : !1,
+          clean: (te = (ee = s.clean) != null ? ee : a) != null ? te : !1,
+          prettier: (it = (Me = s.prettier) != null ? Me : p) != null ? it : !1,
+          tslint: (_e = (Be = s.tslint) != null ? Be : f) != null ? _e : !1,
           tsconfig: d,
-          packageJson: f,
+          packageJson: g,
           override: T($({}, s.override), {
             operations: Hn(
               (ze = (Qe = s.override) == null ? void 0 : Qe.operations) != null
                 ? ze
                 : {},
-              a,
+              i,
             ),
             tags: Hn(
               (pt = (at = s.override) == null ? void 0 : at.tags) != null
                 ? pt
                 : {},
-              a,
+              i,
             ),
-            mutator: De(a, (Ar = s.override) == null ? void 0 : Ar.mutator),
+            mutator: De(i, (vr = s.override) == null ? void 0 : vr.mutator),
             formData:
               (kr = J((Gr = s.override) == null ? void 0 : Gr.formData)
                 ? (Dr = s.override) == null
                   ? void 0
                   : Dr.formData
-                : De(a, (Cr = s.override) == null ? void 0 : Cr.formData)) !=
+                : De(i, (Cr = s.override) == null ? void 0 : Cr.formData)) !=
               null
                 ? kr
                 : !0,
@@ -2062,7 +2060,7 @@ var Yn = async (e, t = process.cwd(), r = {}) => {
                   ? void 0
                   : Vr.formUrlEncoded
                 : De(
-                    a,
+                    i,
                     (Fr = s.override) == null ? void 0 : Fr.formUrlEncoded,
                   )) != null
                 ? Nr
@@ -2164,7 +2162,7 @@ var Yn = async (e, t = process.cwd(), r = {}) => {
   op = { validate: !0, resolve: { github: _n } },
   De = (e, t) => {
     var r;
-    return k(t)
+    return q(t)
       ? (t.path ||
           (X().error(_chalk2.default.red('Mutator need a path')),
           process.exit(1)),
@@ -2172,23 +2170,23 @@ var Yn = async (e, t = process.cwd(), r = {}) => {
           path: _upath.resolve.call(void 0, e, t.path),
           default: (r = t.default || !t.name) != null ? r : !1,
         }))
-      : q(t)
+      : F(t)
       ? { path: _upath.resolve.call(void 0, e, t), default: !0 }
       : t;
   },
-  sp = (e, t) => (q(e) && !Oe(e) ? le(e, t) : e),
-  le = (e, t) => (q(e) ? _upath.resolve.call(void 0, t, e) : e),
+  sp = (e, t) => (F(e) && !Oe(e) ? le(e, t) : e),
+  le = (e, t) => (F(e) ? _upath.resolve.call(void 0, t, e) : e),
   Hn = (e, t) =>
     Object.fromEntries(
-      Object.entries(e).map((m) => {
-        var [r, c] = m,
-          l = c,
+      Object.entries(e).map((c) => {
+        var [r, m] = c,
+          l = m,
           {
             transformer: n,
             mutator: o,
             formData: s,
-            formUrlEncoded: a,
-            requestOptions: i,
+            formUrlEncoded: i,
+            requestOptions: a,
           } = l,
           p = we(l, [
             'transformer',
@@ -2197,7 +2195,7 @@ var Yn = async (e, t = process.cwd(), r = {}) => {
             'formUrlEncoded',
             'requestOptions',
           ]);
-        var g, d;
+        var f, d;
         return [
           r,
           T(
@@ -2206,9 +2204,9 @@ var Yn = async (e, t = process.cwd(), r = {}) => {
               o ? { mutator: De(t, o) } : {},
             ),
             {
-              formData: (g = J(s) ? s : De(t, s)) != null ? g : !0,
-              formUrlEncoded: (d = J(a) ? a : De(t, a)) != null ? d : !0,
-              requestOptions: i != null ? i : !0,
+              formData: (f = J(s) ? s : De(t, s)) != null ? f : !0,
+              formUrlEncoded: (d = J(i) ? i : De(t, i)) != null ? d : !0,
+              requestOptions: a != null ? a : !0,
             },
           ),
         ];
@@ -2232,19 +2230,19 @@ var Jn = async (e, t, r = '.') => {
       typeof e == 'boolean'
         ? r
         : Array.isArray(e)
-        ? e.filter((i) => typeof i == 'string')
+        ? e.filter((a) => typeof a == 'string')
         : e;
   N(
     `Watching for changes in ${
-      Array.isArray(s) ? s.map((i) => '"' + i + '"').join(' | ') : '"' + s + '"'
+      Array.isArray(s) ? s.map((a) => '"' + a + '"').join(' | ') : '"' + s + '"'
     }`,
   ),
-    n(s, { ignorePermissionErrors: !0, ignored: o }).on('all', async (i, p) => {
-      N(`Change detected: ${i} ${p}`);
+    n(s, { ignorePermissionErrors: !0, ignored: o }).on('all', async (a, p) => {
+      N(`Change detected: ${a} ${p}`);
       try {
         await t();
-      } catch (m) {
-        N(_chalk2.default.red(m));
+      } catch (c) {
+        N(_chalk2.default.red(c));
       }
     });
 };
@@ -2257,7 +2255,7 @@ u();
 var _lodashomit = require('lodash.omit');
 var _lodashomit2 = _interopRequireDefault(_lodashomit);
 u();
-var v = (e, t, r) =>
+var A = (e, t, r) =>
   e.reduce(async (n, ...o) => t(await n, ...o), Promise.resolve(r));
 u();
 var _swagger2openapi = require('swagger2openapi');
@@ -2287,10 +2285,10 @@ u();
 var St = async (e, t = process.cwd(), r = !0) => {
   if (!e) return e;
   try {
-    if (q(e)) {
+    if (F(e)) {
       let n = _upath.resolve.call(void 0, t, e),
         o = await Promise.resolve().then(() => ye(W(n)));
-      return r && k(o) && o.default ? o.default : o;
+      return r && q(o) && o.default ? o.default : o;
     }
     return Promise.resolve(e);
   } catch (n) {
@@ -2304,7 +2302,7 @@ var Zn = (e) => /[^{]*{[\w_-]*}.*/.test(e),
     let t = e.match(/([^{]*){?([\w_-]*)}?(.*)/);
     if (!(t != null && t.length)) return e;
     let r = t[1],
-      n = U(P(t[2]), { es5keyword: !0, underscore: !0, dash: !0, dot: !0 }),
+      n = U(E(t[2]), { es5keyword: !0, underscore: !0, dash: !0, dot: !0 }),
       o = Zn(t[3]) ? eo(t[3]) : t[3];
     return Zn(e) ? `${r}\${${n}}${o}` : `${r}${n}${o}`;
   },
@@ -2317,17 +2315,17 @@ var Zn = (e) => /[^{]*{[\w_-]*}.*/.test(e),
         '',
       );
 u();
-var D = (e, t, r = []) => {
+var k = (e, t, r = []) => {
   var p;
   if ((p = e == null ? void 0 : e.schema) != null && p.$ref) {
-    let m = D(e == null ? void 0 : e.schema, t, r);
-    return { schema: T($({}, e), { schema: m.schema }), imports: r };
+    let c = k(e == null ? void 0 : e.schema, t, r);
+    return { schema: T($({}, e), { schema: c.schema }), imports: r };
   }
-  if (!C(e)) return { schema: e, imports: r };
-  let { name: n, originalName: o, specKey: s, refPaths: a } = Ge(e.$ref, t),
-    i = _lodashget2.default.call(void 0, t.specs[s || t.specKey], a);
-  if (!i) throw `Oups... \u{1F37B}. Ref not found: ${e.$ref}`;
-  return D(i, T($({}, t), { specKey: s || t.specKey }), [
+  if (!D(e)) return { schema: e, imports: r };
+  let { name: n, originalName: o, specKey: s, refPaths: i } = Ge(e.$ref, t),
+    a = _lodashget2.default.call(void 0, t.specs[s || t.specKey], i);
+  if (!a) throw `Oups... \u{1F37B}. Ref not found: ${e.$ref}`;
+  return k(a, T($({}, t), { specKey: s || t.specKey }), [
     ...r,
     { name: n, specKey: s, schemaName: o },
   ]);
@@ -2412,40 +2410,40 @@ ${ro.join(`
       mutator: n,
       body: o,
       props: s,
-      verb: a,
-      override: i,
+      verb: i,
+      override: a,
       formData: p,
-      formUrlEncoded: m,
+      formUrlEncoded: c,
     },
-    { route: c },
+    { route: m },
   ) => {
-    let l = (i == null ? void 0 : i.requestOptions) !== !1,
-      g = (i == null ? void 0 : i.formData) !== !1,
-      d = (i == null ? void 0 : i.formUrlEncoded) !== !1,
-      f = se.includes(a),
+    let l = (a == null ? void 0 : a.requestOptions) !== !1,
+      f = (a == null ? void 0 : a.formData) !== !1,
+      d = (a == null ? void 0 : a.formUrlEncoded) !== !1,
+      g = oe.includes(i),
       b = ue({
         formData: p,
-        formUrlEncoded: m,
+        formUrlEncoded: c,
         body: o,
-        isFormData: g,
+        isFormData: f,
         isFormUrlEncoded: d,
       }),
       y = r.definition.success || 'unknown';
     if ((ro.push(`export type ${x(t)}ClientResult = NonNullable<${y}>`), n)) {
       let S = ce({
-          route: c,
+          route: m,
           body: o,
           queryParams: e,
           response: r,
-          verb: a,
-          isFormData: g,
+          verb: i,
+          isFormData: f,
           isFormUrlEncoded: d,
           hasSignal: !1,
-          isBodyVerb: f,
+          isBodyVerb: g,
         }),
-        w = l ? me(i == null ? void 0 : i.requestOptions, n.hasThirdArg) : '';
+        w = l ? me(a == null ? void 0 : a.requestOptions, n.hasThirdArg) : '';
       return ` ${t}<TData = ${y}>(
-    ${F(s, 'implementation')}
+    ${V(s, 'implementation')}
  ${
    l && n.hasThirdArg ? `options?: ThirdParameter<typeof ${n.name}>` : ''
  }) {${b}
@@ -2457,24 +2455,24 @@ ${ro.join(`
   `;
     }
     let h = pe({
-      route: c,
+      route: m,
       body: o,
       queryParams: e,
       response: r,
-      verb: a,
-      requestOptions: i == null ? void 0 : i.requestOptions,
-      isFormData: g,
+      verb: i,
+      requestOptions: a == null ? void 0 : a.requestOptions,
+      isFormData: f,
       isFormUrlEncoded: d,
       isAngular: !0,
     });
     return ` ${t}<TData = ${y}>(
-    ${F(s, 'implementation')} ${
+    ${V(s, 'implementation')} ${
       l
         ? `options?: HttpClientOptions
 `
         : ''
     }  ): Observable<TData>  {${b}
-    return this.http.${a}<TData>(${h});
+    return this.http.${i}<TData>(${h});
   }
 `;
   },
@@ -2503,38 +2501,38 @@ var gp = [
       mutator: n,
       body: o,
       props: s,
-      verb: a,
-      override: i,
+      verb: i,
+      override: a,
       formData: p,
-      formUrlEncoded: m,
+      formUrlEncoded: c,
     },
-    { route: c, context: l },
+    { route: m, context: l },
   ) => {
-    let g = (i == null ? void 0 : i.requestOptions) !== !1,
-      d = (i == null ? void 0 : i.formData) !== !1,
-      f = (i == null ? void 0 : i.formUrlEncoded) !== !1,
+    let f = (a == null ? void 0 : a.requestOptions) !== !1,
+      d = (a == null ? void 0 : a.formData) !== !1,
+      g = (a == null ? void 0 : a.formUrlEncoded) !== !1,
       b = Q(l.tsconfig),
       y = ue({
         formData: p,
-        formUrlEncoded: m,
+        formUrlEncoded: c,
         body: o,
         isFormData: d,
-        isFormUrlEncoded: f,
+        isFormUrlEncoded: g,
       }),
-      h = se.includes(a);
+      h = oe.includes(i);
     if (n) {
       let w = ce({
-          route: c,
+          route: m,
           body: o,
           queryParams: e,
           response: r,
-          verb: a,
+          verb: i,
           isFormData: d,
-          isFormUrlEncoded: f,
+          isFormUrlEncoded: g,
           isBodyVerb: h,
           hasSignal: !0,
         }),
-        R = g ? me(i == null ? void 0 : i.requestOptions, n.hasSecondArg) : '';
+        P = f ? me(a == null ? void 0 : a.requestOptions, n.hasSecondArg) : '';
       return (
         wt.set(
           t,
@@ -2544,8 +2542,8 @@ var gp = [
             }>>>`,
         ),
         `const ${t} = (
-    ${F(s, 'implementation')}
- ${g && n.hasSecondArg ? `options?: SecondParameter<typeof ${n.name}>,` : ''}${
+    ${V(s, 'implementation')}
+ ${f && n.hasSecondArg ? `options?: SecondParameter<typeof ${n.name}>,` : ''}${
           h
             ? `
 `
@@ -2554,20 +2552,20 @@ var gp = [
         }) => {${y}
       return ${n.name}<${r.definition.success || 'unknown'}>(
       ${w},
-      ${R});
+      ${P});
     }
   `
       );
     }
     let S = pe({
-      route: c,
+      route: m,
       body: o,
       queryParams: e,
       response: r,
-      verb: a,
-      requestOptions: i == null ? void 0 : i.requestOptions,
+      verb: i,
+      requestOptions: a == null ? void 0 : a.requestOptions,
       isFormData: d,
-      isFormUrlEncoded: f,
+      isFormUrlEncoded: g,
     });
     return (
       wt.set(
@@ -2580,13 +2578,13 @@ var gp = [
       `const ${t} = <TData = AxiosResponse<${
         r.definition.success || 'unknown'
       }>>(
-    ${F(s, 'implementation')} ${
-        g
+    ${V(s, 'implementation')} ${
+        f
           ? `options?: AxiosRequestConfig
 `
           : ''
       } ): Promise<TData> => {${y}
-    return axios${b ? '' : '.default'}.${a}(${S});
+    return axios${b ? '' : '.default'}.${i}(${S});
   }
 `
     );
@@ -2624,17 +2622,17 @@ ${
   }) => {
     let s = `return {${e.join(',')}}};
 `,
-      a = e
+      i = e
         .map((p) => {
-          var m;
+          var c;
           return wt.has(p)
-            ? (m = wt.get(p)) == null
+            ? (c = wt.get(p)) == null
               ? void 0
-              : m(r || !t ? void 0 : t)
+              : c(r || !t ? void 0 : t)
             : '';
         })
         .filter(Boolean),
-      i =
+      a =
         n && !o
           ? `
 type AwaitedInput<T> = PromiseLike<T> | T;
@@ -2644,10 +2642,10 @@ type AwaitedInput<T> = PromiseLike<T> | T;
 `
           : '';
     return (
-      a.length &&
-        (i += a.join(`
+      i.length &&
+        (a += i.join(`
 `)),
-      r ? i : s + i
+      r ? a : s + a
     );
   },
   or = (e, t) => {
@@ -2677,26 +2675,26 @@ var po = {
 u();
 u();
 var co = (e, t, r) => {
-  var a, i, p, m;
+  var i, a, p, c;
   let n = Object.entries(
-      (i = (a = t.specs[r].components) == null ? void 0 : a.schemas) != null
-        ? i
+      (a = (i = t.specs[r].components) == null ? void 0 : i.schemas) != null
+        ? a
         : [],
-    ).reduce((c, [l, g]) => ((c[l] = g), c), {}),
+    ).reduce((m, [l, f]) => ((m[l] = f), m), {}),
     o = Object.entries(
-      (m = (p = t.specs[r].components) == null ? void 0 : p.responses) != null
-        ? m
+      (c = (p = t.specs[r].components) == null ? void 0 : p.responses) != null
+        ? c
         : [],
-    ).reduce((c, [l, g]) => {
-      var d, f;
+    ).reduce((m, [l, f]) => {
+      var d, g;
       return (
-        (c[l] = C(g)
-          ? g
-          : (f = (d = g.content) == null ? void 0 : d['application/json']) ==
+        (m[l] = D(f)
+          ? f
+          : (g = (d = f.content) == null ? void 0 : d['application/json']) ==
             null
           ? void 0
-          : f.schema),
-        c
+          : g.schema),
+        m
       );
     }, {}),
     s = $($({}, n), o);
@@ -2727,40 +2725,40 @@ var yp = (e) => e[0] === '/' && e[e.length - 1] === '/',
     tags: n,
     combine: o,
     context: s,
-    imports: a,
+    imports: i,
   }) => {
-    if (C(e)) {
-      let { name: p, specKey: m } = Ge(
+    if (D(e)) {
+      let { name: p, specKey: c } = Ge(
           e.$ref,
           T($({}, s), { specKey: e.specKey || s.specKey }),
         ),
-        c = T($({}, co(p, s, m || e.specKey || s.specKey)), {
+        m = T($({}, co(p, s, c || e.specKey || s.specKey)), {
           name: p,
           path: e.path,
           isRef: !0,
-          specKey: m || e.specKey,
+          specKey: c || e.specKey,
         }),
         l = await He({
-          item: c,
+          item: m,
           mockOptions: t,
           operationId: r,
           tags: n,
           combine: o,
           context: s,
-          imports: a,
+          imports: i,
         });
-      return T($({}, l), { type: c.type });
+      return T($({}, l), { type: m.type });
     }
-    let i = await He({
+    let a = await He({
       item: e,
       mockOptions: t,
       operationId: r,
       tags: n,
       combine: o,
       context: s,
-      imports: a,
+      imports: i,
     });
-    return T($({}, i), { type: e.type });
+    return T($({}, a), { type: e.type });
   };
 u();
 var _cuid = require('cuid');
@@ -2778,35 +2776,35 @@ var uo = async ({
   mockOptions: n,
   operationId: o,
   tags: s,
-  combine: a,
-  context: i,
+  combine: i,
+  context: a,
   imports: p,
 }) => {
-  var g;
-  let m = [],
-    c = [...((g = a == null ? void 0 : a.properties) != null ? g : [])];
+  var f;
+  let c = [],
+    m = [...((f = i == null ? void 0 : i.properties) != null ? f : [])];
   return {
-    value: await v(
+    value: await A(
       t,
-      async (d, f, b, y) => {
+      async (d, g, b, y) => {
         var S;
         let h = await he({
-          schema: T($({}, f), {
+          schema: T($({}, g), {
             name: e.name,
             path: e.path ? e.path : '#',
             specKey: e.specKey,
           }),
-          combine: r ? void 0 : { properties: c },
+          combine: r ? void 0 : { properties: m },
           mockOptions: n,
           operationId: o,
           tags: s,
-          context: i,
+          context: a,
           imports: p,
         });
         return (
-          (m = [...m, ...h.imports]),
-          (c = [...c, ...((S = h.properties) != null ? S : [])]),
-          !b && !a
+          (c = [...c, ...h.imports]),
+          (m = [...m, ...((S = h.properties) != null ? S : [])]),
+          !b && !i
             ? h.enums || r
               ? y.length === 1
                 ? `faker.random.arrayElement([${h.value}])`
@@ -2818,8 +2816,8 @@ var uo = async ({
               : `{${h.value},`
             : y.length - 1 === b
             ? h.enums || r
-              ? d + h.value + (a ? '' : '])')
-              : d + h.value + (a ? '' : '}')
+              ? d + h.value + (i ? '' : '])')
+              : d + h.value + (i ? '' : '}')
             : h.value
             ? d + h.value + ','
             : d
@@ -2827,9 +2825,9 @@ var uo = async ({
       },
       '',
     ),
-    imports: m,
+    imports: c,
     name: e.name,
-    properties: c,
+    properties: m,
   };
 };
 u();
@@ -2841,9 +2839,9 @@ var lo = async ({
   tags: n,
   combine: o,
   context: s,
-  imports: a,
+  imports: i,
 }) => {
-  if (C(e))
+  if (D(e))
     return he({
       schema: T($({}, e), {
         name: e.name,
@@ -2854,7 +2852,7 @@ var lo = async ({
       operationId: r,
       tags: n,
       context: s,
-      imports: a,
+      imports: i,
     });
   if (e.allOf || e.oneOf || e.anyOf)
     return uo({
@@ -2866,25 +2864,25 @@ var lo = async ({
       tags: n,
       combine: o,
       context: s,
-      imports: a,
+      imports: i,
     });
   if (e.properties) {
-    let i = o ? '' : '{',
+    let a = o ? '' : '{',
       p = [],
-      m = [];
+      c = [];
     return (
-      (i += (
+      (a += (
         await Promise.all(
-          Object.entries(e.properties).map(async ([c, l]) => {
-            if (o != null && o.properties.includes(c)) return;
-            let g =
+          Object.entries(e.properties).map(async ([m, l]) => {
+            if (o != null && o.properties.includes(m)) return;
+            let f =
               (t == null ? void 0 : t.required) ||
-              (Array.isArray(e.required) ? e.required : []).includes(c);
-            if (mo(e.path, `\\.${c}\\.`) >= 1) return;
+              (Array.isArray(e.required) ? e.required : []).includes(m);
+            if (mo(e.path, `\\.${m}\\.`) >= 1) return;
             let d = await he({
               schema: T($({}, l), {
-                name: c,
-                path: e.path ? `${e.path}.${c}` : `#.${c}`,
+                name: m,
+                path: e.path ? `${e.path}.${m}` : `#.${m}`,
                 specKey: e.specKey,
               }),
               mockOptions: t,
@@ -2893,24 +2891,24 @@ var lo = async ({
               context: s,
               imports: p,
             });
-            (p = [...p, ...d.imports]), (m = [...m, c]);
-            let f = ke(c);
-            return !g && !d.overrided
-              ? `${f}: faker.random.arrayElement([${d.value}, undefined])`
-              : `${f}: ${d.value}`;
+            (p = [...p, ...d.imports]), (c = [...c, m]);
+            let g = ke(m);
+            return !f && !d.overrided
+              ? `${g}: faker.random.arrayElement([${d.value}, undefined])`
+              : `${g}: ${d.value}`;
           }),
         )
       )
         .filter(Boolean)
         .join(', ')),
-      (i += o ? '' : '}'),
-      { value: i, imports: p, name: e.name, properties: m }
+      (a += o ? '' : '}'),
+      { value: a, imports: p, name: e.name, properties: c }
     );
   }
   if (e.additionalProperties) {
     if (J(e.additionalProperties))
       return { value: '{}', imports: [], name: e.name };
-    let i = await he({
+    let a = await he({
       schema: T($({}, e.additionalProperties), {
         name: e.name,
         path: e.path ? `${e.path}.#` : '#',
@@ -2920,11 +2918,11 @@ var lo = async ({
       operationId: r,
       tags: n,
       context: s,
-      imports: a,
+      imports: i,
     });
-    return T($({}, i), {
+    return T($({}, a), {
       value: `{
-        '${_cuid2.default.call(void 0)}': ${i.value}
+        '${_cuid2.default.call(void 0)}': ${a.value}
       }`,
     });
   }
@@ -2937,24 +2935,24 @@ var He = async ({
   operationId: n,
   tags: o,
   combine: s,
-  context: a,
+  context: i,
 }) => {
-  var g, d, f, b;
-  let i = Tt(
-    (d = (g = r == null ? void 0 : r.operations) == null ? void 0 : g[n]) ==
+  var f, d, g, b;
+  let a = Tt(
+    (d = (f = r == null ? void 0 : r.operations) == null ? void 0 : f[n]) ==
       null
       ? void 0
       : d.properties,
     e,
   );
-  if (i) return i;
+  if (a) return a;
   let p = Object.entries(
-      (f = r == null ? void 0 : r.tags) != null ? f : {},
+      (g = r == null ? void 0 : r.tags) != null ? g : {},
     ).reduce((y, [h, S]) => (o.includes(h) ? Pe(y, S) : y), {}),
-    m = Tt(p == null ? void 0 : p.properties, e);
-  if (m) return m;
-  let c = Tt(r == null ? void 0 : r.properties, e);
+    c = Tt(p == null ? void 0 : p.properties, e);
   if (c) return c;
+  let m = Tt(r == null ? void 0 : r.properties, e);
+  if (m) return m;
   let l = $($({}, po), (b = r == null ? void 0 : r.format) != null ? b : {});
   if (e.format && l[e.format])
     return {
@@ -2990,17 +2988,17 @@ var He = async ({
         mockOptions: r,
         operationId: n,
         tags: o,
-        context: a,
+        context: i,
         imports: t,
       });
       if (h) {
-        if (!C(e.items)) return { value: y, imports: S, name: e.name };
-        let R = t.find((M) => w.replace('[]', '') === M.name);
+        if (!D(e.items)) return { value: y, imports: S, name: e.name };
+        let P = t.find((I) => w.replace('[]', '') === I.name);
         return {
           value: `faker.random.arrayElements(Object.values(${
-            (R == null ? void 0 : R.name) || w
+            (P == null ? void 0 : P.name) || w
           }))`,
-          imports: R ? [...S, T($({}, R), { values: !0 })] : S,
+          imports: P ? [...S, T($({}, P), { values: !0 })] : S,
           name: e.name,
         };
       }
@@ -3035,7 +3033,7 @@ var He = async ({
         operationId: n,
         tags: o,
         combine: s,
-        context: a,
+        context: i,
         imports: t,
       });
   }
@@ -3071,12 +3069,12 @@ var Rt = (e, t) =>
         ),
         t != null && t.operations
           ? {
-              operations: Object.entries(t.operations).reduce((s, [a, i]) => {
+              operations: Object.entries(t.operations).reduce((s, [i, a]) => {
                 var p;
                 return (
-                  (p = i.mock) != null &&
+                  (p = a.mock) != null &&
                     p.properties &&
-                    (s[a] = { properties: Rt(i.mock.properties, e) }),
+                    (s[i] = { properties: Rt(a.mock.properties, e) }),
                   s
                 );
               }, {}),
@@ -3085,12 +3083,12 @@ var Rt = (e, t) =>
       ),
       t != null && t.tags
         ? {
-            tags: Object.entries(t.tags).reduce((s, [a, i]) => {
+            tags: Object.entries(t.tags).reduce((s, [i, a]) => {
               var p;
               return (
-                (p = i.mock) != null &&
+                (p = a.mock) != null &&
                   p.properties &&
-                  (s[a] = { properties: Rt(i.mock.properties, e) }),
+                  (s[i] = { properties: Rt(a.mock.properties, e) }),
                 s
               );
             }, {}),
@@ -3121,32 +3119,32 @@ var Rt = (e, t) =>
     transformer: o,
     context: s,
   }) =>
-    v(
+    A(
       r.types.success,
-      async (a, { value: i, originalSchema: p, imports: m }) => {
-        if (!i || ve.includes(i)) {
-          let g = $p(i);
-          return a.definitions.push(o ? o(g, r.definition.success) : g), a;
+      async (i, { value: a, originalSchema: p, imports: c }) => {
+        if (!a || Ie.includes(a)) {
+          let f = $p(a);
+          return i.definitions.push(o ? o(f, r.definition.success) : f), i;
         }
-        if (!p) return a;
-        let c = await D(p, s),
+        if (!p) return i;
+        let m = await k(p, s),
           l = await He({
             item: $(
-              $({ name: i }, c.schema),
+              $({ name: a }, m.schema),
               r.imports.length ? { specKey: r.imports[0].specKey } : {},
             ),
-            imports: m,
+            imports: c,
             mockOptions: n,
             operationId: e,
             tags: t,
             context: s,
           });
         return (
-          a.imports.push(...l.imports),
-          a.definitions.push(
+          i.imports.push(...l.imports),
+          i.definitions.push(
             o ? o(l.value, r.definition.success) : l.value.toString(),
           ),
-          a
+          i
         );
       },
       { definitions: [], imports: [] },
@@ -3159,28 +3157,28 @@ var Rt = (e, t) =>
     transformer: o,
     context: s,
   }) => {
-    let a = hp(s.specs[s.specKey], n),
-      { definitions: i, imports: p } = await xp({
+    let i = hp(s.specs[s.specKey], n),
+      { definitions: a, imports: p } = await xp({
         operationId: e,
         tags: t,
         response: r,
-        mockOptionsWithoutFunc: a,
+        mockOptionsWithoutFunc: i,
         transformer: o,
         context: s,
       });
-    return { definition: '[' + i.join(', ') + ']', definitions: i, imports: p };
+    return { definition: '[' + a.join(', ') + ']', definitions: a, imports: p };
   },
   go = (e, t) => {
-    var o, s, a;
+    var o, s, i;
     let r =
-        (a =
+        (i =
           (s =
             (o = t == null ? void 0 : t.operations) == null ? void 0 : o[e]) ==
           null
             ? void 0
             : s.mock) == null
           ? void 0
-          : a.data,
+          : i.data,
       n = L(r) ? `(${r})()` : ne(r);
     return n == null
       ? void 0
@@ -3207,42 +3205,42 @@ var Sp = (e) =>
   $e = (e, t, r, n, o) => $t(e, [...Tp, ...t], r, n, o),
   yo = async (
     { operationId: e, response: t, verb: r, tags: n },
-    { pathRoute: o, override: s, context: a },
+    { pathRoute: o, override: s, context: i },
   ) => {
-    var f;
+    var g;
     let {
-        definitions: i,
+        definitions: a,
         definition: p,
-        imports: m,
+        imports: c,
       } = await fo({
         operationId: e,
         tags: n,
         response: t,
         override: s,
-        context: a,
+        context: i,
       }),
-      c = wp(o, (f = s == null ? void 0 : s.mock) == null ? void 0 : f.baseUrl),
+      m = wp(o, (g = s == null ? void 0 : s.mock) == null ? void 0 : g.baseUrl),
       l = go(e, s),
-      g = '';
+      f = '';
     l
-      ? (g = l)
-      : i.length > 1
-      ? (g = `faker.random.arrayElement(${p})`)
-      : i[0] && (g = i[0]);
+      ? (f = l)
+      : a.length > 1
+      ? (f = `faker.random.arrayElement(${p})`)
+      : a[0] && (f = a[0]);
     let d = t.contentTypes.includes('text/plain') ? 'text' : 'json';
     return {
       implementation: {
         function:
-          g && g !== 'undefined'
-            ? `export const get${x(e)}Mock = () => (${g})
+          f && f !== 'undefined'
+            ? `export const get${x(e)}Mock = () => (${f})
 
 `
             : '',
-        handler: `rest.${r}('${c}', (_req, res, ctx) => {
+        handler: `rest.${r}('${m}', (_req, res, ctx) => {
         return res(
           ctx.delay(1000),
           ctx.status(200, 'Mocked status'),${
-            g && g !== 'undefined'
+            f && f !== 'undefined'
               ? `
 ctx.${d}(get${x(e)}Mock()),`
               : ''
@@ -3250,7 +3248,7 @@ ctx.${d}(get${x(e)}Mock()),`
         )
       }),`,
       },
-      imports: m,
+      imports: c,
     };
   };
 u();
@@ -3335,7 +3333,7 @@ var ir = [
     },
   ],
   ho = (e) => [...(e ? [] : ir), ...Ep],
-  Ip = (
+  Mp = (
     {
       queryParams: e,
       operationName: t,
@@ -3343,58 +3341,58 @@ var ir = [
       mutator: n,
       body: o,
       props: s,
-      verb: a,
-      formData: i,
+      verb: i,
+      formData: a,
       formUrlEncoded: p,
-      override: m,
+      override: c,
     },
-    { route: c, context: l },
+    { route: m, context: l },
   ) => {
-    let g = (m == null ? void 0 : m.requestOptions) !== !1,
-      d = (m == null ? void 0 : m.formData) !== !1,
-      f = (m == null ? void 0 : m.formUrlEncoded) !== !1,
+    let f = (c == null ? void 0 : c.requestOptions) !== !1,
+      d = (c == null ? void 0 : c.formData) !== !1,
+      g = (c == null ? void 0 : c.formUrlEncoded) !== !1,
       b = Q(l.tsconfig),
-      y = se.includes(a),
+      y = oe.includes(i),
       h = ue({
-        formData: i,
+        formData: a,
         formUrlEncoded: p,
         body: o,
         isFormData: d,
-        isFormUrlEncoded: f,
+        isFormUrlEncoded: g,
       });
     if (n) {
       let w = ce({
-          route: c,
+          route: m,
           body: o,
           queryParams: e,
           response: r,
-          verb: a,
+          verb: i,
           isFormData: d,
-          isFormUrlEncoded: f,
+          isFormUrlEncoded: g,
           isBodyVerb: y,
           hasSignal: !0,
         }),
-        R =
+        P =
           (n == null ? void 0 : n.bodyTypeName) && o.definition
-            ? F(s, 'implementation').replace(
+            ? V(s, 'implementation').replace(
                 new RegExp(`(\\w*):\\s?${o.definition}`),
                 `$1: ${n.bodyTypeName}<${o.definition}>`,
               )
-            : F(s, 'implementation'),
-        j = g ? me(m == null ? void 0 : m.requestOptions, n.hasSecondArg) : '';
+            : V(s, 'implementation'),
+        j = f ? me(c == null ? void 0 : c.requestOptions, n.hasSecondArg) : '';
       return n.isHook
         ? `export const use${x(t)}Hook = () => {
         const ${t} = ${n.name}<${r.definition.success || 'unknown'}>();
 
         return (
-    ${R}
+    ${P}
 ${
   y
     ? ''
     : `signal?: AbortSignal,
 `
 } ${
-            g && n.hasSecondArg
+            f && n.hasSecondArg
               ? `options?: SecondParameter<typeof ${n.name}>`
               : ''
           }) => {${h}
@@ -3405,8 +3403,8 @@ ${
       }
     `
         : `export const ${t} = (
-    ${R}
- ${g && n.hasSecondArg ? `options?: SecondParameter<typeof ${n.name}>,` : ''}${
+    ${P}
+ ${f && n.hasSecondArg ? `options?: SecondParameter<typeof ${n.name}>,` : ''}${
             y
               ? `
 `
@@ -3420,38 +3418,38 @@ ${
   `;
     }
     let S = pe({
-      route: c,
+      route: m,
       body: o,
       queryParams: e,
       response: r,
-      verb: a,
-      requestOptions: m == null ? void 0 : m.requestOptions,
+      verb: i,
+      requestOptions: c == null ? void 0 : c.requestOptions,
       isFormData: d,
-      isFormUrlEncoded: f,
+      isFormUrlEncoded: g,
     });
     return `export const ${t} = (
-    ${F(s, 'implementation')} ${
-      g
+    ${V(s, 'implementation')} ${
+      f
         ? `options?: AxiosRequestConfig
 `
         : ''
     } ): Promise<AxiosResponse<${r.definition.success || 'unknown'}>> => {${h}
-    return axios${b ? '' : '.default'}.${a}(${S});
+    return axios${b ? '' : '.default'}.${i}(${S});
   }
 `;
   },
   sr = { INFINITE: 'infiniteQuery', QUERY: 'query' },
-  vp = ['getNextPageParam', 'getPreviousPageParam'],
-  Mp = ({ params: e, options: t, type: r }) => {
+  Ip = ['getNextPageParam', 'getPreviousPageParam'],
+  Ap = ({ params: e, options: t, type: r }) => {
     var o;
     if (t === !1) return '';
-    let n = k(t)
+    let n = q(t)
       ? ` ${
           (o = ne(
             _lodashomitby2.default.call(
               void 0,
               t,
-              (s, a) => !!(r !== sr.INFINITE && vp.includes(a)),
+              (s, i) => !!(r !== sr.INFINITE && Ip.includes(i)),
             ),
           )) == null
             ? void 0
@@ -3460,7 +3458,7 @@ ${
       : '';
     return e.length
       ? `{${
-          !k(t) || !t.hasOwnProperty('enabled')
+          !q(t) || !t.hasOwnProperty('enabled')
             ? `enabled: !!(${e.map(({ name: s }) => s).join(' && ')}),`
             : ''
         }${n} ...queryOptions}`
@@ -3476,7 +3474,7 @@ ${
     type: o,
   }) => {
     let s = r == null ? void 0 : r.isHook,
-      a = o
+      i = o
         ? `Use${x(o)}Options<Awaited<ReturnType<${
             s ? `ReturnType<typeof use${x(e)}Hook>` : `typeof ${e}`
           }>>, TError, TData>`
@@ -3484,7 +3482,7 @@ ${
             s ? `ReturnType<typeof use${x(e)}Hook>` : `typeof ${e}`
           }>>, TError,${t ? `{${t}}` : 'TVariables'}, TContext>`;
     return n
-      ? `options?: { ${o ? 'query' : 'mutation'}?:${a}, ${
+      ? `options?: { ${o ? 'query' : 'mutation'}?:${i}, ${
           r
             ? r != null && r.hasSecondArg
               ? `request?: SecondParameter<typeof ${r.name}>`
@@ -3492,9 +3490,9 @@ ${
             : 'axios?: AxiosRequestConfig'
         }}
 `
-      : `${o ? 'queryOptions' : 'mutationOptions'}?: ${a}`;
+      : `${o ? 'queryOptions' : 'mutationOptions'}?: ${i}`;
   },
-  Ap = ({ outputClient: e, type: t, isMutatorHook: r, operationName: n }) => {
+  vp = ({ outputClient: e, type: t, isMutatorHook: r, operationName: n }) => {
     switch (e) {
       case B.SVELTE_QUERY:
         return `Use${x(t)}StoreResult<Awaited<ReturnType<${
@@ -3513,50 +3511,50 @@ ${
     queryOption: { name: e, queryParam: t, options: r, type: n },
     operationName: o,
     queryProps: s,
-    queryKeyFnName: a,
-    properties: i,
+    queryKeyFnName: i,
+    properties: a,
     params: p,
-    props: m,
-    mutator: c,
+    props: c,
+    mutator: m,
     isRequestOptions: l,
-    response: g,
+    response: f,
     outputClient: d,
   }) => {
-    let f = t
-        ? m
+    let g = t
+        ? c
             .map(({ name: S }) =>
               S === 'params' ? `{ ${t}: pageParam, ...params }` : S,
             )
             .join(',')
-        : i,
-      b = Ap({
+        : a,
+      b = vp({
         outputClient: d,
         type: n,
-        isMutatorHook: c == null ? void 0 : c.isHook,
+        isMutatorHook: m == null ? void 0 : m.isHook,
         operationName: o,
       }),
-      y = `AxiosError<${g.definition.errors || 'unknown'}>`;
-    c &&
-      (y = c.hasErrorType
-        ? `${c.default ? x(o) : ''}ErrorType<${
-            g.definition.errors || 'unknown'
+      y = `AxiosError<${f.definition.errors || 'unknown'}>`;
+    m &&
+      (y = m.hasErrorType
+        ? `${m.default ? x(o) : ''}ErrorType<${
+            f.definition.errors || 'unknown'
           }>`
-        : g.definition.errors || 'unknown');
+        : f.definition.errors || 'unknown');
     let h =
-      c != null && c.isHook
+      m != null && m.isHook
         ? `ReturnType<typeof use${x(o)}Hook>`
         : `typeof ${o}`;
     return `
 export type ${x(e)}QueryResult = NonNullable<Awaited<ReturnType<${h}>>>
 export type ${x(e)}QueryError = ${y}
 
-export const ${P(
+export const ${E(
       `use-${e}`,
     )} = <TData = Awaited<ReturnType<${h}>>, TError = ${y}>(
  ${s} ${$o({
       operationName: o,
       definitions: '',
-      mutator: c,
+      mutator: m,
       isRequestOptions: l,
       type: n,
     })}
@@ -3565,8 +3563,8 @@ export const ${P(
   ${
     l
       ? `const {query: queryOptions${
-          c
-            ? c.hasSecondArg
+          m
+            ? m.hasSecondArg
               ? ', request: requestOptions'
               : ''
             : ', axios: axiosOptions'
@@ -3574,31 +3572,31 @@ export const ${P(
       : ''
   }
 
-  const queryKey = queryOptions?.queryKey ?? ${a}(${i});
+  const queryKey = queryOptions?.queryKey ?? ${i}(${a});
 
-  ${c != null && c.isHook ? `const ${o} =  use${x(o)}Hook()` : ''}
+  ${m != null && m.isHook ? `const ${o} =  use${x(o)}Hook()` : ''}
 
   const queryFn: QueryFunction<Awaited<ReturnType<${
-    c != null && c.isHook ? `ReturnType<typeof use${x(o)}Hook>` : `typeof ${o}`
+    m != null && m.isHook ? `ReturnType<typeof use${x(o)}Hook>` : `typeof ${o}`
   }>>> = (${
-      t && m.some(({ type: S }) => S === 'queryParam')
+      t && c.some(({ type: S }) => S === 'queryParam')
         ? '{ signal, pageParam }'
         : '{ signal }'
-    }) => ${o}(${f}${f ? ', ' : ''}${
+    }) => ${o}(${g}${g ? ', ' : ''}${
       l
-        ? c
-          ? c.hasSecondArg
+        ? m
+          ? m.hasSecondArg
             ? 'requestOptions, signal'
             : 'signal'
           : '{ signal, ...axiosOptions }'
         : ''
     });
 
-  const query = ${P(`use-${n}`)}<Awaited<ReturnType<${
-      c != null && c.isHook
+  const query = ${E(`use-${n}`)}<Awaited<ReturnType<${
+      m != null && m.isHook
         ? `ReturnType<typeof use${x(o)}Hook>`
         : `typeof ${o}`
-    }>>, TError, TData>(queryKey, queryFn, ${Mp({
+    }>>, TError, TData>(queryKey, queryFn, ${Ap({
       params: p,
       options: r,
       type: n,
@@ -3619,68 +3617,68 @@ export const ${P(
       props: n,
       verb: o,
       params: s,
-      override: a,
-      mutator: i,
+      override: i,
+      mutator: a,
       response: p,
-      operationId: m,
+      operationId: c,
     },
-    { route: c, override: { operations: l = {} }, context: g },
+    { route: m, override: { operations: l = {} }, context: f },
     d,
   ) => {
     var j;
-    let f = a == null ? void 0 : a.query,
-      b = (a == null ? void 0 : a.requestOptions) !== !1,
-      y = (j = l[m]) == null ? void 0 : j.query;
+    let g = i == null ? void 0 : i.query,
+      b = (i == null ? void 0 : i.requestOptions) !== !1,
+      y = (j = l[c]) == null ? void 0 : j.query;
     if (
       o === K.GET ||
       (y == null ? void 0 : y.useInfinite) ||
       (y == null ? void 0 : y.useQuery)
     ) {
-      let M = n
+      let I = n
           .map(({ name: ee, type: te }) =>
             te === H.BODY ? r.implementation : ee,
           )
           .join(','),
-        I = [
-          ...(f != null && f.useInfinite
+        R = [
+          ...(g != null && g.useInfinite
             ? [
                 {
-                  name: P(`${t}-infinite`),
-                  options: f == null ? void 0 : f.options,
+                  name: E(`${t}-infinite`),
+                  options: g == null ? void 0 : g.options,
                   type: sr.INFINITE,
-                  queryParam: f == null ? void 0 : f.useInfiniteQueryParam,
+                  queryParam: g == null ? void 0 : g.useInfiniteQueryParam,
                 },
               ]
             : []),
-          ...((!(f != null && f.useQuery) && !(f != null && f.useInfinite)) ||
-          (f == null ? void 0 : f.useQuery)
+          ...((!(g != null && g.useQuery) && !(g != null && g.useInfinite)) ||
+          (g == null ? void 0 : g.useQuery)
             ? [
                 {
                   name: t,
-                  options: f == null ? void 0 : f.options,
+                  options: g == null ? void 0 : g.options,
                   type: sr.QUERY,
                 },
               ]
             : []),
         ],
-        V = P(`get-${t}-queryKey`),
-        Z = F(n, 'implementation');
-      return `export const ${V} = (${Z}) => [\`${c}\`${
+        G = E(`get-${t}-queryKey`),
+        Z = V(n, 'implementation');
+      return `export const ${G} = (${Z}) => [\`${m}\`${
         e ? ', ...(params ? [params]: [])' : ''
       }${r.implementation ? `, ${r.implementation}` : ''}];
 
-    ${I.reduce(
+    ${R.reduce(
       (ee, te) =>
         ee +
         Gp({
           queryOption: te,
           operationName: t,
           queryProps: Z,
-          queryKeyFnName: V,
-          properties: M,
+          queryKeyFnName: G,
+          properties: I,
           params: s,
           props: n,
-          mutator: i,
+          mutator: a,
           isRequestOptions: b,
           response: p,
           outputClient: d,
@@ -3690,54 +3688,54 @@ export const ${P(
 `;
     }
     let h = n
-        .map(({ definition: M, type: I }) =>
-          I === H.BODY
-            ? i != null && i.bodyTypeName
-              ? `data: ${i.bodyTypeName}<${r.definition}>`
+        .map(({ definition: I, type: R }) =>
+          R === H.BODY
+            ? a != null && a.bodyTypeName
+              ? `data: ${a.bodyTypeName}<${r.definition}>`
               : `data: ${r.definition}`
-            : M,
+            : I,
         )
         .join(';'),
       S = n
-        .map(({ name: M, type: I }) => (I === H.BODY ? 'data' : M))
+        .map(({ name: I, type: R }) => (R === H.BODY ? 'data' : I))
         .join(','),
       w = `AxiosError<${p.definition.errors || 'unknown'}>`;
-    i &&
-      (w = i.hasErrorType
-        ? `${i.default ? x(t) : ''}ErrorType<${
+    a &&
+      (w = a.hasErrorType
+        ? `${a.default ? x(t) : ''}ErrorType<${
             p.definition.errors || 'unknown'
           }>`
         : p.definition.errors || 'unknown');
-    let R =
-      i != null && i.isHook
+    let P =
+      a != null && a.isHook
         ? `ReturnType<typeof use${x(t)}Hook>`
         : `typeof ${t}`;
     return `
-    export type ${x(t)}MutationResult = NonNullable<Awaited<ReturnType<${R}>>>
+    export type ${x(t)}MutationResult = NonNullable<Awaited<ReturnType<${P}>>>
     ${
       r.definition
         ? `export type ${x(t)}MutationBody = ${
-            i != null && i.bodyTypeName
-              ? `${i.bodyTypeName}<${r.definition}>`
+            a != null && a.bodyTypeName
+              ? `${a.bodyTypeName}<${r.definition}>`
               : r.definition
           }`
         : ''
     }
     export type ${x(t)}MutationError = ${w}
 
-    export const ${P(`use-${t}`)} = <TError = ${w},
+    export const ${E(`use-${t}`)} = <TError = ${w},
     ${h ? '' : 'TVariables = void,'}
     TContext = unknown>(${$o({
       operationName: t,
       definitions: h,
-      mutator: i,
+      mutator: a,
       isRequestOptions: b,
     })}) => {
       ${
         b
           ? `const {mutation: mutationOptions${
-              i
-                ? i != null && i.hasSecondArg
+              a
+                ? a != null && a.hasSecondArg
                   ? ', request: requestOptions'
                   : ''
                 : ', axios: axiosOptions'
@@ -3745,18 +3743,18 @@ export const ${P(
           : ''
       }
 
-      ${i != null && i.isHook ? `const ${t} =  use${x(t)}Hook()` : ''}
+      ${a != null && a.isHook ? `const ${t} =  use${x(t)}Hook()` : ''}
 
 
-      const mutationFn: MutationFunction<Awaited<ReturnType<${R}>>, ${
+      const mutationFn: MutationFunction<Awaited<ReturnType<${P}>>, ${
       h ? `{${h}}` : 'TVariables'
     }> = (${S ? 'props' : ''}) => {
           ${S ? `const {${S}} = props ?? {}` : ''};
 
           return  ${t}(${S}${S ? ',' : ''}${
       b
-        ? i
-          ? i != null && i.hasSecondArg
+        ? a
+          ? a != null && a.hasSecondArg
             ? 'requestOptions'
             : ''
           : 'axiosOptions'
@@ -3794,9 +3792,9 @@ ${
     : ''
 }`,
   Et = () => '',
-  It = (e, t, r) => {
+  Mt = (e, t, r) => {
     let n = ae(e),
-      o = Ip(e, t),
+      o = Mp(e, t),
       s = Cp(e, t, r);
     return {
       implementation: `${o}
@@ -3836,67 +3834,67 @@ var Dp = [
       mutator: n,
       body: o,
       props: s,
-      verb: a,
-      formData: i,
+      verb: i,
+      formData: a,
       formUrlEncoded: p,
-      override: m,
+      override: c,
     },
-    { route: c, context: l },
+    { route: m, context: l },
   ) => {
-    let g = (m == null ? void 0 : m.requestOptions) !== !1,
-      d = (m == null ? void 0 : m.formData) !== !1,
-      f = (m == null ? void 0 : m.formUrlEncoded) !== !1,
-      b = se.includes(a),
+    let f = (c == null ? void 0 : c.requestOptions) !== !1,
+      d = (c == null ? void 0 : c.formData) !== !1,
+      g = (c == null ? void 0 : c.formUrlEncoded) !== !1,
+      b = oe.includes(i),
       y = Q(l.tsconfig),
       h = ue({
-        formData: i,
+        formData: a,
         formUrlEncoded: p,
         body: o,
         isFormData: d,
-        isFormUrlEncoded: f,
+        isFormUrlEncoded: g,
       });
     if (n) {
       let w = ce({
-          route: c,
+          route: m,
           body: o,
           queryParams: e,
           response: r,
-          verb: a,
+          verb: i,
           isFormData: d,
-          isFormUrlEncoded: f,
+          isFormUrlEncoded: g,
           hasSignal: !1,
           isBodyVerb: b,
         }),
-        R = g ? me(m == null ? void 0 : m.requestOptions, n.hasSecondArg) : '';
+        P = f ? me(c == null ? void 0 : c.requestOptions, n.hasSecondArg) : '';
       return `export const ${t} = (
-    ${F(s, 'implementation')}
+    ${V(s, 'implementation')}
  ${
-   g && n.hasSecondArg ? `options?: SecondParameter<typeof ${n.name}>` : ''
+   f && n.hasSecondArg ? `options?: SecondParameter<typeof ${n.name}>` : ''
  }) => {${h}
       return ${n.name}<${r.definition.success || 'unknown'}>(
       ${w},
-      ${R});
+      ${P});
     }
   `;
     }
     let S = pe({
-      route: c,
+      route: m,
       body: o,
       queryParams: e,
       response: r,
-      verb: a,
-      requestOptions: m == null ? void 0 : m.requestOptions,
+      verb: i,
+      requestOptions: c == null ? void 0 : c.requestOptions,
       isFormData: d,
-      isFormUrlEncoded: f,
+      isFormUrlEncoded: g,
     });
     return `export const ${t} = (
-    ${F(s, 'implementation')} ${
-      g
+    ${V(s, 'implementation')} ${
+      f
         ? `options?: AxiosRequestConfig
 `
         : ''
     } ): Promise<AxiosResponse<${r.definition.success || 'unknown'}>> => {${h}
-    return axios${y ? '' : '.default'}.${a}(${S});
+    return axios${y ? '' : '.default'}.${i}(${S});
   }
 `;
   },
@@ -3920,30 +3918,30 @@ var Dp = [
     properties: n,
     params: o,
     mutator: s,
-    isRequestOptions: a,
-    response: i,
+    isRequestOptions: i,
+    response: a,
   }) => {
     let p = n,
-      m = o.length
+      c = o.length
         ? `const isEnable = !!(${o.map(({ name: l }) => l).join(' && ')})
   const swrKey = swrOptions?.swrKey ?? (() => isEnable ? ${r}(${n}) : null);`
         : `const swrKey = swrOptions?.swrKey ?? (() => ${r}(${n}))`,
-      c = `AxiosError<${i.definition.errors || 'unknown'}>`;
+      m = `AxiosError<${a.definition.errors || 'unknown'}>`;
     return (
       s &&
-        (c = s.hasErrorType
-          ? `ErrorType<${i.definition.errors || 'unknown'}>`
-          : i.definition.errors || 'unknown'),
+        (m = s.hasErrorType
+          ? `ErrorType<${a.definition.errors || 'unknown'}>`
+          : a.definition.errors || 'unknown'),
       `
 export type ${x(e)}QueryResult = NonNullable<Awaited<ReturnType<typeof ${e}>>>
-export type ${x(e)}QueryError = ${c}
+export type ${x(e)}QueryError = ${m}
 
-export const ${P(`use-${e}`)} = <TError = ${c}>(
- ${t} ${Fp({ operationName: e, mutator: s, isRequestOptions: a })}
+export const ${E(`use-${e}`)} = <TError = ${m}>(
+ ${t} ${Fp({ operationName: e, mutator: s, isRequestOptions: i })}
   ) => {
 
   ${
-    a
+    i
       ? `const {swr: swrOptions${
           s
             ? s != null && s.hasSecondArg
@@ -3954,9 +3952,9 @@ export const ${P(`use-${e}`)} = <TError = ${c}>(
       : ''
   }
 
-  ${m}
+  ${c}
   const swrFn = () => ${e}(${p}${p ? ', ' : ''}${
-        a
+        i
           ? s
             ? s != null && s.hasSecondArg
               ? 'requestOptions'
@@ -3983,32 +3981,32 @@ export const ${P(`use-${e}`)} = <TError = ${c}>(
       props: n,
       verb: o,
       params: s,
-      override: a,
-      mutator: i,
+      override: i,
+      mutator: a,
       response: p,
     },
-    { route: m },
+    { route: c },
   ) => {
-    let c = (a == null ? void 0 : a.requestOptions) !== !1;
+    let m = (i == null ? void 0 : i.requestOptions) !== !1;
     if (o !== K.GET) return '';
     let l = n
-        .map(({ name: f, type: b }) => (b === H.BODY ? r.implementation : f))
+        .map(({ name: g, type: b }) => (b === H.BODY ? r.implementation : g))
         .join(','),
-      g = P(`get-${t}-key`),
-      d = F(n, 'implementation');
-    return `export const ${g} = (${d}) => [\`${m}\`${
+      f = E(`get-${t}-key`),
+      d = V(n, 'implementation');
+    return `export const ${f} = (${d}) => [\`${c}\`${
       e ? ', ...(params ? [params]: [])' : ''
     }${r.implementation ? `, ${r.implementation}` : ''}];
 
     ${Vp({
       operationName: t,
       swrProps: d,
-      swrKeyFnName: g,
+      swrKeyFnName: f,
       properties: l,
       params: s,
       props: n,
-      mutator: i,
-      isRequestOptions: c,
+      mutator: a,
+      isRequestOptions: m,
       response: p,
     })}
 `;
@@ -4050,7 +4048,7 @@ ${o}`,
     };
   };
 u();
-var vt = null,
+var It = null,
   Up = [
     {
       exports: [
@@ -4097,78 +4095,91 @@ var vt = null,
       mutator: n,
       body: o,
       props: s,
-      verb: a,
-      formData: i,
+      verb: i,
+      formData: a,
       formUrlEncoded: p,
-      override: m,
+      override: c,
     },
-    { route: c, context: l },
+    { route: m, context: l },
   ) => {
-    let g = (m == null ? void 0 : m.requestOptions) !== !1,
-      d = (m == null ? void 0 : m.formData) !== !1,
-      f = (m == null ? void 0 : m.formUrlEncoded) !== !1,
-      b = Q(l.tsconfig),
-      y = se.includes(a),
-      h = ue({
-        formData: i,
+    var P;
+    let f = (c == null ? void 0 : c.requestOptions) !== !1,
+      d = (c == null ? void 0 : c.formData) !== !1,
+      g = (c == null ? void 0 : c.formUrlEncoded) !== !1,
+      b =
+        ((P = c == null ? void 0 : c.trpc) == null
+          ? void 0
+          : P.passRequestContextToCustomMutator) !== !1,
+      y = Q(l.tsconfig),
+      h = oe.includes(i),
+      S = ue({
+        formData: a,
         formUrlEncoded: p,
         body: o,
         isFormData: d,
-        isFormUrlEncoded: f,
+        isFormUrlEncoded: g,
       });
     if (n) {
-      let w = ce({
-          route: c,
+      let j = ce({
+          route: m,
           body: o,
           queryParams: e,
           response: r,
-          verb: a,
+          verb: i,
           isFormData: d,
-          isFormUrlEncoded: f,
-          isBodyVerb: y,
-          hasSignal: !0,
+          isFormUrlEncoded: g,
+          isBodyVerb: h,
+          hasSignal: !1,
         }),
-        R =
+        I =
           (n == null ? void 0 : n.bodyTypeName) && o.definition
-            ? F(s, 'implementation').replace(
+            ? V(s, 'implementation').replace(
                 new RegExp(`(\\w*):\\s?${o.definition}`),
                 `$1: ${n.bodyTypeName}<${o.definition}>`,
               )
-            : F(s, 'implementation'),
-        j = g ? me(m == null ? void 0 : m.requestOptions, n.hasSecondArg) : '';
+            : V(s, 'implementation'),
+        R = f ? me(c == null ? void 0 : c.requestOptions, n.hasSecondArg) : '';
       return `export const ${t} = (
-    ${R}
- ${g && n.hasSecondArg ? `options?: SecondParameter<typeof ${n.name}>,` : ''}${
-        y
+    ${I}
+ ${f && n.hasSecondArg ? `options?: Parameters<typeof ${n.name}>[1],` : ''}${
+        h
           ? `
 `
-          : `signal?: AbortSignal
+          : `signal?: AbortSignal,
 `
-      }) => {${h}
+      }${
+        b
+          ? `ctx?: any
+`
+          : `
+`
+      }) => {${S}
       return ${n.name}<${r.definition.success || 'unknown'}>(
-      ${w},
-      ${j});
+      ${j},
+      ${R},
+      ${b ? 'ctx' : ''}
+      );
     }
   `;
     }
-    let S = pe({
-      route: c,
+    let w = pe({
+      route: m,
       body: o,
       queryParams: e,
       response: r,
-      verb: a,
-      requestOptions: m == null ? void 0 : m.requestOptions,
+      verb: i,
+      requestOptions: c == null ? void 0 : c.requestOptions,
       isFormData: d,
-      isFormUrlEncoded: f,
+      isFormUrlEncoded: g,
     });
     return `export const ${t} = (
-    ${F(s, 'implementation')} ${
-      g
+    ${V(s, 'implementation')} ${
+      f
         ? `options?: AxiosRequestConfig
 `
         : ''
-    } ): Promise<AxiosResponse<${r.definition.success || 'unknown'}>> => {${h}
-    return axios${b ? '' : '.default'}.${a}(${S});
+    } ): Promise<AxiosResponse<${r.definition.success || 'unknown'}>> => {${S}
+    return axios${y ? '' : '.default'}.${i}(${w});
   }
 `;
   },
@@ -4183,7 +4194,7 @@ var vt = null,
     }
   },
   ar = (e, t) => {
-    var p, m, c, l, g, d, f, b, y;
+    var p, c, m, l, f, d, g, b, y;
     if (!e) return [];
     let r = [],
       n = _p(e == null ? void 0 : e.type),
@@ -4195,23 +4206,23 @@ var vt = null,
           : !1,
       s =
         (l =
-          (c =
-            (m = e == null ? void 0 : e.minimum) != null
-              ? m
+          (m =
+            (c = e == null ? void 0 : e.minimum) != null
+              ? c
               : e == null
               ? void 0
               : e.exclusiveMinimum) != null
-            ? c
+            ? m
             : e == null
             ? void 0
             : e.minLength) != null
           ? l
           : void 0,
-      a =
-        (f =
+      i =
+        (g =
           (d =
-            (g = e == null ? void 0 : e.maximum) != null
-              ? g
+            (f = e == null ? void 0 : e.maximum) != null
+              ? f
               : e == null
               ? void 0
               : e.exclusiveMaximum) != null
@@ -4219,9 +4230,9 @@ var vt = null,
             : e == null
             ? void 0
             : e.maxLength) != null
-          ? f
+          ? g
           : void 0,
-      i = (b = e == null ? void 0 : e.pattern) != null ? b : void 0;
+      a = (b = e == null ? void 0 : e.pattern) != null ? b : void 0;
     return (
       r.push(
         n === 'object'
@@ -4256,8 +4267,8 @@ var vt = null,
       ),
       r.push([o ? 'required' : 'notRequired', void 0]),
       s !== void 0 && r.push(['min', s]),
-      a !== void 0 && r.push(['max', a]),
-      i && r.push(['matches', i]),
+      i !== void 0 && r.push(['max', i]),
+      a && r.push(['matches', a]),
       e != null &&
         e.enum &&
         r.push([
@@ -4288,64 +4299,75 @@ var vt = null,
       ? r
       : '';
   },
-  zp = (e, { pathRoute: t, context: r }) => {
-    var y, h, S;
-    let { operationName: n, body: o, props: s, verb: a } = e;
-    vt = Qp(r.specKey);
-    let i = r.specs[r.specKey].paths[t],
-      p = (y = i == null ? void 0 : i[a]) == null ? void 0 : y.parameters,
-      m = (h = i == null ? void 0 : i[a]) == null ? void 0 : h.requestBody,
-      c = m && '$ref' in m ? D(m, r).schema : m,
-      l =
-        c != null && c.content['application/json'].schema
-          ? D(c == null ? void 0 : c.content['application/json'].schema, r)
+  zp = (
+    { operationName: e, body: t, props: r, verb: n, mutator: o },
+    { pathRoute: s, context: i, override: a },
+  ) => {
+    var w, P, j, I;
+    let p =
+      ((w = a == null ? void 0 : a.trpc) == null
+        ? void 0
+        : w.passRequestContextToCustomMutator) !== !1;
+    It = Qp(i.specKey);
+    let c = i.specs[i.specKey].paths[s],
+      m = (P = c == null ? void 0 : c[n]) == null ? void 0 : P.parameters,
+      l = (j = c == null ? void 0 : c[n]) == null ? void 0 : j.requestBody,
+      f = l && '$ref' in l ? k(l, i).schema : l,
+      d =
+        f != null && f.content['application/json'].schema
+          ? k(f == null ? void 0 : f.content['application/json'].schema, i)
               .schema
-          : c == null
+          : f == null
           ? void 0
-          : c.content['application/json'].schema,
+          : f.content['application/json'].schema,
       g =
-        (S = p != null ? p : []) == null
+        (I = m != null ? m : []) == null
           ? void 0
-          : S.map((w) => ({ [w.name]: ar(w.schema, w.required) }))
+          : I.map((R) => ({ [R.name]: ar(R.schema, R.required) }))
               .concat(
-                o.implementation && l
+                t.implementation && d
                   ? {
-                      [o.implementation]: ar(
-                        l,
-                        c == null ? void 0 : c.required,
+                      [t.implementation]: ar(
+                        d,
+                        f == null ? void 0 : f.required,
                       ),
                     }
                   : {},
               )
-              .reduce((w, R) => $($({}, w), R), {}),
-      d = s
-        .map(({ name: w, type: R }) => (R === H.BODY ? o.implementation : w))
+              .reduce((R, G) => $($({}, R), G), {}),
+      b = r
+        .map(({ name: R, type: G }) => (G === H.BODY ? t.implementation : R))
         .join(', '),
-      f = s
-        .sort((w, { type: R }) => (R === H.QUERY_PARAM ? -1 : 1))
-        .map(({ name: w, type: R }) => {
-          switch (R) {
+      y = r
+        .sort((R, { type: G }) => (G === H.QUERY_PARAM ? -1 : 1))
+        .map(({ name: R, type: G }) => {
+          switch (G) {
             case H.BODY:
-              return o.implementation;
+              return t.implementation;
             case H.QUERY_PARAM:
-              return `...${w}`;
+              return `...${R}`;
             default:
-              return w;
+              return R;
           }
         })
         .join(', '),
-      b = Po(g);
+      h = Po(g),
+      S = oe.includes(n);
     return `
-export const ${n}Route = trpc.router().${
-      a === K.GET ? 'query' : 'mutation'
-    }('${n}', {
-  ${b ? `input: ${b},` : ''}
-  resolve: (${b ? `{input: {${f}}}` : ''}) => ${n}(${d})
+export const ${e}Route = trpc.router().${
+      n === K.GET ? 'query' : 'mutation'
+    }('${e}', {
+  ${h ? `input: ${h},` : ''}
+  resolve: (
+    {${h ? `input: {${y}}` : ''}${p ? `${h ? ', ' : ''}ctx` : ''}}
+  ) => ${e}(${b}${
+      p && o ? `${b ? ', ' : ''}${S ? '' : 'undefined, '}undefined, ctx` : ''
+    })
 });`;
   },
   Eo = () => '',
-  Io = () => '',
-  vo = ({ operationNames: e, title: t, customTitleFunc: r }) => `
+  Mo = () => '',
+  Io = ({ operationNames: e, title: t, customTitleFunc: r }) => `
 const router = trpc.router()
 ${e.length ? '.' : ''}${e
     .map(
@@ -4355,12 +4377,12 @@ ${e.length ? '.' : ''}${e
     .join('.')};
 
 ${
-  vt
-    ? `export const ${P(vt)}Router = trpc.router().merge('${P(vt)}.', router);`
+  It
+    ? `export const ${E(It)}Router = trpc.router().merge('${E(It)}.', router);`
     : ''
 }
     `,
-  Mo = (e, t, r) => {
+  Ao = (e, t, r) => {
     let n = ae(e),
       o = Bp(e, t),
       s = zp(e, t);
@@ -4372,7 +4394,7 @@ ${s}`,
     };
   };
 var Je = B.AXIOS,
-  Ao = {
+  vo = {
     axios: { client: or, header: rr, dependencies: er, footer: nr, title: tr },
     'axios-functions': {
       client: (e, t) => {
@@ -4392,66 +4414,66 @@ var Je = B.AXIOS,
       title: oo,
     },
     'react-query': {
-      client: It,
+      client: Mt,
       header: Pt,
       dependencies: Oo,
       footer: Et,
       title: jt,
     },
     'svelte-query': {
-      client: It,
+      client: Mt,
       header: Pt,
       dependencies: bo,
       footer: Et,
       title: jt,
     },
     'vue-query': {
-      client: It,
+      client: Mt,
       header: Pt,
       dependencies: ho,
       footer: Et,
       title: jt,
     },
     swr: { client: Ro, header: wo, dependencies: xo, footer: To, title: So },
-    trpc: { client: Mo, header: Io, dependencies: jo, footer: vo, title: Eo },
+    trpc: { client: Ao, header: Mo, dependencies: jo, footer: Io, title: Eo },
   },
   Xe = (e) => {
-    let t = L(e) ? e(Ao) : Ao[e];
+    let t = L(e) ? e(vo) : vo[e];
     if (!t) throw `Oups... \u{1F37B}. Client not found: ${e}`;
     return t;
   },
-  xe = (e = Je, t, r, n, o, s, a) => {
-    let { dependencies: i } = Xe(e);
-    return $t(t, [...i(a), ...r], n, o, s);
+  xe = (e = Je, t, r, n, o, s, i) => {
+    let { dependencies: a } = Xe(e);
+    return $t(t, [...a(i), ...r], n, o, s);
   },
-  Mt = ({
+  At = ({
     outputClient: e = Je,
     isRequestOptions: t,
     title: r,
     customTitleFunc: n,
     isGlobalMutator: o,
     isMutator: s,
-    provideInRoot: a,
-    provideIn: i,
+    provideInRoot: i,
+    provideIn: a,
     hasAwaitedType: p,
   }) => {
-    let m = Go(e, r, n),
-      { header: c } = Xe(e);
+    let c = Go(e, r, n),
+      { header: m } = Xe(e);
     return {
-      implementation: c({
-        title: m.implementation,
+      implementation: m({
+        title: c.implementation,
         isRequestOptions: t,
         isGlobalMutator: o,
         isMutator: s,
-        provideInRoot: a,
-        provideIn: i,
+        provideInRoot: i,
+        provideIn: a,
         hasAwaitedType: p,
       }),
-      implementationMSW: `export const ${m.implementationMSW} = () => [
+      implementationMSW: `export const ${c.implementationMSW} = () => [
 `,
     };
   },
-  At = ({
+  vt = ({
     outputClient: e = Je,
     operationNames: t,
     title: r,
@@ -4459,25 +4481,25 @@ var Je = B.AXIOS,
     hasMutator: o,
     hasAwaitedType: s,
   }) => {
-    let a = Go(e, r, n),
-      { footer: i } = Xe(e),
+    let i = Go(e, r, n),
+      { footer: a } = Xe(e),
       p;
     try {
       L(e)
-        ? ((p = i(t)),
+        ? ((p = a(t)),
           console.warn(
             '[WARN] Passing an array of strings for operations names to the footer function is deprecated and will be removed in a future major release. Please pass them in an object instead: { operationNames: string[] }.',
           ))
-        : (p = i({
+        : (p = a({
             operationNames: t,
-            title: a.implementation,
+            title: i.implementation,
             hasMutator: o,
             hasAwaitedType: s,
           }));
     } catch (e7) {
-      p = i({
+      p = a({
         operationNames: t,
-        title: a.implementation,
+        title: i.implementation,
         hasMutator: o,
         hasAwaitedType: s,
       });
@@ -4503,18 +4525,18 @@ var Je = B.AXIOS,
         : yo(e, t)
       : { implementation: { function: '', handler: '' }, imports: [] },
   Co = (e = Je, t, r) =>
-    v(
+    A(
       t,
       async (n, o) => {
         let { client: s } = Xe(e),
-          a = s(o, r, e),
-          i = await Kp(o, r);
+          i = s(o, r, e),
+          a = await Kp(o, r);
         return (
           (n[o.operationId] = {
-            implementation: o.doc + a.implementation,
-            imports: a.imports,
-            implementationMSW: i.implementation,
-            importsMSW: i.imports,
+            implementation: o.doc + i.implementation,
+            imports: i.imports,
+            implementationMSW: a.implementation,
+            importsMSW: a.imports,
             tags: o.tags,
             mutator: o.mutator,
             formData: o.formData,
@@ -4532,44 +4554,44 @@ var Lp = '\\*/',
   pr = '*\\/',
   cr = new RegExp(Lp, 'g');
 function z({ description: e, deprecated: t, summary: r }, n = !1) {
-  var m;
+  var c;
   let o = (
       Array.isArray(e)
-        ? e.filter((c) => !c.includes('eslint-disable'))
+        ? e.filter((m) => !m.includes('eslint-disable'))
         : [e || '']
-    ).map((c) => c.replace(cr, pr)),
-    s = [e, t, r].reduce((c, l) => (l ? c + 1 : c), 0);
+    ).map((m) => m.replace(cr, pr)),
+    s = [e, t, r].reduce((m, l) => (l ? m + 1 : m), 0);
   if (!s) return '';
-  let a = s === 1 && n,
-    i = Array.isArray(e)
-      ? (m = e.find((c) => c.includes('eslint-disable'))) == null
+  let i = s === 1 && n,
+    a = Array.isArray(e)
+      ? (c = e.find((m) => m.includes('eslint-disable'))) == null
         ? void 0
-        : m.replace(cr, pr)
+        : c.replace(cr, pr)
       : void 0,
     p = `${
-      i
-        ? `/* ${i} */
+      a
+        ? `/* ${a} */
 `
         : ''
     }/**`;
   return (
     e &&
-      (a ||
+      (i ||
         (p += `
 ${n ? '  ' : ''} *`),
       (p += ` ${o.join(`
  * `)}`)),
     t &&
-      (a ||
+      (i ||
         (p += `
 ${n ? '  ' : ''} *`),
       (p += ' @deprecated')),
     r &&
-      (a ||
+      (i ||
         (p += `
 ${n ? '  ' : ''} *`),
       (p += ` @summary ${r.replace(cr, pr)}`)),
-    (p += a
+    (p += i
       ? ' '
       : `
  ${n ? '  ' : ''}`),
@@ -4584,59 +4606,59 @@ var _lodashuniqby = require('lodash.uniqby');
 var _lodashuniqby2 = _interopRequireDefault(_lodashuniqby);
 u();
 var Ze = async (e, t, r, n) => {
-  let { schema: o, imports: s } = await D(t, r),
-    a = C(t) ? s[0].name : e,
-    i = n ? 'formUrlEncoded' : 'formData',
+  let { schema: o, imports: s } = await k(t, r),
+    i = D(t) ? s[0].name : e,
+    a = n ? 'formUrlEncoded' : 'formData',
     p = n
-      ? `const ${i} = new URLSearchParams();
+      ? `const ${a} = new URLSearchParams();
 `
-      : `const ${i} = new FormData();
+      : `const ${a} = new FormData();
 `;
   if (o.type === 'object' && o.properties) {
-    let m = await v(
+    let c = await A(
       Object.entries(o.properties),
-      async (c, [l, g]) => {
+      async (m, [l, f]) => {
         var b;
-        let { schema: d } = await D(g, r),
-          f = '';
+        let { schema: d } = await k(f, r),
+          g = '';
         return (
           d.type === 'object' || d.type === 'array'
-            ? (f = `${i}.append('${l}', JSON.stringify(${P(a)}${
+            ? (g = `${a}.append('${l}', JSON.stringify(${E(i)}${
                 l.includes('-') ? `['${l}']` : `.${l}`
               }))
 `)
             : d.type === 'number' ||
               d.type === 'integer' ||
               d.type === 'boolean'
-            ? (f = `${i}.append('${l}', ${P(a)}${
+            ? (g = `${a}.append('${l}', ${E(i)}${
                 l.includes('-') ? `['${l}']` : `.${l}`
               }.toString())
 `)
-            : (f = `${i}.append('${l}', ${P(a)}${
+            : (g = `${a}.append('${l}', ${E(i)}${
                 l.includes('-') ? `['${l}']` : `.${l}`
               })
 `),
           (b = o.required) != null && b.includes(l)
-            ? c + f
-            : c +
-              `if(${P(a)}${
+            ? m + g
+            : m +
+              `if(${E(i)}${
                 l.includes('-') ? `['${l}']` : `.${l}`
               } !== undefined) {
- ${f} }
+ ${g} }
 `
         );
       },
       '',
     );
-    return `${p}${m}`;
+    return `${p}${c}`;
   }
   return o.type === 'array'
-    ? `${p}${i}.append('data', JSON.stringify(${P(a)}))
+    ? `${p}${a}.append('data', JSON.stringify(${E(i)}))
 `
     : o.type === 'number' || o.type === 'boolean'
-    ? `${p}${i}.append('data', ${P(a)}.toString())
+    ? `${p}${a}.append('data', ${E(i)}.toString())
 `
-    : `${p}${i}.append('data', ${P(a)})
+    : `${p}${a}.append('data', ${E(i)})
 `;
 };
 u();
@@ -4661,13 +4683,13 @@ ${o}} as const;
     [...new Set(e.split(' | '))].reduce((r, n) => {
       if (n === 'null') return r;
       let o = t === 'number',
-        a =
+        i =
           !Number.isNaN(Number(n.slice(1, -1))) || o
             ? Yp(o ? n.toString() : n.slice(1, -1))
             : U(n, { underscore: '_', whitespace: '_', dash: '-' });
       return (
         r +
-        `  ${_esutils.keyword.isIdentifierNameES5(a) ? a : `'${a}'`}: ${n},
+        `  ${_esutils.keyword.isIdentifierNameES5(i) ? i : `'${i}'`}: ${n},
 `
       );
     }, ''),
@@ -4697,14 +4719,14 @@ u();
 u();
 var Jp = { allOf: '&', oneOf: '|', anyOf: '|' },
   Ct = async ({ name: e, items: t, separator: r, context: n, nullable: o }) => {
-    let s = await v(
+    let s = await A(
         t,
-        async (p, m) => {
-          let c = e ? e + x(r) : void 0;
-          c && p.schemas.length && (c = c + x(gt(p.schemas.length + 1)));
+        async (p, c) => {
+          let m = e ? e + x(r) : void 0;
+          m && p.schemas.length && (m = m + x(gt(p.schemas.length + 1)));
           let l = await fe({
-            schema: m,
-            propName: c,
+            schema: c,
+            propName: m,
             combined: !0,
             context: n,
           });
@@ -4727,16 +4749,16 @@ var Jp = { allOf: '&', oneOf: '|', anyOf: '|' },
           types: [],
         },
       ),
-      a = s.isEnum.every((p) => p),
-      i = s.values.join(` ${a ? '|' : Jp[r]} `);
-    if (a && e && t.length > 1) {
+      i = s.isEnum.every((p) => p),
+      a = s.values.join(` ${i ? '|' : Jp[r]} `);
+    if (i && e && t.length > 1) {
       let p = `
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const ${x(e)} = ${Xp(s, e)}`;
       return {
         value: `typeof ${x(e)}[keyof typeof ${x(e)}] ${o};` + p,
-        imports: s.imports.map((m) => T($({}, m), { values: !0 })),
+        imports: s.imports.map((c) => T($({}, c), { values: !0 })),
         schemas: s.schemas,
         isEnum: !1,
         type: 'object',
@@ -4744,7 +4766,7 @@ export const ${x(e)} = ${Xp(s, e)}`;
       };
     }
     return {
-      value: i + o,
+      value: a + o,
       imports: s.imports,
       schemas: s.schemas,
       isEnum: !1,
@@ -4758,15 +4780,15 @@ export const ${x(e)} = ${Xp(s, e)}`;
         ? e[0]
         : `{${Gt(e[0], r[0])}} as const`
       : `{${e
-          .map((s, a) => (t[a] ? `...${s},` : Gt(s, r[a])))
+          .map((s, i) => (t[i] ? `...${s},` : Gt(s, r[i])))
           .join('')}} as const`;
 var ko = async ({ item: e, name: t, context: r, nullable: n }) => {
   var o, s;
-  if (C(e)) {
-    let { name: a, specKey: i } = Ge(e.$ref, r);
+  if (D(e)) {
+    let { name: i, specKey: a } = Ge(e.$ref, r);
     return {
-      value: a + n,
-      imports: [{ name: a, specKey: i }],
+      value: i + n,
+      imports: [{ name: i, specKey: a }],
       schemas: [],
       isEnum: !1,
       type: 'object',
@@ -4804,53 +4826,53 @@ var ko = async ({ item: e, name: t, context: r, nullable: n }) => {
       nullable: n,
     });
   if (e.properties && Object.entries(e.properties).length > 0)
-    return v(
+    return A(
       Object.entries(e.properties),
-      async (a, [i, p], m, c) => {
+      async (i, [a, p], c, m) => {
         var h, S, w;
-        let l = (Array.isArray(e.required) ? e.required : []).includes(i),
-          g = t ? x(t) + x(i) : void 0;
+        let l = (Array.isArray(e.required) ? e.required : []).includes(a),
+          f = t ? x(t) + x(a) : void 0;
         !!(
           (w =
             (S = (h = r.specs[r.target]) == null ? void 0 : h.components) ==
             null
               ? void 0
-              : S.schemas) != null && w[g || '']
-        ) && (g = g + 'Property');
-        let f = await fe({ schema: p, propName: g, context: r }),
+              : S.schemas) != null && w[f || '']
+        ) && (f = f + 'Property');
+        let g = await fe({ schema: p, propName: f, context: r }),
           b = e.readOnly || p.readOnly;
-        m || (a.value += '{');
+        c || (i.value += '{');
         let y = z(p, !0);
         if (
-          (a.imports.push(...f.imports),
-          (a.value += `
-  ${y ? `${y}  ` : ''}${b ? 'readonly ' : ''}${ke(i)}${l ? '' : '?'}: ${
-            f.value
+          (i.imports.push(...g.imports),
+          (i.value += `
+  ${y ? `${y}  ` : ''}${b ? 'readonly ' : ''}${ke(a)}${l ? '' : '?'}: ${
+            g.value
           };`),
-          a.schemas.push(...f.schemas),
-          c.length - 1 === m)
+          i.schemas.push(...g.schemas),
+          m.length - 1 === c)
         ) {
           if (e.additionalProperties)
             if (J(e.additionalProperties))
-              a.value += `
+              i.value += `
   [key: string]: any;
  }`;
             else {
-              let R = await ie({
+              let P = await ie({
                 schema: e.additionalProperties,
                 name: t,
                 context: r,
               });
-              a.value += `
-  [key: string]: ${R.value};
+              i.value += `
+  [key: string]: ${P.value};
 }`;
             }
           else
-            a.value += `
+            i.value += `
 }`;
-          a.value += n;
+          i.value += n;
         }
-        return a;
+        return i;
       },
       {
         imports: [],
@@ -4872,11 +4894,11 @@ var ko = async ({ item: e, name: t, context: r, nullable: n }) => {
         type: 'object',
         isRef: !1,
       };
-    let a = await ie({ schema: e.additionalProperties, name: t, context: r });
+    let i = await ie({ schema: e.additionalProperties, name: t, context: r });
     return {
-      value: `{[key: string]: ${a.value}}` + n,
-      imports: (o = a.imports) != null ? o : [],
-      schemas: (s = a.schemas) != null ? s : [],
+      value: `{[key: string]: ${i.value}}` + n,
+      imports: (o = i.imports) != null ? o : [],
+      schemas: (s = i.schemas) != null ? s : [],
       isEnum: !1,
       type: 'object',
       isRef: !1,
@@ -4896,13 +4918,13 @@ var Dt = async ({ item: e, name: t, context: r }) => {
   switch ((!e.type && e.items && (e.type = 'array'), e.type)) {
     case 'number':
     case 'integer': {
-      let a = 'number',
-        i = !1;
+      let i = 'number',
+        a = !1;
       return (
-        e.enum && ((a = e.enum.join(' | ')), (i = !0)),
+        e.enum && ((i = e.enum.join(' | ')), (a = !0)),
         {
-          value: a + n,
-          isEnum: i,
+          value: i + n,
+          isEnum: a,
           type: 'number',
           schemas: [],
           imports: [],
@@ -4921,27 +4943,27 @@ var Dt = async ({ item: e, name: t, context: r }) => {
       };
     case 'array': {
       let o = await Do({ schema: e, name: t, context: r }),
-        { value: a } = o,
-        i = we(o, ['value']);
-      return $({ value: a + n }, i);
+        { value: i } = o,
+        a = we(o, ['value']);
+      return $({ value: i + n }, a);
     }
     case 'string': {
-      let a = 'string',
-        i = !1;
+      let i = 'string',
+        a = !1;
       return (
         e.enum &&
-          ((a = `'${e.enum
-            .map((p) => (q(p) ? dt(p) : p))
+          ((i = `'${e.enum
+            .map((p) => (F(p) ? dt(p) : p))
             .filter(Boolean)
             .join("' | '")}'`),
-          (i = !0)),
-        e.format === 'binary' && (a = 'Blob'),
+          (a = !0)),
+        e.format === 'binary' && (i = 'Blob'),
         r.override.useDates &&
           (e.format === 'date' || e.format === 'date-time') &&
-          (a = 'Date'),
+          (i = 'Date'),
         {
-          value: a + n,
-          isEnum: i,
+          value: i + n,
+          isEnum: a,
           type: 'string',
           imports: [],
           schemas: [],
@@ -4952,20 +4974,20 @@ var Dt = async ({ item: e, name: t, context: r }) => {
     case 'object':
     default: {
       let s = await ko({ item: e, name: t, context: r, nullable: n }),
-        { value: a } = s,
-        i = we(s, ['value']);
-      return $({ value: a }, i);
+        { value: i } = s,
+        a = we(s, ['value']);
+      return $({ value: i }, a);
     }
   }
 };
 var ie = async ({ schema: e, name: t, context: r }) => {
-  if (C(e)) {
-    let { schema: o, imports: s } = await D(e, r),
-      { name: a, specKey: i, schemaName: p } = s[0],
-      m = i || (r.specKey !== r.target ? r.specKey : void 0);
+  if (D(e)) {
+    let { schema: o, imports: s } = await k(e, r),
+      { name: i, specKey: a, schemaName: p } = s[0],
+      c = a || (r.specKey !== r.target ? r.specKey : void 0);
     return {
-      value: a,
-      imports: [{ name: a, specKey: m, schemaName: p }],
+      value: i,
+      imports: [{ name: i, specKey: c, schemaName: p }],
       type: (o == null ? void 0 : o.type) || 'object',
       schemas: [],
       isEnum: !!(o != null && o.enum),
@@ -4977,9 +4999,9 @@ var ie = async ({ schema: e, name: t, context: r }) => {
   return T($({}, n), { originalSchema: e, isRef: !1 });
 };
 var fe = async ({ schema: e, propName: t, combined: r = !1, context: n }) => {
-  var a;
+  var i;
   let o = await ie({ schema: e, name: t, context: n }),
-    s = z((a = o.originalSchema) != null ? a : {});
+    s = z((i = o.originalSchema) != null ? i : {});
   if (
     t &&
     !o.isEnum &&
@@ -5004,11 +5026,11 @@ var fe = async ({ schema: e, propName: t, combined: r = !1, context: n }) => {
       isRef: o.isRef,
     };
   if (t && o.isEnum && !r && !o.isRef) {
-    let i = qe(o.value, o.type, t);
+    let a = qe(o.value, o.type, t);
     return {
       value: t,
       imports: [{ name: t }],
-      schemas: [...o.schemas, { name: t, model: s + i, imports: o.imports }],
+      schemas: [...o.schemas, { name: t, model: s + a, imports: o.imports }],
       isEnum: !1,
       type: 'enum',
       originalSchema: o.originalSchema,
@@ -5024,90 +5046,90 @@ var qo = ['multipart/form-data'],
   Fe = async (e, t, r, n = 'unknown') => {
     let o = await Promise.all(
       e
-        .filter(([s, a]) => Boolean(a))
-        .map(async ([s, a]) => {
-          var i, p;
-          if (C(a)) {
+        .filter(([s, i]) => Boolean(i))
+        .map(async ([s, i]) => {
+          var a, p;
+          if (D(i)) {
             let {
-                schema: m,
-                imports: [{ name: c, specKey: l, schemaName: g }],
-              } = await D(a, r),
-              [d, f] =
-                (p = Object.entries((i = m.content) != null ? i : {})[0]) !=
+                schema: c,
+                imports: [{ name: m, specKey: l, schemaName: f }],
+              } = await k(i, r),
+              [d, g] =
+                (p = Object.entries((a = c.content) != null ? a : {})[0]) !=
                 null
                   ? p
                   : [],
               b = qo.includes(d),
               y = Fo.includes(d);
-            if ((!b && !y) || !(f != null && f.schema))
+            if ((!b && !y) || !(g != null && g.schema))
               return [
                 {
-                  value: c,
-                  imports: [{ name: c, specKey: l, schemaName: g }],
+                  value: m,
+                  imports: [{ name: m, specKey: l, schemaName: f }],
                   schemas: [],
                   type: 'unknown',
                   isEnum: !1,
                   isRef: !0,
-                  originalSchema: f == null ? void 0 : f.schema,
+                  originalSchema: g == null ? void 0 : g.schema,
                   key: s,
                   contentType: d,
                 },
               ];
             let h = b
                 ? await Ze(
-                    c,
-                    f == null ? void 0 : f.schema,
+                    m,
+                    g == null ? void 0 : g.schema,
                     T($({}, r), { specKey: l || r.specKey }),
                   )
                 : void 0,
               S = y
                 ? await Ze(
-                    c,
-                    f == null ? void 0 : f.schema,
+                    m,
+                    g == null ? void 0 : g.schema,
                     T($({}, r), { specKey: l || r.specKey }),
                     !0,
                   )
                 : void 0;
             return [
               {
-                value: c,
-                imports: [{ name: c, specKey: l, schemaName: g }],
+                value: m,
+                imports: [{ name: m, specKey: l, schemaName: f }],
                 schemas: [],
                 type: 'unknown',
                 isEnum: !1,
                 formData: h,
                 formUrlEncoded: S,
                 isRef: !0,
-                originalSchema: f == null ? void 0 : f.schema,
+                originalSchema: g == null ? void 0 : g.schema,
                 key: s,
                 contentType: d,
               },
             ];
           }
-          return a.content
+          return i.content
             ? (
                 await Promise.all(
-                  Object.entries(a.content).map(async ([c, l], g, d) => {
-                    let f = s ? x(t) + x(s) : void 0;
-                    f && d.length > 1 && (f = f + x(gt(g + 1)));
-                    let b = await ec({ mediaType: l, propName: f, context: r });
+                  Object.entries(i.content).map(async ([m, l], f, d) => {
+                    let g = s ? x(t) + x(s) : void 0;
+                    g && d.length > 1 && (g = g + x(gt(f + 1)));
+                    let b = await ec({ mediaType: l, propName: g, context: r });
                     if (!b) return;
-                    let y = qo.includes(c),
-                      h = Fo.includes(c);
-                    if ((!y && !h) || !f)
-                      return T($({}, b), { contentType: c });
-                    let S = y ? await Ze(f, l.schema, r) : void 0,
-                      w = h ? await Ze(f, l.schema, r, !0) : void 0;
+                    let y = qo.includes(m),
+                      h = Fo.includes(m);
+                    if ((!y && !h) || !g)
+                      return T($({}, b), { contentType: m });
+                    let S = y ? await Ze(g, l.schema, r) : void 0,
+                      w = h ? await Ze(g, l.schema, r, !0) : void 0;
                     return T($({}, b), {
                       formData: S,
                       formUrlEncoded: w,
-                      contentType: c,
+                      contentType: m,
                     });
                   }),
                 )
               )
-                .filter((c) => c)
-                .map((c) => T($({}, c), { key: s }))
+                .filter((m) => m)
+                .map((m) => T($({}, m), { key: s }))
             : [
                 {
                   value: n,
@@ -5132,22 +5154,22 @@ var Vo = async (e, t, r) => {
   let n = await Fe([[r.override.components.requestBodies.suffix, e]], t, r),
     o = n.flatMap(({ imports: l }) => l),
     s = n.flatMap(({ schemas: l }) => l),
-    a = n.map(({ value: l }) => l).join(' | '),
-    i =
-      ve.includes(a.toLowerCase()) || n.length > 1
-        ? P(t) + r.override.components.requestBodies.suffix
-        : P(a),
+    i = n.map(({ value: l }) => l).join(' | '),
+    a =
+      Ie.includes(i.toLowerCase()) || n.length > 1
+        ? E(t) + r.override.components.requestBodies.suffix
+        : E(i),
     p = n.length === 1 ? n[0].formData : void 0,
-    m = n.length === 1 ? n[0].formUrlEncoded : void 0,
-    c = n.length === 1 ? n[0].contentType : void 0;
+    c = n.length === 1 ? n[0].formUrlEncoded : void 0,
+    m = n.length === 1 ? n[0].contentType : void 0;
   return {
-    definition: a,
-    implementation: i,
+    definition: i,
+    implementation: a,
     imports: o,
     schemas: s,
     formData: p || '',
-    formUrlEncoded: m || '',
-    contentType: c || '',
+    formUrlEncoded: c || '',
+    contentType: m || '',
   };
 };
 u();
@@ -5166,11 +5188,11 @@ var No = (e, t, r) =>
       );
 u();
 var Uo = async ({ parameters: e = [], context: t }) =>
-  v(
+  A(
     e,
     async (r, n) => {
-      if (C(n)) {
-        let { schema: o, imports: s } = await D(n, t);
+      if (D(n)) {
+        let { schema: o, imports: s } = await k(n, t);
         (o.in === 'path' || o.in === 'query') &&
           r[o.in].push({ parameter: o, imports: s });
       } else
@@ -5192,41 +5214,41 @@ var tc = (e) => {
     let o = tc(e);
     return Promise.all(
       o.map(async (s) => {
-        let a = t.find(
-          ({ parameter: f }) =>
-            U(P(f.name), { es5keyword: !0, underscore: !0, dash: !0 }) === s,
+        let i = t.find(
+          ({ parameter: g }) =>
+            U(E(g.name), { es5keyword: !0, underscore: !0, dash: !0 }) === s,
         );
-        if (!a)
+        if (!i)
           throw new Error(
             `The path params ${s} can't be found in parameters (${r})`,
           );
-        let { name: i, required: p = !1, schema: m } = a.parameter,
-          c = U(P(i), { es5keyword: !0 });
-        if (!m)
+        let { name: a, required: p = !1, schema: c } = i.parameter,
+          m = U(E(a), { es5keyword: !0 });
+        if (!c)
           return {
-            name: c,
-            definition: `${c}${p ? '' : '?'}: unknown`,
-            implementation: `${c}${p ? '' : '?'}: unknown`,
+            name: m,
+            definition: `${m}${p ? '' : '?'}: unknown`,
+            implementation: `${m}${p ? '' : '?'}: unknown`,
             default: !1,
             required: p,
             imports: [],
           };
         let l = await ie({
-            schema: m,
+            schema: c,
             context: $(
               $({}, n),
-              a.imports.length ? { specKey: a.imports[0].specKey } : {},
+              i.imports.length ? { specKey: i.imports[0].specKey } : {},
             ),
           }),
-          g = `${c}${!p || l.originalSchema.default ? '?' : ''}: ${l.value}`,
-          d = `${c}${!p && !l.originalSchema.default ? '?' : ''}${
+          f = `${m}${!p || l.originalSchema.default ? '?' : ''}: ${l.value}`,
+          d = `${m}${!p && !l.originalSchema.default ? '?' : ''}${
             l.originalSchema.default
               ? `= ${ne(l.originalSchema.default)}`
               : `: ${l.value}`
           }`;
         return {
-          name: c,
-          definition: g,
+          name: m,
+          definition: f,
           implementation: d,
           default: l.originalSchema.default,
           required: p,
@@ -5269,7 +5291,7 @@ var _o = ({ body: e, queryParams: t, params: r }) => {
       type: H.QUERY_PARAM,
     },
     s = [
-      ...r.map((i) => T($({}, i), { type: H.PARAM })),
+      ...r.map((a) => T($({}, a), { type: H.PARAM })),
       ...(e.definition ? [n] : []),
       ...(t ? [o] : []),
     ];
@@ -5279,38 +5301,38 @@ u();
 var rc = (e, t, r) =>
     Promise.all(
       e.map(async ({ parameter: n, imports: o }) => {
-        let { name: s, required: a, schema: i, content: p } = n,
+        let { name: s, required: i, schema: a, content: p } = n,
           {
-            value: m,
-            imports: c,
+            value: c,
+            imports: m,
             isEnum: l,
-            type: g,
+            type: f,
             schemas: d,
-            isRef: f,
+            isRef: g,
           } = await ie({
-            schema: i || p['application/json'].schema,
+            schema: a || p['application/json'].schema,
             context: r,
             name: x(t) + x(s),
           }),
           b = ke(s);
         if (o.length)
           return {
-            definition: `${b}${!a || i.default ? '?' : ''}: ${o[0].name}`,
+            definition: `${b}${!i || a.default ? '?' : ''}: ${o[0].name}`,
             imports: o,
             schemas: [],
           };
-        if (l && !f) {
+        if (l && !g) {
           let h = x(t) + x(s),
-            S = qe(m, g, h);
+            S = qe(c, f, h);
           return {
-            definition: `${b}${!a || i.default ? '?' : ''}: ${h}`,
+            definition: `${b}${!i || a.default ? '?' : ''}: ${h}`,
             imports: [{ name: h }],
-            schemas: [...d, { name: h, model: S, imports: c }],
+            schemas: [...d, { name: h, model: S, imports: m }],
           };
         }
         return {
-          definition: `${b}${!a || i.default ? '?' : ''}: ${m}`,
-          imports: c,
+          definition: `${b}${!i || a.default ? '?' : ''}: ${c}`,
+          imports: m,
           schemas: d,
         };
       }),
@@ -5318,14 +5340,14 @@ var rc = (e, t, r) =>
   Qo = async ({ queryParams: e = [], operationName: t, context: r }) => {
     if (!e.length) return;
     let n = await rc(e, t, r),
-      o = n.flatMap(({ imports: m }) => m),
-      s = n.flatMap(({ schemas: m }) => m),
-      a = `${x(t)}Params`,
-      i = n.map(({ definition: m }) => m).join('; ');
+      o = n.flatMap(({ imports: c }) => c),
+      s = n.flatMap(({ schemas: c }) => c),
+      i = `${x(t)}Params`,
+      a = n.map(({ definition: c }) => c).join('; ');
     return {
       schema: {
-        name: a,
-        model: `export type ${a} = { ${i} };
+        name: i,
+        model: `export type ${i} = { ${a} };
 `,
         imports: o,
       },
@@ -5345,25 +5367,25 @@ var zo = async (e, t, r) => {
     };
   let n = await Fe(Object.entries(e), t, r, 'void'),
     o = n.reduce(
-      (c, l) => (
-        l.key.startsWith('2') ? c.success.push(l) : c.errors.push(l), c
+      (m, l) => (
+        l.key.startsWith('2') ? m.success.push(l) : m.errors.push(l), m
       ),
       { success: [], errors: [] },
     ),
-    s = n.flatMap(({ imports: c }) => c),
-    a = n.flatMap(({ schemas: c }) => c),
-    i = [...new Set(n.map(({ contentType: c }) => c))],
+    s = n.flatMap(({ imports: m }) => m),
+    i = n.flatMap(({ schemas: m }) => m),
+    a = [...new Set(n.map(({ contentType: m }) => m))],
     p = o.success
-      .map(({ value: c, formData: l }) => (l ? 'Blob' : c))
+      .map(({ value: m, formData: l }) => (l ? 'Blob' : m))
       .join(' | '),
-    m = o.errors.map(({ value: c }) => c).join(' | ');
+    c = o.errors.map(({ value: m }) => m).join(' | ');
   return {
     imports: s,
-    definition: { success: p || 'unknown', errors: m || 'unknown' },
+    definition: { success: p || 'unknown', errors: c || 'unknown' },
     isBlob: p === 'Blob',
     types: o,
-    contentTypes: i,
-    schemas: a,
+    contentTypes: a,
+    schemas: i,
   };
 };
 var nc = async ({
@@ -5376,40 +5398,40 @@ var nc = async ({
   }) => {
     var Qe;
     let {
-        responses: a,
-        requestBody: i,
+        responses: i,
+        requestBody: a,
         parameters: p,
-        tags: m = [],
-        deprecated: c,
+        tags: c = [],
+        deprecated: m,
         description: l,
-        summary: g,
+        summary: f,
       } = r,
       d = No(r, n, e),
-      f = t.override.operations[r.operationId],
+      g = t.override.operations[r.operationId],
       b = Object.entries(t.override.tags).reduce(
-        (ze, [at, pt]) => (m.includes(at) ? Pe(ze, pt) : ze),
+        (ze, [at, pt]) => (c.includes(at) ? Pe(ze, pt) : ze),
         {},
       ),
-      y = $($($({}, t.override), b), f),
+      y = $($($({}, t.override), b), g),
       h =
-        (f == null ? void 0 : f.operationName) ||
+        (g == null ? void 0 : g.operationName) ||
         ((Qe = t.override) == null ? void 0 : Qe.operationName),
-      S = h ? h(r, n, e) : P(d),
+      S = h ? h(r, n, e) : E(d),
       w = U(S, { es5keyword: !0 }),
-      R = await zo(a, w, s),
-      j = await Vo(i, w, s),
-      M = await Uo({ parameters: [...o, ...(p != null ? p : [])], context: s }),
-      I = await Qo({ queryParams: M.query, operationName: w, context: s }),
-      V = await Wo({
+      P = await zo(i, w, s),
+      j = await Vo(a, w, s),
+      I = await Uo({ parameters: [...o, ...(p != null ? p : [])], context: s }),
+      R = await Qo({ queryParams: I.query, operationName: w, context: s }),
+      G = await Wo({
         route: n,
-        pathParams: M.path,
+        pathParams: I.path,
         operationId: d,
         context: s,
       }),
       Z = _o({
         body: j,
-        queryParams: I == null ? void 0 : I.schema,
-        params: V,
+        queryParams: R == null ? void 0 : R.schema,
+        params: G,
       }),
       ee = await ht({
         output: t.target,
@@ -5419,7 +5441,7 @@ var nc = async ({
         tsconfig: s.tsconfig,
       }),
       te =
-        q(y == null ? void 0 : y.formData) || k(y == null ? void 0 : y.formData)
+        F(y == null ? void 0 : y.formData) || q(y == null ? void 0 : y.formData)
           ? await ht({
               output: t.target,
               name: w,
@@ -5428,9 +5450,9 @@ var nc = async ({
               tsconfig: s.tsconfig,
             })
           : void 0,
-      Ie =
-        q(y == null ? void 0 : y.formUrlEncoded) ||
-        k(y == null ? void 0 : y.formUrlEncoded)
+      Me =
+        F(y == null ? void 0 : y.formUrlEncoded) ||
+        q(y == null ? void 0 : y.formUrlEncoded)
           ? await ht({
               output: t.target,
               name: w,
@@ -5439,21 +5461,21 @@ var nc = async ({
               tsconfig: s.tsconfig,
             })
           : void 0,
-      it = z({ description: l, deprecated: c, summary: g }),
+      it = z({ description: l, deprecated: m, summary: f }),
       Be = {
         verb: e,
-        tags: m,
+        tags: c,
         summary: r.summary,
         operationId: d,
         operationName: w,
-        response: R,
+        response: P,
         body: j,
-        queryParams: I,
-        params: V,
+        queryParams: R,
+        params: G,
         props: Z,
         mutator: ee,
         formData: te,
-        formUrlEncoded: Ie,
+        formUrlEncoded: Me,
         override: y,
         doc: it,
       },
@@ -5461,54 +5483,54 @@ var nc = async ({
     return _e ? _e(Be) : Be;
   },
   Ko = ({ verbs: e, output: t, route: r, context: n }) =>
-    v(
+    A(
       Object.entries(e),
-      async (o, [s, a]) => {
+      async (o, [s, i]) => {
         if (hn(s)) {
-          let i = await nc({
+          let a = await nc({
             verb: s,
             output: t,
             verbParameters: e.parameters,
             route: r,
-            operation: a,
+            operation: i,
             context: n,
           });
-          o.push(i);
+          o.push(a);
         }
         return o;
       },
       [],
     );
 var Lo = async ({ output: e, context: t }) =>
-  v(
+  A(
     Object.entries(t.specs[t.specKey].paths),
     async (r, [n, o]) => {
       let s = to(n),
-        a = o,
-        i = t;
-      if (C(o)) {
-        let { schema: l, imports: g } = await D(o, t);
-        (a = l), (i = $($({}, t), g.length ? { specKey: g[0].specKey } : {}));
+        i = o,
+        a = t;
+      if (D(o)) {
+        let { schema: l, imports: f } = await k(o, t);
+        (i = l), (a = $($({}, t), f.length ? { specKey: f[0].specKey } : {}));
       }
-      let p = await Ko({ verbs: a, output: e, route: s, context: i }),
-        m = p.reduce(
-          (l, { queryParams: g, body: d, response: f }) => (
-            g && l.push(g.schema, ...g.deps),
+      let p = await Ko({ verbs: i, output: e, route: s, context: a }),
+        c = p.reduce(
+          (l, { queryParams: f, body: d, response: g }) => (
+            f && l.push(f.schema, ...f.deps),
             l.push(...d.schemas),
-            l.push(...f.schemas),
+            l.push(...g.schemas),
             l
           ),
           [],
         ),
-        c = await Co(e.client, p, {
+        m = await Co(e.client, p, {
           route: s,
           pathRoute: n,
           override: e.override,
-          context: i,
+          context: a,
           mock: !!e.mock,
         });
       return (
-        r.schemas.push(...m), (r.operations = $($({}, r.operations), c)), r
+        r.schemas.push(...c), (r.operations = $($({}, r.operations), m)), r
       );
     },
     { operations: {}, schemas: [] },
@@ -5518,19 +5540,19 @@ var $i = ye(Rr());
 var jr = (e = {}, t, r) =>
   (0, $i.default)(e)
     ? Promise.resolve([])
-    : v(
+    : A(
         Object.entries(e),
         async (n, [o, s]) => {
-          let a = await Fe([[r, s]], o, t, 'void'),
-            i = a.flatMap(({ imports: d }) => d),
-            p = a.flatMap(({ schemas: d }) => d),
-            m = a.map(({ value: d }) => d).join(' | '),
-            c = `${x(o)}${r}`,
-            g = `${z(s)}export type ${c} = ${m || 'unknown'};
+          let i = await Fe([[r, s]], o, t, 'void'),
+            a = i.flatMap(({ imports: d }) => d),
+            p = i.flatMap(({ schemas: d }) => d),
+            c = i.map(({ value: d }) => d).join(' | '),
+            m = `${x(o)}${r}`,
+            f = `${z(s)}export type ${m} = ${c || 'unknown'};
 `;
           return (
             n.push(...p),
-            c !== m && n.push({ name: c, model: g, imports: i }),
+            m !== c && n.push({ name: m, model: f, imports: a }),
             n
           );
         },
@@ -5538,16 +5560,16 @@ var jr = (e = {}, t, r) =>
       );
 u();
 var xi = (e = {}, t, r) =>
-  v(
+  A(
     Object.entries(e),
     async (n, [o, s]) => {
-      let a = `${x(o)}${r}`,
-        { schema: i, imports: p } = await D(s, t);
-      if (i.in !== 'query') return n;
-      if (!i.schema || p.length)
+      let i = `${x(o)}${r}`,
+        { schema: a, imports: p } = await k(s, t);
+      if (a.in !== 'query') return n;
+      if (!a.schema || p.length)
         return (
           n.push({
-            name: a,
+            name: i,
             imports: p.length
               ? [
                   {
@@ -5557,17 +5579,17 @@ var xi = (e = {}, t, r) =>
                   },
                 ]
               : [],
-            model: `export type ${a} = ${p.length ? p[0].name : 'unknown'};
+            model: `export type ${i} = ${p.length ? p[0].name : 'unknown'};
 `,
           }),
           n
         );
-      let m = await fe({ schema: i.schema, propName: a, context: t }),
-        l = `${z(s)}export type ${a} = ${m.value || 'unknown'};
+      let c = await fe({ schema: a.schema, propName: i, context: t }),
+        l = `${z(s)}export type ${i} = ${c.value || 'unknown'};
 `;
       return (
-        n.push(...m.schemas),
-        a !== m.value && n.push({ name: a, model: l, imports: m.imports }),
+        n.push(...c.schemas),
+        i !== c.value && n.push({ name: i, model: l, imports: c.imports }),
         n
       );
     },
@@ -5580,70 +5602,70 @@ var Si = async ({ name: e, schema: t, context: r, suffix: n }) => {
   var p;
   let o = await Dt({ item: t, name: e, context: r }),
     s = o.value === '{}',
-    a = '';
-  (a += z(t)),
+    i = '';
+  (i += z(t)),
     s &&
       (r.tslint
-        ? (a += `// tslint:disable-next-line:no-empty-interface
+        ? (i += `// tslint:disable-next-line:no-empty-interface
 `)
-        : (a += `// eslint-disable-next-line @typescript-eslint/no-empty-interface
+        : (i += `// eslint-disable-next-line @typescript-eslint/no-empty-interface
 `)),
-    !ve.includes(o.value) &&
+    !Ie.includes(o.value) &&
     !((p = r == null ? void 0 : r.override) != null && p.useTypeOverInterfaces)
-      ? (a += `export interface ${e} ${o.value}
+      ? (i += `export interface ${e} ${o.value}
 `)
-      : (a += `export type ${e} = ${o.value};
+      : (i += `export type ${e} = ${o.value};
 `);
-  let i = o.imports.filter((m) => m.name !== e);
-  return [...o.schemas, { name: e, model: a, imports: i }];
+  let a = o.imports.filter((c) => c.name !== e);
+  return [...o.schemas, { name: e, model: i, imports: a }];
 };
 var Ti = async (e = {}, t, r) =>
   (0, wi.default)(e)
     ? []
-    : v(
+    : A(
         Object.entries(e),
-        async (o, [s, a]) => {
-          let i = x(s) + r;
+        async (o, [s, i]) => {
+          let a = x(s) + r;
           if (
-            (!a.type || a.type === 'object') &&
-            !a.allOf &&
-            !a.oneOf &&
-            !a.anyOf &&
-            !C(a) &&
-            !a.nullable
+            (!i.type || i.type === 'object') &&
+            !i.allOf &&
+            !i.oneOf &&
+            !i.anyOf &&
+            !D(i) &&
+            !i.nullable
           )
             return (
               o.push(
-                ...(await Si({ name: i, schema: a, context: t, suffix: r })),
+                ...(await Si({ name: a, schema: i, context: t, suffix: r })),
               ),
               o
             );
           {
-            let p = await ie({ schema: a, name: i, context: t }),
-              m = '',
-              c = p.imports;
-            if (((m += z(a)), p.isEnum && !p.isRef))
-              m += qe(p.value, p.type, i);
-            else if (i === p.value && p.isRef) {
-              let l = p.imports.find((g) => g.name === i);
+            let p = await ie({ schema: i, name: a, context: t }),
+              c = '',
+              m = p.imports;
+            if (((c += z(i)), p.isEnum && !p.isRef))
+              c += qe(p.value, p.type, a);
+            else if (a === p.value && p.isRef) {
+              let l = p.imports.find((f) => f.name === a);
               if (!l)
-                m += `export type ${i} = ${p.value};
+                c += `export type ${a} = ${p.value};
 `;
               else {
-                let g =
+                let f =
                   l != null && l.specKey
                     ? `${x(bt(l.specKey, t.specKey))}${p.value}`
                     : `${p.value}Bis`;
-                (m += `export type ${i} = ${g};
+                (c += `export type ${a} = ${f};
 `),
-                  (c = c.map((d) =>
-                    d.name === i ? T($({}, d), { alias: g }) : d,
+                  (m = m.map((d) =>
+                    d.name === a ? T($({}, d), { alias: f }) : d,
                   ));
               }
             } else
-              m += `export type ${i} = ${p.value};
+              c += `export type ${a} = ${p.value};
 `;
-            return o.push(...p.schemas, { name: i, model: m, imports: c }), o;
+            return o.push(...p.schemas, { name: a, model: c, imports: m }), o;
           }
         },
         [],
@@ -5664,12 +5686,12 @@ var Qu = async ({ specs: e, input: t, workspace: r }) => {
       (o = t.override) != null && o.transformer
         ? await St(t.override.transformer, r)
         : void 0;
-    return v(
+    return A(
       Object.entries(e),
-      async (s, [a, i]) => {
-        let p = await Xn(i, t.converterOptions, a),
-          m = n ? n(p) : p;
-        return t.validation && (await Ri(m)), (s[a] = m), s;
+      async (s, [i, a]) => {
+        let p = await Xn(a, t.converterOptions, i),
+          c = n ? n(p) : p;
+        return t.validation && (await Ri(c)), (s[i] = c), s;
       },
       {},
     );
@@ -5677,12 +5699,12 @@ var Qu = async ({ specs: e, input: t, workspace: r }) => {
   Pr = async ({ data: e, input: t, output: r, target: n, workspace: o }) => {
     var p;
     let s = await Qu({ specs: e, input: t, workspace: o }),
-      a = await v(
+      i = await A(
         Object.entries(s),
-        async (m, [c, l]) => {
-          var S, w, R, j, M, I;
-          let g = {
-              specKey: c,
+        async (c, [m, l]) => {
+          var S, w, P, j, I, R;
+          let f = {
+              specKey: m,
               target: n,
               workspace: o,
               specs: s,
@@ -5693,9 +5715,9 @@ var Qu = async ({ specs: e, input: t, workspace: r }) => {
             },
             d = await Ti(
               l.openapi
-                ? (R = l.components) == null
+                ? (P = l.components) == null
                   ? void 0
-                  : R.schemas
+                  : P.schemas
                 : $(
                     $(
                       {},
@@ -5715,30 +5737,30 @@ var Qu = async ({ specs: e, input: t, workspace: r }) => {
                       ? w
                       : {},
                   ),
-              g,
+              f,
               r.override.components.schemas.suffix,
             ),
-            f = await jr(
+            g = await jr(
               (j = l.components) == null ? void 0 : j.responses,
-              g,
+              f,
               r.override.components.responses.suffix,
             ),
             b = await jr(
-              (M = l.components) == null ? void 0 : M.requestBodies,
-              g,
+              (I = l.components) == null ? void 0 : I.requestBodies,
+              f,
               r.override.components.requestBodies.suffix,
             ),
             y = await xi(
-              (I = l.components) == null ? void 0 : I.parameters,
-              g,
+              (R = l.components) == null ? void 0 : R.parameters,
+              f,
               r.override.components.parameters.suffix,
             ),
-            h = [...d, ...f, ...b, ...y];
-          return h.length && (m[c] = h), m;
+            h = [...d, ...g, ...b, ...y];
+          return h.length && (c[m] = h), c;
         },
         {},
       ),
-      i = await Lo({
+      a = await Lo({
         output: r,
         context: {
           specKey: n,
@@ -5751,9 +5773,9 @@ var Qu = async ({ specs: e, input: t, workspace: r }) => {
           packageJson: r.packageJson,
         },
       });
-    return T($({}, i), {
-      schemas: T($({}, a), {
-        [n]: [...((p = a[n]) != null ? p : []), ...i.schemas],
+    return T($({}, a), {
+      schemas: T($({}, i), {
+        [n]: [...((p = i[n]) != null ? p : []), ...a.schemas],
       }),
       target: n,
       info: s[n].info,
@@ -5766,23 +5788,23 @@ var Hu = async (e, o, n) => {
     if (t)
       try {
         await _swaggerparser2.default.validate(e);
-      } catch (i) {
-        if ((i == null ? void 0 : i.name) === 'ParserError') throw i;
-        _console.log.call(void 0, `\u26A0\uFE0F  ${_chalk2.default.yellow(i)}`);
+      } catch (a) {
+        if ((a == null ? void 0 : a.name) === 'ParserError') throw a;
+        _console.log.call(void 0, `\u26A0\uFE0F  ${_chalk2.default.yellow(a)}`);
       }
-    let a = (await _swaggerparser2.default.resolve(e, r)).values();
+    let i = (await _swaggerparser2.default.resolve(e, r)).values();
     return n
-      ? a
+      ? i
       : Object.fromEntries(
-          Object.entries(a).map(([i, p]) => [
-            _upath.resolve.call(void 0, i),
+          Object.entries(i).map(([a, p]) => [
+            _upath.resolve.call(void 0, a),
             p,
           ]),
         );
   },
   Pi = async (e, t) => {
     let { input: r, output: n } = t;
-    if (k(r.target))
+    if (q(r.target))
       return Pr({
         data: { [e]: r.target },
         input: r,
@@ -5805,17 +5827,17 @@ var el = ({
     specsName: o,
     header: s,
   }) => {
-    let a = s;
+    let i = s;
     return (
-      (a += Un({ imports: e, target: r, isRootKey: n, specsName: o })),
-      (a += e.length
+      (i += Un({ imports: e, target: r, isRootKey: n, specsName: o })),
+      (i += e.length
         ? `
 
 `
         : `
 `),
-      (a += t),
-      a
+      (i += t),
+      i
     );
   },
   Er = (e, t) => _upath.join.call(void 0, e, `/${t}.ts`);
@@ -5827,28 +5849,28 @@ var tl = async ({
     specsName: o,
     header: s,
   }) => {
-    let a = P(t.name);
+    let i = E(t.name);
     try {
       await _fsextra.outputFile.call(
         void 0,
-        Er(e, a),
+        Er(e, i),
         el({ schema: t, target: r, isRootKey: n, specsName: o, header: s }),
       );
-      let i = Er(e, 'index'),
-        m = (await _fsextra.readFile.call(void 0, i)).toString();
-      !m.includes(`export * from './${a}'`) &&
-        !m.includes(`export * from "./${a}"`) &&
+      let a = Er(e, 'index'),
+        c = (await _fsextra.readFile.call(void 0, a)).toString();
+      !c.includes(`export * from './${i}'`) &&
+        !c.includes(`export * from "./${i}"`) &&
         (await _fsextra.appendFile.call(
           void 0,
           Er(e, 'index'),
-          `export * from './${a}';
+          `export * from './${i}';
 `,
         ));
-    } catch (i) {
-      throw `Oups... \u{1F37B}. An Error occurred while writing schema ${a} => ${i}`;
+    } catch (a) {
+      throw `Oups... \u{1F37B}. An Error occurred while writing schema ${i} => ${a}`;
     }
   },
-  Ii = async ({
+  Mi = async ({
     schemaPath: e,
     schemas: t,
     target: r,
@@ -5861,10 +5883,10 @@ var tl = async ({
       _upath.join.call(void 0, e, '/index.ts'),
     ),
     Promise.all(
-      t.map((a) =>
+      t.map((i) =>
         tl({
           path: e,
-          schema: a,
+          schema: i,
           target: r,
           isRootKey: n,
           specsName: o,
@@ -5887,36 +5909,36 @@ var rl = (e, t) =>
 u();
 var _compareversions = require('compare-versions');
 var qt = (e, t, r) => {
-  let n = Object.values(e).map(({ operationName: a }) => a),
+  let n = Object.values(e).map(({ operationName: i }) => i),
     o = (r == null ? void 0 : r.client) === B.ANGULAR,
     s = Object.values(e).reduce(
-      (a, i, p, m) => {
-        var c, l, g;
+      (i, a, p, c) => {
+        var m, l, f;
         if (
-          (a.imports.push(...i.imports),
-          a.importsMSW.push(...i.importsMSW),
-          (a.implementation +=
-            i.implementation +
+          (i.imports.push(...a.imports),
+          i.importsMSW.push(...a.importsMSW),
+          (i.implementation +=
+            a.implementation +
             `
 `),
-          (a.implementationMSW.function += i.implementationMSW.function),
-          (a.implementationMSW.handler += i.implementationMSW.handler),
-          i.mutator && a.mutators.push(i.mutator),
-          i.formData && a.formData.push(i.formData),
-          i.formUrlEncoded && a.formUrlEncoded.push(i.formUrlEncoded),
-          p === m.length - 1)
+          (i.implementationMSW.function += a.implementationMSW.function),
+          (i.implementationMSW.handler += a.implementationMSW.handler),
+          a.mutator && i.mutators.push(a.mutator),
+          a.formData && i.formData.push(a.formData),
+          a.formUrlEncoded && i.formUrlEncoded.push(a.formUrlEncoded),
+          p === c.length - 1)
         ) {
-          let d = a.mutators.some((S) => (o ? S.hasThirdArg : S.hasSecondArg)),
-            f =
-              (g =
-                (l = (c = r.packageJson) == null ? void 0 : c.dependencies) ==
+          let d = i.mutators.some((S) => (o ? S.hasThirdArg : S.hasSecondArg)),
+            g =
+              (f =
+                (l = (m = r.packageJson) == null ? void 0 : m.dependencies) ==
                 null
                   ? void 0
                   : l.typescript) != null
-                ? g
+                ? f
                 : '4.4.0',
-            b = _compareversions.compare.call(void 0, f, '4.5.0', '>='),
-            y = Mt({
+            b = _compareversions.compare.call(void 0, g, '4.5.0', '>='),
+            y = At({
               outputClient: r.client,
               isRequestOptions: r.override.requestOptions !== !1,
               isMutator: d,
@@ -5927,21 +5949,21 @@ var qt = (e, t, r) => {
               provideIn: r.override.angular.provideIn,
               hasAwaitedType: b,
             });
-          (a.implementation = y.implementation + a.implementation),
-            (a.implementationMSW.handler =
-              y.implementationMSW + a.implementationMSW.handler);
-          let h = At({
+          (i.implementation = y.implementation + i.implementation),
+            (i.implementationMSW.handler =
+              y.implementationMSW + i.implementationMSW.handler);
+          let h = vt({
             outputClient: r == null ? void 0 : r.client,
             operationNames: n,
             title: x(t.title),
             customTitleFunc: r.override.title,
-            hasMutator: !!a.mutators.length,
+            hasMutator: !!i.mutators.length,
             hasAwaitedType: b,
           });
-          (a.implementation += h.implementation),
-            (a.implementationMSW.handler += h.implementationMSW);
+          (i.implementation += h.implementation),
+            (i.implementationMSW.handler += h.implementationMSW);
         }
-        return a;
+        return i;
       },
       {
         imports: [],
@@ -5958,7 +5980,7 @@ var qt = (e, t, r) => {
       s.implementationMSW.function + s.implementationMSW.handler,
   });
 };
-var vi = async ({
+var Ii = async ({
   operations: e,
   schemas: t,
   info: r,
@@ -5967,27 +5989,27 @@ var vi = async ({
   header: s,
 }) => {
   try {
-    let { path: a, dirname: i } = A(n.target, { backupFilename: P(r.title) }),
+    let { path: i, dirname: a } = v(n.target, { backupFilename: E(r.title) }),
       {
         imports: p,
-        importsMSW: m,
-        implementation: c,
+        importsMSW: c,
+        implementation: m,
         implementationMSW: l,
-        mutators: g,
+        mutators: f,
         formData: d,
-        formUrlEncoded: f,
+        formUrlEncoded: g,
       } = qt(e, r, n),
       b = s,
-      y = n.schemas ? oe(i, A(n.schemas).dirname) : void 0,
+      y = n.schemas ? se(a, v(n.schemas).dirname) : void 0,
       h = Q(n.tsconfig);
     return (
       (b += xe(
         n.client,
-        c,
+        m,
         y
           ? [
               {
-                exports: p.filter((S) => !m.some((w) => S.name === w.name)),
+                exports: p.filter((S) => !c.some((w) => S.name === w.name)),
                 dependency: y,
               },
             ]
@@ -6000,32 +6022,32 @@ var vi = async ({
       n.mock &&
         (b += $e(
           l,
-          y ? [{ exports: m, dependency: y }] : [],
+          y ? [{ exports: c, dependency: y }] : [],
           o,
           !!n.schemas,
           h,
         )),
-      g && (b += _(g)),
-      d && (b += _(d)),
       f && (b += _(f)),
+      d && (b += _(d)),
+      g && (b += _(g)),
       n.schemas || (b += Se(t)),
       (b += `
 
-${c}`),
+${m}`),
       n.mock &&
         ((b += `
 
 `),
         (b += l)),
-      await _fsextra.outputFile.call(void 0, a, b),
-      [a]
+      await _fsextra.outputFile.call(void 0, i, b),
+      [i]
     );
-  } catch (a) {
-    throw `Oups... \u{1F37B}. An Error occurred while writing file => ${a}`;
+  } catch (i) {
+    throw `Oups... \u{1F37B}. An Error occurred while writing file => ${i}`;
   }
 };
 u();
-var Mi = async ({
+var Ai = async ({
   operations: e,
   schemas: t,
   info: r,
@@ -6035,61 +6057,61 @@ var Mi = async ({
 }) => {
   try {
     let {
-        filename: a,
-        dirname: i,
+        filename: i,
+        dirname: a,
         extension: p,
-      } = A(n.target, { backupFilename: P(r.title) }),
+      } = v(n.target, { backupFilename: E(r.title) }),
       {
-        imports: m,
-        implementation: c,
+        imports: c,
+        implementation: m,
         implementationMSW: l,
-        importsMSW: g,
+        importsMSW: f,
         mutators: d,
-        formData: f,
+        formData: g,
         formUrlEncoded: b,
       } = qt(e, r, n),
       y = s,
       h = s,
-      S = n.schemas ? oe(i, A(n.schemas).dirname) : './' + a + '.schemas',
+      S = n.schemas ? se(a, v(n.schemas).dirname) : './' + i + '.schemas',
       w = Q(n.tsconfig);
     (y += xe(
       n.client,
-      c,
-      [{ exports: m, dependency: S }],
+      m,
+      [{ exports: c, dependency: S }],
       o,
       !!n.schemas,
       w,
       !!n.override.mutator,
     )),
-      (h += $e(l, [{ exports: g, dependency: S }], o, !!n.schemas, w));
-    let R = n.schemas
+      (h += $e(l, [{ exports: f, dependency: S }], o, !!n.schemas, w));
+    let P = n.schemas
       ? void 0
-      : _upath.join.call(void 0, i, a + '.schemas' + p);
-    if (R) {
-      let V = s + Se(t);
+      : _upath.join.call(void 0, a, i + '.schemas' + p);
+    if (P) {
+      let G = s + Se(t);
       await _fsextra.outputFile.call(
         void 0,
-        _upath.join.call(void 0, i, a + '.schemas' + p),
-        V,
+        _upath.join.call(void 0, a, i + '.schemas' + p),
+        G,
       );
     }
     d && (y += _(d)),
-      f && (y += _(f)),
+      g && (y += _(g)),
       b && (y += _(b)),
       (y += `
-${c}`),
+${m}`),
       (h += `
 ${l}`);
-    let j = a + (B.ANGULAR === n.client ? '.service' : '') + p,
-      M = _upath.join.call(void 0, i, j);
-    await _fsextra.outputFile.call(void 0, _upath.join.call(void 0, i, j), y);
-    let I = n.mock ? _upath.join.call(void 0, i, a + '.msw' + p) : void 0;
+    let j = i + (B.ANGULAR === n.client ? '.service' : '') + p,
+      I = _upath.join.call(void 0, a, j);
+    await _fsextra.outputFile.call(void 0, _upath.join.call(void 0, a, j), y);
+    let R = n.mock ? _upath.join.call(void 0, a, i + '.msw' + p) : void 0;
     return (
-      I && (await _fsextra.outputFile.call(void 0, I, h)),
-      [M, ...(R ? [R] : []), ...(I ? [I] : [])]
+      R && (await _fsextra.outputFile.call(void 0, R, h)),
+      [I, ...(P ? [P] : []), ...(R ? [R] : [])]
     );
-  } catch (a) {
-    throw `Oups... \u{1F37B}. An Error occurred while splitting => ${a}`;
+  } catch (i) {
+    throw `Oups... \u{1F37B}. An Error occurred while splitting => ${i}`;
   }
 };
 u();
@@ -6097,7 +6119,7 @@ u();
 var il = (e) => T($({}, e), { tags: e.tags.length ? e.tags : ['default'] }),
   al = (e, t) =>
     t.tags.reduce((r, n) => {
-      var s, a, i;
+      var s, i, a;
       let o = r[n];
       return (
         (r[n] = o
@@ -6115,11 +6137,11 @@ var il = (e) => T($({}, e), { tags: e.tags.length ? e.tags : ['default'] }),
                 ? [...((s = o.mutators) != null ? s : []), t.mutator]
                 : o.mutators,
               formData: t.formData
-                ? [...((a = o.formData) != null ? a : []), t.formData]
+                ? [...((i = o.formData) != null ? i : []), t.formData]
                 : o.formData,
               formUrlEncoded: t.formUrlEncoded
                 ? [
-                    ...((i = o.formUrlEncoded) != null ? i : []),
+                    ...((a = o.formUrlEncoded) != null ? a : []),
                     t.formUrlEncoded,
                   ]
                 : o.formUrlEncoded,
@@ -6143,50 +6165,50 @@ var il = (e) => T($({}, e), { tags: e.tags.length ? e.tags : ['default'] }),
     let r = t.client === B.ANGULAR,
       n = Object.values(e)
         .map(il)
-        .reduce((o, s, a, i) => {
+        .reduce((o, s, i, a) => {
           let p = al(o, s);
-          return a === i.length - 1
-            ? Object.entries(p).reduce((m, [c, l]) => {
-                var S, w, R, j, M;
-                let g = !!(
+          return i === a.length - 1
+            ? Object.entries(p).reduce((c, [m, l]) => {
+                var S, w, P, j, I;
+                let f = !!(
                     (S = l.mutators) != null &&
-                    S.some((I) => (r ? I.hasThirdArg : I.hasSecondArg))
+                    S.some((R) => (r ? R.hasThirdArg : R.hasSecondArg))
                   ),
                   d = Object.values(e)
-                    .filter(({ tags: I }) => I.includes(c))
-                    .map(({ operationName: I }) => I),
-                  f =
+                    .filter(({ tags: R }) => R.includes(m))
+                    .map(({ operationName: R }) => R),
+                  g =
                     (j =
-                      (R =
+                      (P =
                         (w = t.packageJson) == null
                           ? void 0
                           : w.dependencies) == null
                         ? void 0
-                        : R.typescript) != null
+                        : P.typescript) != null
                       ? j
                       : '4.4.0',
-                  b = _compareversions.compare.call(void 0, f, '4.5.0', '>='),
-                  y = At({
+                  b = _compareversions.compare.call(void 0, g, '4.5.0', '>='),
+                  y = vt({
                     outputClient: t == null ? void 0 : t.client,
                     operationNames: d,
-                    title: x(c),
+                    title: x(m),
                     customTitleFunc: t.override.title,
-                    hasMutator: !!((M = l.mutators) != null && M.length),
+                    hasMutator: !!((I = l.mutators) != null && I.length),
                     hasAwaitedType: b,
                   }),
-                  h = Mt({
+                  h = At({
                     outputClient: t.client,
                     isRequestOptions: t.override.requestOptions !== !1,
-                    isMutator: g,
+                    isMutator: f,
                     isGlobalMutator: !!t.override.mutator,
-                    title: x(c),
+                    title: x(m),
                     customTitleFunc: t.override.title,
                     provideInRoot: !!t.override.angular.provideIn,
                     provideIn: t.override.angular.provideIn,
                     hasAwaitedType: b,
                   });
                 return (
-                  (m[c] = {
+                  (c[m] = {
                     implementation:
                       h.implementation + l.implementation + y.implementation,
                     implementationMSW: {
@@ -6202,23 +6224,23 @@ var il = (e) => T($({}, e), { tags: e.tags.length ? e.tags : ['default'] }),
                     formData: l.formData,
                     formUrlEncoded: l.formUrlEncoded,
                   }),
-                  m
+                  c
                 );
               }, {})
             : p;
         }, {});
     return Object.entries(n).reduce(
-      (o, [s, a]) => (
-        (o[s] = T($({}, a), {
+      (o, [s, i]) => (
+        (o[s] = T($({}, i), {
           implementationMSW:
-            a.implementationMSW.function + a.implementationMSW.handler,
+            i.implementationMSW.function + i.implementationMSW.handler,
         })),
         o
       ),
       {},
     );
   };
-var Ai = async ({
+var vi = async ({
   operations: e,
   schemas: t,
   info: r,
@@ -6227,70 +6249,70 @@ var Ai = async ({
   header: s,
 }) => {
   let {
-      filename: a,
-      dirname: i,
+      filename: i,
+      dirname: a,
       extension: p,
-    } = A(n.target, { backupFilename: P(r.title) }),
-    m = Ft(e, n),
-    c = Q(n.tsconfig);
+    } = v(n.target, { backupFilename: E(r.title) }),
+    c = Ft(e, n),
+    m = Q(n.tsconfig);
   return (
     await Promise.all(
-      Object.entries(m).map(async ([g, d]) => {
+      Object.entries(c).map(async ([f, d]) => {
         try {
           let {
-              imports: f,
+              imports: g,
               implementation: b,
               implementationMSW: y,
               importsMSW: h,
               mutators: S,
               formData: w,
-              formUrlEncoded: R,
+              formUrlEncoded: P,
             } = d,
             j = s,
-            M = s,
-            I = n.schemas
-              ? '../' + oe(i, A(n.schemas).dirname)
-              : '../' + a + '.schemas';
+            I = s,
+            R = n.schemas
+              ? '../' + se(a, v(n.schemas).dirname)
+              : '../' + i + '.schemas';
           (j += xe(
             n.client,
             b,
-            [{ exports: f, dependency: I }],
+            [{ exports: g, dependency: R }],
             o,
             !!n.schemas,
-            c,
+            m,
             !!n.override.mutator,
           )),
-            (M += $e(y, [{ exports: h, dependency: I }], o, !!n.schemas, c));
-          let V = n.schemas
+            (I += $e(y, [{ exports: h, dependency: R }], o, !!n.schemas, m));
+          let G = n.schemas
             ? void 0
-            : _upath.join.call(void 0, i, a + '.schemas' + p);
-          if (V) {
-            let Ie = s + Se(t);
-            await _fsextra.outputFile.call(void 0, V, Ie);
+            : _upath.join.call(void 0, a, i + '.schemas' + p);
+          if (G) {
+            let Me = s + Se(t);
+            await _fsextra.outputFile.call(void 0, G, Me);
           }
           S && (j += _(S, !0)),
             w && (j += _(w, !0)),
-            R && (j += _(R)),
+            P && (j += _(P)),
             (j += `
 ${b}`),
-            (M += `
+            (I += `
 ${y}`);
-          let Z = Te(g) + (B.ANGULAR === n.client ? '.service' : '') + p,
-            ee = _upath.join.call(void 0, i, Te(g), Z);
+          let Z = Te(f) + (B.ANGULAR === n.client ? '.service' : '') + p,
+            ee = _upath.join.call(void 0, a, Te(f), Z);
           await _fsextra.outputFile.call(void 0, ee, j);
           let te = n.mock
-            ? _upath.join.call(void 0, i, Te(g), Te(g) + '.msw' + p)
+            ? _upath.join.call(void 0, a, Te(f), Te(f) + '.msw' + p)
             : void 0;
           return (
-            te && (await _fsextra.outputFile.call(void 0, te, M)),
-            [ee, ...(V ? [V] : []), ...(te ? [te] : [])]
+            te && (await _fsextra.outputFile.call(void 0, te, I)),
+            [ee, ...(G ? [G] : []), ...(te ? [te] : [])]
           );
-        } catch (f) {
-          throw `Oups... \u{1F37B}. An Error occurred while splitting tag ${g} => ${f}`;
+        } catch (g) {
+          throw `Oups... \u{1F37B}. An Error occurred while splitting tag ${f} => ${g}`;
         }
       }),
     )
-  ).flatMap((g) => g);
+  ).flatMap((f) => f);
 };
 u();
 var Di = async ({
@@ -6302,53 +6324,53 @@ var Di = async ({
   header: s,
 }) => {
   let {
-      filename: a,
-      dirname: i,
+      filename: i,
+      dirname: a,
       extension: p,
-    } = A(n.target, { backupFilename: P(r.title) }),
-    m = Ft(e, n),
-    c = Q(n.tsconfig);
+    } = v(n.target, { backupFilename: E(r.title) }),
+    c = Ft(e, n),
+    m = Q(n.tsconfig);
   return (
     await Promise.all(
-      Object.entries(m).map(async ([g, d]) => {
+      Object.entries(c).map(async ([f, d]) => {
         try {
           let {
-              imports: f,
+              imports: g,
               implementation: b,
               implementationMSW: y,
               importsMSW: h,
               mutators: S,
               formData: w,
-              formUrlEncoded: R,
+              formUrlEncoded: P,
             } = d,
             j = s,
-            M = n.schemas ? oe(i, A(n.schemas).dirname) : './' + a + '.schemas';
+            I = n.schemas ? se(a, v(n.schemas).dirname) : './' + i + '.schemas';
           (j += xe(
             n.client,
             b,
             [
               {
-                exports: f.filter((Z) => !h.some((ee) => Z.name === ee.name)),
-                dependency: M,
+                exports: g.filter((Z) => !h.some((ee) => Z.name === ee.name)),
+                dependency: I,
               },
             ],
             o,
             !!n.schemas,
-            c,
+            m,
             !!n.override.mutator,
           )),
             n.mock &&
-              (j += $e(y, [{ exports: h, dependency: M }], o, !!n.schemas, c));
-          let I = n.schemas
+              (j += $e(y, [{ exports: h, dependency: I }], o, !!n.schemas, m));
+          let R = n.schemas
             ? void 0
-            : _upath.join.call(void 0, i, a + '.schemas' + p);
-          if (I) {
+            : _upath.join.call(void 0, a, i + '.schemas' + p);
+          if (R) {
             let Z = s + Se(t);
-            await _fsextra.outputFile.call(void 0, I, Z);
+            await _fsextra.outputFile.call(void 0, R, Z);
           }
           S && (j += _(S)),
             w && (j += _(w)),
-            R && (j += _(R)),
+            P && (j += _(P)),
             (j += `
 
 `),
@@ -6358,109 +6380,109 @@ var Di = async ({
 
 `),
               (j += y));
-          let V = _upath.join.call(void 0, i, `${Te(g)}${p}`);
+          let G = _upath.join.call(void 0, a, `${Te(f)}${p}`);
           return (
-            await _fsextra.outputFile.call(void 0, V, j), [V, ...(I ? [I] : [])]
+            await _fsextra.outputFile.call(void 0, G, j), [G, ...(R ? [R] : [])]
           );
-        } catch (f) {
-          throw `Oups... \u{1F37B}. An Error occurred while writing tag ${g} => ${f}`;
+        } catch (g) {
+          throw `Oups... \u{1F37B}. An Error occurred while writing tag ${f} => ${g}`;
         }
       }),
     )
-  ).flatMap((g) => g);
+  ).flatMap((f) => f);
 };
 var dl = (e, t) => {
     if (!e) return '';
     let r = e(t);
     return Array.isArray(r) ? z({ description: r }) : r;
   },
-  Fi = async ({ operations: e, schemas: t, target: r, info: n }, o, s, a) => {
-    let { output: i } = s,
-      p = a || n.title,
-      m = Object.keys(t).reduce((g, d) => {
+  Fi = async ({ operations: e, schemas: t, target: r, info: n }, o, s, i) => {
+    let { output: a } = s,
+      p = i || n.title,
+      c = Object.keys(t).reduce((f, d) => {
         let b = bt(d, r).slice(1).split('/').join('-');
-        return (g[d] = b), g;
+        return (f[d] = b), f;
       }, {}),
-      c = dl(i.override.header, n);
-    if (i.schemas) {
-      let g = i.schemas;
+      m = dl(a.override.header, n);
+    if (a.schemas) {
+      let f = a.schemas;
       await Promise.all(
-        Object.entries(t).map(([d, f]) => {
+        Object.entries(t).map(([d, g]) => {
           let b = r === d,
-            y = b ? g : _upath.join.call(void 0, g, m[d]);
-          return Ii({
+            y = b ? f : _upath.join.call(void 0, f, c[d]);
+          return Mi({
             schemaPath: y,
-            schemas: f,
+            schemas: g,
             target: r,
-            specsName: m,
+            specsName: c,
             isRootKey: b,
-            header: c,
+            header: m,
           });
         }),
       );
     }
     let l = [];
-    if (i.target)
-      switch (i.mode) {
+    if (a.target)
+      switch (a.mode) {
         case ge.SPLIT:
-          l = await Mi({
+          l = await Ai({
             workspace: o,
             operations: e,
-            output: i,
+            output: a,
             info: n,
             schemas: t,
-            specsName: m,
-            header: c,
+            specsName: c,
+            header: m,
           });
           break;
         case ge.TAGS:
           l = await Di({
             workspace: o,
             operations: e,
-            output: i,
+            output: a,
             info: n,
             schemas: t,
-            specsName: m,
-            header: c,
+            specsName: c,
+            header: m,
           });
           break;
         case ge.TAGS_SPLIT:
-          l = await Ai({
+          l = await vi({
             workspace: o,
             operations: e,
-            output: i,
+            output: a,
             info: n,
             schemas: t,
-            specsName: m,
-            header: c,
+            specsName: c,
+            header: m,
           });
           break;
         case ge.SINGLE:
         default:
-          l = await vi({
+          l = await Ii({
             workspace: o,
             operations: e,
-            output: i,
+            output: a,
             info: n,
             schemas: t,
-            specsName: m,
-            header: c,
+            specsName: c,
+            header: m,
           });
           break;
       }
-    if (i.workspace) {
-      let g = i.workspace,
+    if (a.workspace) {
+      let f = a.workspace,
         d = l
           .filter((b) => !b.endsWith('.msw.ts'))
-          .map((b) => oe(g, A(b).pathWithoutExtension));
-      i.schemas && d.push(oe(g, A(i.schemas).dirname));
-      let f = _upath.join.call(void 0, g, '/index.ts');
-      if (await _fsextra.pathExists.call(void 0, f)) {
-        let b = await _fsextra.readFile.call(void 0, f, 'utf8'),
+          .map((b) => se(f, v(b).pathWithoutExtension));
+      a.schemas && d.push(se(f, v(a.schemas).dirname));
+      let g = _upath.join.call(void 0, f, '/index.ts');
+      if (await _fsextra.pathExists.call(void 0, g)) {
+        let b = await _fsextra.readFile.call(void 0, g, 'utf8'),
           y = d.filter((h) => !b.includes(h));
         await _fsextra.appendFile.call(
           void 0,
-          f,
+          g,
           _lodashuniq2.default
             .call(void 0, y)
             .map((h) => `export * from '${h}';`).join(`
@@ -6471,7 +6493,7 @@ var dl = (e, t) => {
       } else
         await _fsextra.outputFile.call(
           void 0,
-          f,
+          g,
           _lodashuniq2.default
             .call(void 0, d)
             .map((b) => `export * from '${b}';`).join(`
@@ -6479,13 +6501,13 @@ var dl = (e, t) => {
             `
 `,
         );
-      l = [f, ...l];
+      l = [g, ...l];
     }
-    if (i.prettier)
+    if (a.prettier)
       try {
         await _execa2.default.call(void 0, 'prettier', [
           '--write',
-          ...(i.schemas ? [A(i.schemas).dirname] : []),
+          ...(a.schemas ? [v(a.schemas).dirname] : []),
           ...l,
         ]);
       } catch (e8) {
@@ -6506,9 +6528,9 @@ var Ui = async (e, t, r) => {
     if (t.output.clean) {
       let o = Array.isArray(t.output.clean) ? t.output.clean : [];
       t.output.target &&
-        (await Yt(['**/*', '!**/*.d.ts', ...o], A(t.output.target).dirname)),
+        (await Yt(['**/*', '!**/*.d.ts', ...o], v(t.output.target).dirname)),
         t.output.schemas &&
-          (await Yt(['**/*', '!**/*.d.ts', ...o], A(t.output.schemas).dirname)),
+          (await Yt(['**/*', '!**/*.d.ts', ...o], v(t.output.schemas).dirname)),
         N(`${r ? `${r}: ` : ''}Cleaning output folder`);
     }
     let n = await Pi(e, t);
@@ -6526,13 +6548,13 @@ var Ui = async (e, t, r) => {
       else Vi('Project not found');
       return;
     }
-    return v(
+    return A(
       Object.entries(e),
       async (n, [o, s]) => {
         try {
           n.push(await Ui(t, s, o));
-        } catch (a) {
-          N(_chalk2.default.red(`\u{1F6D1}  ${o ? `${o} - ` : ''}${a}`));
+        } catch (i) {
+          N(_chalk2.default.red(`\u{1F6D1}  ${o ? `${o} - ` : ''}${i}`));
         }
         return n;
       },
@@ -6547,46 +6569,46 @@ var Ui = async (e, t, r) => {
     } = await yt(e, { defaultFileName: 'orval.config' });
     if (!n) throw `failed to load from ${r} => ${o}`;
     let s = _upath.dirname.call(void 0, r),
-      a = await (L(n) ? n() : n),
-      i = await v(
-        Object.entries(a),
-        async (m, [c, l]) => ((m[c] = await Yn(l, s, t)), m),
+      i = await (L(n) ? n() : n),
+      a = await A(
+        Object.entries(i),
+        async (c, [m, l]) => ((c[m] = await Yn(l, s, t)), c),
         {},
       ),
-      p = Object.entries(i)
+      p = Object.entries(a)
         .filter(
-          ([m]) =>
+          ([c]) =>
             (t == null ? void 0 : t.projectName) === void 0 ||
-            m === (t == null ? void 0 : t.projectName),
+            c === (t == null ? void 0 : t.projectName),
         )
-        .map(([, { input: m }]) => m.target)
-        .filter((m) => q(m));
+        .map(([, { input: c }]) => c.target)
+        .filter((c) => F(c));
     (t == null ? void 0 : t.watch) && p.length
       ? Jn(
           t == null ? void 0 : t.watch,
-          () => Wi(i, s, t == null ? void 0 : t.projectName),
+          () => Wi(a, s, t == null ? void 0 : t.projectName),
           p,
         )
-      : await Wi(i, s, t == null ? void 0 : t.projectName);
+      : await Wi(a, s, t == null ? void 0 : t.projectName);
   });
 exports.a = Ut;
 exports.b = u;
-exports.c = q;
+exports.c = F;
 exports.d = N;
 exports.e = jl;
 exports.f = x;
-exports.g = P;
+exports.g = E;
 exports.h = El;
 exports.i = Te;
-exports.j = Il;
+exports.j = Ml;
 exports.k = ne;
 exports.l = U;
-exports.m = F;
+exports.m = V;
 exports.n = gt;
 exports.o = dt;
 exports.p = ha;
-exports.q = ve;
-exports.r = se;
+exports.q = Ie;
+exports.r = oe;
 exports.s = kl;
 exports.t = Un;
 exports.u = _;
