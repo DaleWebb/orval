@@ -390,6 +390,7 @@ declare type AngularOptions = {
 };
 declare type TrpcOptions = {
     passRequestContextToCustomMutator?: boolean;
+    routerNamePrefix?: string;
 };
 declare type InputTransformerFn = (spec: OpenAPIObject) => OpenAPIObject;
 declare type InputTransformer = string | InputTransformerFn;
